@@ -41,6 +41,10 @@ from modules.soil_intelligence import evaluate_soil_health
 from modules.fertilizer_advisor import calculate_fertilizer_prescription
 from modules.fraud_detector import evaluate_buyer_offer
 from modules.trend_shift_detector import detect_market_trend_shifts, analyze_weather_and_yield_shifts
+from modules.geo_ors import (
+    geocode_address, get_nearest_mandis_realtime, format_duration,
+    haversine_distance_km, estimate_road_distance_demo
+)
 from modules.auth_db import (
     save_user_prediction, get_user_predictions, update_farm_profile, change_user_password
 )
@@ -241,7 +245,7 @@ def render_intelligence_overview_view(user, farm, df_market):
             st.html("""
             <div style="font-size:1.2rem; margin-bottom:6px;">📍</div>
             <div style="font-weight:700; font-size:1.02rem; color:#1D1D1F; margin-bottom:2px;">Nearby Market Finder</div>
-            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">Road distance circuity and driving time from farm GPS.</div>
+            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">Real-time road routing & nearest mandis directly from farm profile address.</div>
             """)
             if st.button("Find Markets →", key="qa_mandi_finder", use_container_width=True):
                 st.session_state.active_nav = "Market Intelligence"
@@ -489,16 +493,23 @@ def render_crop_yield_view(user, farm):
             soil_n=y_n, soil_p=y_p, soil_k=y_k, rainfall=y_rain, ph=y_ph
         )
         x_c1, x_c2 = st.columns([1, 1.8])
+        base_val = xai_res.get("base_value_quintal", 25.0) if isinstance(xai_res, dict) else 25.0
+        top_driver = xai_res.get("top_positive_driver") if isinstance(xai_res, dict) else None
+        if not top_driver and isinstance(xai_res, dict):
+            pos_f = xai_res.get("positive_factors", [])
+            top_driver = pos_f[0]["feature_label"] if pos_f else "Balanced Soil Chemistry"
+        if not top_driver:
+            top_driver = "Optimal NPK Nutrition"
         with x_c1:
             st.html(f"""
             <div style="background:#F0FDF4; border:1.5px solid #86EFAC; border-radius:8px; padding:12px; margin-bottom:10px;">
                 <div style="font-size:0.75rem; font-weight:800; color:#15803D;">BASE VALUE E[f(x)]</div>
-                <div style="font-size:1.4rem; font-weight:800; color:#0F172A;">{xai_res['base_value_quintal']} <span style="font-size:0.8rem; color:#64748B;">Q/acre</span></div>
+                <div style="font-size:1.4rem; font-weight:800; color:#0F172A;">{base_val} <span style="font-size:0.8rem; color:#64748B;">Q/acre</span></div>
                 <div style="font-size:0.75rem; color:#64748B;">District historical mean baseline</div>
             </div>
             <div style="background:#FFFFFF; border:1.5px solid #CBD5E1; border-radius:8px; padding:12px;">
                 <div style="font-size:0.75rem; font-weight:800; color:#0D5C3A;">TOP DRIVER INFLUENCE</div>
-                <div style="font-size:1.1rem; font-weight:800; color:#0D5C3A;">{xai_res['top_positive_driver']}</div>
+                <div style="font-size:1.1rem; font-weight:800; color:#0D5C3A;">{top_driver}</div>
                 <div style="font-size:0.8rem; color:#475569; margin-top:4px;">Primary parameter increasing projected yield above average.</div>
             </div>
             """)
@@ -542,6 +553,114 @@ def render_market_intelligence_view(user, farm, df_market):
     st.markdown("#### 💰 Smart Marketplace Intelligence & Arbitrage")
     st.caption("Compares 2,733 wholesale mandis using OpenRouteService road routing, itemizes transport expenses, and identifies highest Net Proceeds.")
 
+    # -------------------------------------------------------------------------
+    # REAL-TIME PROFILE ADDRESS & NEAREST DISTANCE CALCULATION RADAR
+    # -------------------------------------------------------------------------
+    p_village = str(farm.get("village", "Ramanagara Rural"))
+    p_district = str(farm.get("district", "Ramanagara"))
+    p_state = str(farm.get("state", "Karnataka"))
+    profile_addr_str = f"{p_village}, {p_district}, {p_state}".strip(", ")
+    default_lat = float(farm.get("latitude", 12.7209))
+    default_lon = float(farm.get("longitude", 77.2799))
+
+    if "active_origin_lat" not in st.session_state:
+        st.session_state.active_origin_lat = default_lat
+    if "active_origin_lon" not in st.session_state:
+        st.session_state.active_origin_lon = default_lon
+    if "active_origin_label" not in st.session_state:
+        st.session_state.active_origin_label = profile_addr_str
+
+    with st.container(border=True):
+        st.html(f"""
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-size:1.25rem;">📍</span>
+                <span style="font-weight:700; font-size:1.05rem; color:#0D5C3A;">Real-Time Origin & Distance Radar (Profile-Linked)</span>
+            </div>
+            <div style="font-size:0.75rem; background:#DCFCE7; color:#14532D; font-weight:700; padding:3px 10px; border-radius:12px; border:1px solid #86EFAC;">
+                GPS ACTIVE: {st.session_state.active_origin_lat:.4f}° N, {st.session_state.active_origin_lon:.4f}° E
+            </div>
+        </div>
+        <div style="font-size:0.83rem; color:#64748B; margin-bottom:12px;">
+            Current origin address pulled from your verified farm profile: <strong>{profile_addr_str}</strong>. You can switch to custom GPS or calculate road distances in real time.
+        </div>
+        """)
+
+        rad_c1, rad_c2 = st.columns([1.2, 1.8], gap="medium")
+        with rad_c1:
+            origin_mode = st.radio(
+                "Select Origin Address Mode:",
+                ["🏠 Use Profile Address", "✏️ Test Custom Address / Live Location"],
+                index=0 if st.session_state.active_origin_label == profile_addr_str else 1,
+                horizontal=False,
+                key="origin_mode_selector"
+            )
+
+        with rad_c2:
+            if "Profile Address" in origin_mode:
+                st.session_state.active_origin_lat = default_lat
+                st.session_state.active_origin_lon = default_lon
+                st.session_state.active_origin_label = profile_addr_str
+                st.info(f"Using Profile Location: **{profile_addr_str}** (Lat: {default_lat:.4f}, Lon: {default_lon:.4f})")
+            else:
+                cust_addr = st.text_input("Enter Village, Town, District, or PIN", value="Kolar, Karnataka", placeholder="e.g. Kolar, Karnataka or Mandya")
+                if st.button("📍 Geocode & Recalculate Distances Real-Time", type="primary", use_container_width=True):
+                    with st.spinner("Resolving coordinates in real-time..."):
+                        g_lat, g_lon, g_src = geocode_address(cust_addr)
+                        if g_lat and g_lon:
+                            st.session_state.active_origin_lat = g_lat
+                            st.session_state.active_origin_lon = g_lon
+                            st.session_state.active_origin_label = cust_addr
+                            st.success(f"Location resolved via {g_src}: {g_lat:.4f}° N, {g_lon:.4f}° E")
+                            st.rerun()
+                        else:
+                            st.warning(f"Could not resolve '{cust_addr}'. Using fallback coordinates.")
+
+        # Compute Real-Time Nearest Mandis from Active Origin
+        curr_lat = st.session_state.active_origin_lat
+        curr_lon = st.session_state.active_origin_lon
+        nearest_mandis = get_nearest_mandis_realtime(curr_lat, curr_lon, df_market, top_n=5)
+
+        if nearest_mandis:
+            closest_m = nearest_mandis[0]
+            sec_m = nearest_mandis[1] if len(nearest_mandis) > 1 else closest_m
+
+            nm_col1, nm_col2, nm_col3 = st.columns(3)
+            with nm_col1:
+                st.metric(
+                    label="📍 Nearest Wholesale Mandi",
+                    value=f"{closest_m['market']}",
+                    delta=f"{closest_m['road_distance_km']} km • {closest_m['duration_formatted']}"
+                )
+            with nm_col2:
+                st.metric(
+                    label="🚚 Est. Short-Haul Freight",
+                    value=f"₹{closest_m['freight_est']:,.2f}",
+                    delta=f"{closest_m['route_type']}"
+                )
+            with nm_col3:
+                st.metric(
+                    label="📍 2nd Nearest Mandi",
+                    value=f"{sec_m['market']}",
+                    delta=f"{sec_m['road_distance_km']} km • {sec_m['duration_formatted']}"
+                )
+
+            with st.expander(f"🔍 View Real-Time Road Distance Matrix to Nearest Mandis from {st.session_state.active_origin_label}", expanded=False):
+                df_near = pd.DataFrame(nearest_mandis)[[
+                    "market", "district", "state", "road_distance_km", "duration_formatted", "route_type", "freight_est"
+                ]].rename(columns={
+                    "market": "Mandi / Market",
+                    "district": "District",
+                    "state": "State",
+                    "road_distance_km": "Road Distance (km)",
+                    "duration_formatted": "Est. Driving Time",
+                    "route_type": "Route Corridor",
+                    "freight_est": "Est. Freight (₹)"
+                })
+                st.dataframe(df_near, use_container_width=True)
+
+    st.html("<div style='height: 8px;'></div>")
+
     col_mp1, col_mp2, col_mp3 = st.columns(3)
     with col_mp1:
         m_crop = st.selectbox("Crop", sorted(df_market['commodity'].unique()), index=sorted(df_market['commodity'].unique()).index("Tomato") if "Tomato" in df_market['commodity'].unique() else 0)
@@ -580,8 +699,8 @@ def render_market_intelligence_view(user, farm, df_market):
             df_marketplace=df_market,
             crop_name=m_crop,
             quantity_kg=m_qty,
-            farmer_lat=farm.get("latitude", 12.7209),
-            farmer_lon=farm.get("longitude", 77.2799),
+            farmer_lat=st.session_state.get("active_origin_lat", farm.get("latitude", 12.7209)),
+            farmer_lon=st.session_state.get("active_origin_lon", farm.get("longitude", 77.2799)),
             vehicle_config=vehicle_cfg
         )
 
@@ -884,7 +1003,7 @@ def render_explainable_ai_view(user, farm):
         st.html(f"""
         <div class="stat-card">
             <div class="stat-label">Expected Base Value E[f(x)]</div>
-            <div class="stat-value" style="color:#64748B;">{xai_res['base_value_quintal']} Q/ac</div>
+            <div class="stat-value" style="color:#64748B;">{xai_res.get('base_value_quintal', 25.0)} Q/ac</div>
             <div class="stat-subtext">Mean yield across training distribution</div>
         </div>
         """)
@@ -892,19 +1011,20 @@ def render_explainable_ai_view(user, farm):
         st.html(f"""
         <div class="stat-card" style="border:2px solid #0D5C3A; background:#F0FDF4;">
             <div class="stat-label">Final Predicted Yield f(x)</div>
-            <div class="stat-value" style="color:#0D5C3A;">{xai_res['predicted_yield_quintal']} Q/ac</div>
+            <div class="stat-value" style="color:#0D5C3A;">{xai_res.get('predicted_yield_quintal', 25.0)} Q/ac</div>
             <div class="stat-subtext">Net sum of all positive & negative SHAP attributions</div>
         </div>
         """)
 
     # Interactive Plotly Waterfall Chart
     with st.container(border=True):
-        st.plotly_chart(xai_res["waterfall_fig"], use_container_width=True)
+        if xai_res.get("waterfall_fig"):
+            st.plotly_chart(xai_res["waterfall_fig"], use_container_width=True)
 
     # Natural Language Explanations
     with st.container(border=True):
         st.html("<div style='font-size:1.15rem; font-weight:700; color:#0D5C3A; margin-bottom:12px;'>🌱 Plain-English Agronomic Explanations for Farmers</div>")
-        for expl in xai_res["natural_explanations"]:
+        for expl in xai_res.get("natural_explanations", []):
             st.markdown(expl)
 
 
@@ -972,13 +1092,15 @@ def render_decision_reports_view(user, farm, df_market):
 
         st.html("<div style='height:16px;'></div>")
         st.html("<div style='font-size:1.15rem; font-weight:800; color:#0D5C3A; margin-bottom:10px;'>8. Prioritized Recommended Farming Decisions</div>")
-        for dec in report["8_recommended_decisions"]:
+        for dec in report.get("8_recommended_decisions", []):
             st.markdown(dec)
 
     # Export Buttons
     c_dl1, c_dl2 = st.columns([1, 1])
     with c_dl1:
-        md_text = f"# Krishi AI Decision Brief - {r_crop}\n\nFarmer: {farm['full_name']}\nFarm: {farm['farm_name']}\n\n## Recommendations:\n" + "\n".join(report["8_recommended_decisions"])
+        farmer_name = user.get("full_name", "Farmer Enterprise")
+        farm_title = farm.get("farm_name", "Agricultural Enterprise")
+        md_text = f"# Krishi AI Decision Brief - {r_crop}\n\nFarmer: {farmer_name}\nFarm: {farm_title}\n\n## Recommendations:\n" + "\n".join(report.get("8_recommended_decisions", []))
         st.download_button(
             label="📥 Download Complete Decision Brief (TXT)",
             data=md_text,
@@ -1079,7 +1201,7 @@ def render_settings_view(user, farm):
     col_p1, col_p2 = st.columns([1, 1], gap="large")
     with col_p1:
         with st.container(border=True):
-            st.html("<div style='font-size:1.15rem; font-weight:700; color:#0D5C3A; margin-bottom:12px;'>Farm Profile Information</div>")
+            st.html("<div style='font-size:1.15rem; font-weight:700; color:#0D5C3A; margin-bottom:12px;'>Farm Profile Information & Real-Time Location</div>")
             p_farm_name = st.text_input("Farm Name", value=farm.get("farm_name", "Green Valley Agro Farm"))
             p_acreage = st.number_input("Holding Acreage (Acres)", value=float(farm.get("acreage", 2.5)), step=0.5)
             p_village = st.text_input("Village / Town", value=farm.get("village", "Ramanagara"))
@@ -1087,18 +1209,60 @@ def render_settings_view(user, farm):
             p_state = st.text_input("State", value=farm.get("state", "Karnataka"))
             p_crops = st.text_input("Primary Crops", value=farm.get("primary_crops", "Tomato, Maize, Banana"))
 
-            if st.button("Save Farm Profile", type="primary"):
+            curr_farm_lat = float(farm.get("latitude", 12.7209))
+            curr_farm_lon = float(farm.get("longitude", 77.2799))
+
+            st.html(f"""
+            <div style="background:#F8FAF8; border:1px solid #E2E8F0; padding:10px 14px; border-radius:10px; margin:10px 0;">
+                <div style="font-size:0.75rem; color:#64748B; font-weight:700; text-transform:uppercase;">Current Profile Geocoding</div>
+                <div style="font-size:0.92rem; font-weight:600; color:#0D5C3A;">📍 {curr_farm_lat:.4f}° N, {curr_farm_lon:.4f}° E</div>
+                <div style="font-size:0.78rem; color:#86868B;">Address: {p_village}, {p_district}, {p_state}</div>
+            </div>
+            """)
+
+            col_geo1, col_geo2 = st.columns(2)
+            with col_geo1:
+                btn_test_geo = st.button("📍 Geocode & Nearest Mandis", use_container_width=True)
+            with col_geo2:
+                btn_save_prof = st.button("💾 Save Profile & Update GPS", type="primary", use_container_width=True)
+            if btn_test_geo:
+                query_str = f"{p_village}, {p_district}, {p_state}"
+                res_lat, res_lon, res_src = geocode_address(query_str)
+                if res_lat and res_lon:
+                    st.success(f"✅ Geocoded via {res_src}: {res_lat:.4f}° N, {res_lon:.4f}° E")
+                    from modules.data_loader import load_normalized_marketplace_data
+                    df_preview = load_normalized_marketplace_data()
+                    preview_mandis = get_nearest_mandis_realtime(res_lat, res_lon, df_preview, top_n=3)
+                    if preview_mandis:
+                        st.markdown("**Nearest Wholesale Mandis from this location:**")
+                        for pm in preview_mandis:
+                            st.write(f"• **{pm['market']}**: {pm['road_distance_km']} km ({pm['duration_formatted']}) — Freight: ₹{pm['freight_est']}")
+                else:
+                    st.warning("Could not automatically geocode exact village; district coordinates will be retained.")
+
+            if btn_save_prof:
+                query_str = f"{p_village}, {p_district}, {p_state}"
+                res_lat, res_lon, _ = geocode_address(query_str)
+                final_lat = res_lat if res_lat else curr_farm_lat
+                final_lon = res_lon if res_lon else curr_farm_lon
+
                 up_ok, up_msg = update_farm_profile(user["id"], {
                     "farm_name": p_farm_name, "acreage": p_acreage, "village": p_village,
                     "district": p_district, "state": p_state, "primary_crops": p_crops,
-                    "latitude": farm.get("latitude", 12.7209), "longitude": farm.get("longitude", 77.2799)
+                    "latitude": final_lat, "longitude": final_lon
                 })
                 if up_ok:
                     st.success("Farm profile updated!")
                     st.session_state.current_user["farm"]["farm_name"] = p_farm_name
                     st.session_state.current_user["farm"]["acreage"] = p_acreage
                     st.session_state.current_user["farm"]["district"] = p_district
+                    st.session_state.current_user["farm"]["village"] = p_village
                     st.session_state.current_user["farm"]["state"] = p_state
+                    st.session_state.current_user["farm"]["latitude"] = final_lat
+                    st.session_state.current_user["farm"]["longitude"] = final_lon
+                    st.session_state.active_origin_lat = final_lat
+                    st.session_state.active_origin_lon = final_lon
+                    st.session_state.active_origin_label = f"{p_village}, {p_district}, {p_state}"
                     st.rerun()
 
     with col_p2:

@@ -73,6 +73,14 @@ from modules.buyer_ui_view import render_buyer_connect_view
 # Initialize Buyer & Industry Connect Tables
 init_buyer_connect_tables()
 
+import importlib
+import modules.geo_ors
+import modules.explainable_ai
+import modules.ui_views
+importlib.reload(modules.geo_ors)
+importlib.reload(modules.explainable_ai)
+importlib.reload(modules.ui_views)
+
 from modules.ui_views import (
     render_intelligence_overview_view,
     render_historical_analysis_view,
@@ -89,7 +97,7 @@ from modules.ui_views import (
     render_trend_shift_view
 )
 
-# Page Configuration
+# Page Configuration (Hot-reload synced) (Hot-reload synced)
 st.set_page_config(
     page_title="Krishi AI – Intelligent Farming Decision System",
     page_icon="🌿",
