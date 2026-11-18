@@ -1,0 +1,5674 @@
+{
+  "Ramanagara, Karnataka": {
+    "lat": 12.7209,
+    "lon": 77.2799,
+    "type": "origin"
+  },
+  "Kolar, Karnataka": {
+    "lat": 13.1367,
+    "lon": 78.1291,
+    "type": "origin"
+  },
+  "Bangalore, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "type": "origin"
+  },
+  "Anand, Gujarat": {
+    "lat": 22.5645,
+    "lon": 72.9289,
+    "type": "origin"
+  },
+  "Agra, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "type": "origin"
+  },
+  "Karnal, Haryana": {
+    "lat": 29.6857,
+    "lon": 76.9905,
+    "type": "origin"
+  },
+  "Damnagar, Amreli, Gujarat": {
+    "lat": 21.7011,
+    "lon": 71.5133,
+    "market": "Damnagar",
+    "district": "Amreli",
+    "state": "Gujarat"
+  },
+  "Damnagar, Gujarat": {
+    "lat": 21.7011,
+    "lon": 71.5133,
+    "market": "Damnagar",
+    "district": "Amreli",
+    "state": "Gujarat"
+  },
+  "Damnagar": {
+    "lat": 21.7011,
+    "lon": 71.5133,
+    "market": "Damnagar",
+    "district": "Amreli",
+    "state": "Gujarat"
+  },
+  "Savarkundla, Amreli, Gujarat": {
+    "lat": 21.3328,
+    "lon": 71.309,
+    "market": "Savarkundla",
+    "district": "Amreli",
+    "state": "Gujarat"
+  },
+  "Savarkundla, Gujarat": {
+    "lat": 21.3328,
+    "lon": 71.309,
+    "market": "Savarkundla",
+    "district": "Amreli",
+    "state": "Gujarat"
+  },
+  "Savarkundla": {
+    "lat": 21.3328,
+    "lon": 71.309,
+    "market": "Savarkundla",
+    "district": "Amreli",
+    "state": "Gujarat"
+  },
+  "Khambhat(Grain Market), Anand, Gujarat": {
+    "lat": 22.3131,
+    "lon": 72.6186,
+    "market": "Khambhat(Grain Market)",
+    "district": "Anand",
+    "state": "Gujarat"
+  },
+  "Khambhat(Grain Market), Gujarat": {
+    "lat": 22.3131,
+    "lon": 72.6186,
+    "market": "Khambhat(Grain Market)",
+    "district": "Anand",
+    "state": "Gujarat"
+  },
+  "Khambhat(Grain Market)": {
+    "lat": 22.3131,
+    "lon": 72.6186,
+    "market": "Khambhat(Grain Market)",
+    "district": "Anand",
+    "state": "Gujarat"
+  },
+  "Vadgam, Banaskanth, Gujarat": {
+    "lat": 24.0833,
+    "lon": 72.4833,
+    "market": "Vadgam",
+    "district": "Banaskanth",
+    "state": "Gujarat"
+  },
+  "Vadgam, Gujarat": {
+    "lat": 24.0833,
+    "lon": 72.4833,
+    "market": "Vadgam",
+    "district": "Banaskanth",
+    "state": "Gujarat"
+  },
+  "Vadgam": {
+    "lat": 24.0833,
+    "lon": 72.4833,
+    "market": "Vadgam",
+    "district": "Banaskanth",
+    "state": "Gujarat"
+  },
+  "Jambusar(Kaavi), Bharuch, Gujarat": {
+    "lat": 22.05,
+    "lon": 72.8,
+    "market": "Jambusar(Kaavi)",
+    "district": "Bharuch",
+    "state": "Gujarat"
+  },
+  "Jambusar(Kaavi), Gujarat": {
+    "lat": 22.05,
+    "lon": 72.8,
+    "market": "Jambusar(Kaavi)",
+    "district": "Bharuch",
+    "state": "Gujarat"
+  },
+  "Jambusar(Kaavi)": {
+    "lat": 22.05,
+    "lon": 72.8,
+    "market": "Jambusar(Kaavi)",
+    "district": "Bharuch",
+    "state": "Gujarat"
+  },
+  "Mansa(Manas Veg Yard), Gandhinagar, Gujarat": {
+    "lat": 23.4264,
+    "lon": 72.7936,
+    "market": "Mansa(Manas Veg Yard)",
+    "district": "Gandhinagar",
+    "state": "Gujarat"
+  },
+  "Mansa(Manas Veg Yard), Gujarat": {
+    "lat": 23.4264,
+    "lon": 72.7936,
+    "market": "Mansa(Manas Veg Yard)",
+    "district": "Gandhinagar",
+    "state": "Gujarat"
+  },
+  "Mansa(Manas Veg Yard)": {
+    "lat": 23.4264,
+    "lon": 72.7936,
+    "market": "Mansa(Manas Veg Yard)",
+    "district": "Gandhinagar",
+    "state": "Gujarat"
+  },
+  "Mangrol, Junagarh, Gujarat": {
+    "lat": 21.5222,
+    "lon": 70.4579,
+    "market": "Mangrol",
+    "district": "Junagarh",
+    "state": "Gujarat"
+  },
+  "Mangrol, Gujarat": {
+    "lat": 21.5222,
+    "lon": 70.4579,
+    "market": "Mangrol",
+    "district": "Junagarh",
+    "state": "Gujarat"
+  },
+  "Mangrol": {
+    "lat": 21.5222,
+    "lon": 70.4579,
+    "market": "Mangrol",
+    "district": "Junagarh",
+    "state": "Gujarat"
+  },
+  "Bilimora, Navsari, Gujarat": {
+    "lat": 20.7634,
+    "lon": 72.9693,
+    "market": "Bilimora",
+    "district": "Navsari",
+    "state": "Gujarat"
+  },
+  "Bilimora, Gujarat": {
+    "lat": 20.7634,
+    "lon": 72.9693,
+    "market": "Bilimora",
+    "district": "Navsari",
+    "state": "Gujarat"
+  },
+  "Bilimora": {
+    "lat": 20.7634,
+    "lon": 72.9693,
+    "market": "Bilimora",
+    "district": "Navsari",
+    "state": "Gujarat"
+  },
+  "Dhoraji, Rajkot, Gujarat": {
+    "lat": 22.3039,
+    "lon": 70.8022,
+    "market": "Dhoraji",
+    "district": "Rajkot",
+    "state": "Gujarat"
+  },
+  "Dhoraji, Gujarat": {
+    "lat": 22.3039,
+    "lon": 70.8022,
+    "market": "Dhoraji",
+    "district": "Rajkot",
+    "state": "Gujarat"
+  },
+  "Dhoraji": {
+    "lat": 22.3039,
+    "lon": 70.8022,
+    "market": "Dhoraji",
+    "district": "Rajkot",
+    "state": "Gujarat"
+  },
+  "Rajkot(Veg.Sub Yard), Rajkot, Gujarat": {
+    "lat": 22.3039,
+    "lon": 70.8022,
+    "market": "Rajkot(Veg.Sub Yard)",
+    "district": "Rajkot",
+    "state": "Gujarat"
+  },
+  "Rajkot(Veg.Sub Yard), Gujarat": {
+    "lat": 22.3039,
+    "lon": 70.8022,
+    "market": "Rajkot(Veg.Sub Yard)",
+    "district": "Rajkot",
+    "state": "Gujarat"
+  },
+  "Rajkot(Veg.Sub Yard)": {
+    "lat": 22.3039,
+    "lon": 70.8022,
+    "market": "Rajkot(Veg.Sub Yard)",
+    "district": "Rajkot",
+    "state": "Gujarat"
+  },
+  "Modasa(Tintoi), Sabarkantha, Gujarat": {
+    "lat": 23.4636,
+    "lon": 73.3006,
+    "market": "Modasa(Tintoi)",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Modasa(Tintoi), Gujarat": {
+    "lat": 23.4636,
+    "lon": 73.3006,
+    "market": "Modasa(Tintoi)",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Modasa(Tintoi)": {
+    "lat": 23.4636,
+    "lon": 73.3006,
+    "market": "Modasa(Tintoi)",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Mahuva(Anaval), Surat, Gujarat": {
+    "lat": 21.0833,
+    "lon": 71.7667,
+    "market": "Mahuva(Anaval)",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Mahuva(Anaval), Gujarat": {
+    "lat": 21.0833,
+    "lon": 71.7667,
+    "market": "Mahuva(Anaval)",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Mahuva(Anaval)": {
+    "lat": 21.0833,
+    "lon": 71.7667,
+    "market": "Mahuva(Anaval)",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Surat, Surat, Gujarat": {
+    "lat": 21.1702,
+    "lon": 72.8311,
+    "market": "Surat",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Surat, Gujarat": {
+    "lat": 21.1702,
+    "lon": 72.8311,
+    "market": "Surat",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Surat": {
+    "lat": 21.1702,
+    "lon": 72.8311,
+    "market": "Surat",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Dhragradhra, Surendranagar, Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Dhragradhra",
+    "district": "Surendranagar",
+    "state": "Gujarat"
+  },
+  "Dhragradhra, Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Dhragradhra",
+    "district": "Surendranagar",
+    "state": "Gujarat"
+  },
+  "Dhragradhra": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Dhragradhra",
+    "district": "Surendranagar",
+    "state": "Gujarat"
+  },
+  "Vadhvan, Surendranagar, Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Vadhvan",
+    "district": "Surendranagar",
+    "state": "Gujarat"
+  },
+  "Vadhvan, Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Vadhvan",
+    "district": "Surendranagar",
+    "state": "Gujarat"
+  },
+  "Vadhvan": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Vadhvan",
+    "district": "Surendranagar",
+    "state": "Gujarat"
+  },
+  "Padra, Vadodara(Baroda), Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Padra",
+    "district": "Vadodara(Baroda)",
+    "state": "Gujarat"
+  },
+  "Padra, Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Padra",
+    "district": "Vadodara(Baroda)",
+    "state": "Gujarat"
+  },
+  "Padra": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Padra",
+    "district": "Vadodara(Baroda)",
+    "state": "Gujarat"
+  },
+  "Fatehabad, Fatehabad, Haryana": {
+    "lat": 29.5152,
+    "lon": 75.4556,
+    "market": "Fatehabad",
+    "district": "Fatehabad",
+    "state": "Haryana"
+  },
+  "Fatehabad, Haryana": {
+    "lat": 29.5152,
+    "lon": 75.4556,
+    "market": "Fatehabad",
+    "district": "Fatehabad",
+    "state": "Haryana"
+  },
+  "Fatehabad": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Fatehabad",
+    "district": "Agra",
+    "state": "Uttar Pradesh"
+  },
+  "Gurgaon, Gurgaon, Haryana": {
+    "lat": 28.4595,
+    "lon": 77.0266,
+    "market": "Gurgaon",
+    "district": "Gurgaon",
+    "state": "Haryana"
+  },
+  "Gurgaon, Haryana": {
+    "lat": 28.4595,
+    "lon": 77.0266,
+    "market": "Gurgaon",
+    "district": "Gurgaon",
+    "state": "Haryana"
+  },
+  "Gurgaon": {
+    "lat": 28.4595,
+    "lon": 77.0266,
+    "market": "Gurgaon",
+    "district": "Gurgaon",
+    "state": "Haryana"
+  },
+  "Hansi, Hissar, Haryana": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Hansi",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Hansi, Haryana": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Hansi",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Hansi": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Hansi",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Dhand, Kaithal, Haryana": {
+    "lat": 29.8015,
+    "lon": 76.3996,
+    "market": "Dhand",
+    "district": "Kaithal",
+    "state": "Haryana"
+  },
+  "Dhand, Haryana": {
+    "lat": 29.8015,
+    "lon": 76.3996,
+    "market": "Dhand",
+    "district": "Kaithal",
+    "state": "Haryana"
+  },
+  "Dhand": {
+    "lat": 29.8015,
+    "lon": 76.3996,
+    "market": "Dhand",
+    "district": "Kaithal",
+    "state": "Haryana"
+  },
+  "Narnaul, Mahendragarh-Narnaul, Haryana": {
+    "lat": 29.5152,
+    "lon": 75.4556,
+    "market": "Narnaul",
+    "district": "Mahendragarh-Narnaul",
+    "state": "Haryana"
+  },
+  "Narnaul, Haryana": {
+    "lat": 29.5152,
+    "lon": 75.4556,
+    "market": "Narnaul",
+    "district": "Mahendragarh-Narnaul",
+    "state": "Haryana"
+  },
+  "Narnaul": {
+    "lat": 29.5152,
+    "lon": 75.4556,
+    "market": "Narnaul",
+    "district": "Mahendragarh-Narnaul",
+    "state": "Haryana"
+  },
+  "FerozpurZirkha(Nagina), Mewat, Haryana": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "FerozpurZirkha(Nagina)",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "FerozpurZirkha(Nagina), Haryana": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "FerozpurZirkha(Nagina)",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "FerozpurZirkha(Nagina)": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "FerozpurZirkha(Nagina)",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "Punhana, Mewat, Haryana": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "Punhana",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "Punhana, Haryana": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "Punhana",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "Punhana": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "Punhana",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "Tauru, Mewat, Haryana": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "Tauru",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "Tauru, Haryana": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "Tauru",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "Tauru": {
+    "lat": 28.1065,
+    "lon": 76.9972,
+    "market": "Tauru",
+    "district": "Mewat",
+    "state": "Haryana"
+  },
+  "Panipat, Panipat, Haryana": {
+    "lat": 29.3909,
+    "lon": 76.9635,
+    "market": "Panipat",
+    "district": "Panipat",
+    "state": "Haryana"
+  },
+  "Panipat, Haryana": {
+    "lat": 29.3909,
+    "lon": 76.9635,
+    "market": "Panipat",
+    "district": "Panipat",
+    "state": "Haryana"
+  },
+  "Panipat": {
+    "lat": 29.3909,
+    "lon": 76.9635,
+    "market": "Panipat",
+    "district": "Panipat",
+    "state": "Haryana"
+  },
+  "Samalkha, Panipat, Haryana": {
+    "lat": 29.3909,
+    "lon": 76.9635,
+    "market": "Samalkha",
+    "district": "Panipat",
+    "state": "Haryana"
+  },
+  "Samalkha, Haryana": {
+    "lat": 29.3909,
+    "lon": 76.9635,
+    "market": "Samalkha",
+    "district": "Panipat",
+    "state": "Haryana"
+  },
+  "Samalkha": {
+    "lat": 29.3909,
+    "lon": 76.9635,
+    "market": "Samalkha",
+    "district": "Panipat",
+    "state": "Haryana"
+  },
+  "Kosli, Rewari, Haryana": {
+    "lat": 28.1833,
+    "lon": 76.6167,
+    "market": "Kosli",
+    "district": "Rewari",
+    "state": "Haryana"
+  },
+  "Kosli, Haryana": {
+    "lat": 28.1833,
+    "lon": 76.6167,
+    "market": "Kosli",
+    "district": "Rewari",
+    "state": "Haryana"
+  },
+  "Kosli": {
+    "lat": 28.1833,
+    "lon": 76.6167,
+    "market": "Kosli",
+    "district": "Rewari",
+    "state": "Haryana"
+  },
+  "Meham, Rohtak, Haryana": {
+    "lat": 28.8955,
+    "lon": 76.6066,
+    "market": "Meham",
+    "district": "Rohtak",
+    "state": "Haryana"
+  },
+  "Meham, Haryana": {
+    "lat": 28.8955,
+    "lon": 76.6066,
+    "market": "Meham",
+    "district": "Rohtak",
+    "state": "Haryana"
+  },
+  "Meham": {
+    "lat": 28.8955,
+    "lon": 76.6066,
+    "market": "Meham",
+    "district": "Rohtak",
+    "state": "Haryana"
+  },
+  "Ganaur, Sonipat, Haryana": {
+    "lat": 28.9931,
+    "lon": 77.0151,
+    "market": "Ganaur",
+    "district": "Sonipat",
+    "state": "Haryana"
+  },
+  "Ganaur, Haryana": {
+    "lat": 28.9931,
+    "lon": 77.0151,
+    "market": "Ganaur",
+    "district": "Sonipat",
+    "state": "Haryana"
+  },
+  "Ganaur": {
+    "lat": 28.9931,
+    "lon": 77.0151,
+    "market": "Ganaur",
+    "district": "Sonipat",
+    "state": "Haryana"
+  },
+  "Gohana, Sonipat, Haryana": {
+    "lat": 28.9931,
+    "lon": 77.0151,
+    "market": "Gohana",
+    "district": "Sonipat",
+    "state": "Haryana"
+  },
+  "Gohana, Haryana": {
+    "lat": 28.9931,
+    "lon": 77.0151,
+    "market": "Gohana",
+    "district": "Sonipat",
+    "state": "Haryana"
+  },
+  "Gohana": {
+    "lat": 28.9931,
+    "lon": 77.0151,
+    "market": "Gohana",
+    "district": "Sonipat",
+    "state": "Haryana"
+  },
+  "Radaur, Yamuna Nagar, Haryana": {
+    "lat": 30.129,
+    "lon": 77.2674,
+    "market": "Radaur",
+    "district": "Yamuna Nagar",
+    "state": "Haryana"
+  },
+  "Radaur, Haryana": {
+    "lat": 30.129,
+    "lon": 77.2674,
+    "market": "Radaur",
+    "district": "Yamuna Nagar",
+    "state": "Haryana"
+  },
+  "Radaur": {
+    "lat": 30.129,
+    "lon": 77.2674,
+    "market": "Radaur",
+    "district": "Yamuna Nagar",
+    "state": "Haryana"
+  },
+  "Sadhaura, Yamuna Nagar, Haryana": {
+    "lat": 30.129,
+    "lon": 77.2674,
+    "market": "Sadhaura",
+    "district": "Yamuna Nagar",
+    "state": "Haryana"
+  },
+  "Sadhaura, Haryana": {
+    "lat": 30.129,
+    "lon": 77.2674,
+    "market": "Sadhaura",
+    "district": "Yamuna Nagar",
+    "state": "Haryana"
+  },
+  "Sadhaura": {
+    "lat": 30.129,
+    "lon": 77.2674,
+    "market": "Sadhaura",
+    "district": "Yamuna Nagar",
+    "state": "Haryana"
+  },
+  "Chamba, Chamba, Himachal Pradesh": {
+    "lat": 32.5534,
+    "lon": 76.1258,
+    "market": "Chamba",
+    "district": "Chamba",
+    "state": "Himachal Pradesh"
+  },
+  "Chamba, Himachal Pradesh": {
+    "lat": 32.5534,
+    "lon": 76.1258,
+    "market": "Chamba",
+    "district": "Chamba",
+    "state": "Himachal Pradesh"
+  },
+  "Chamba": {
+    "lat": 32.5534,
+    "lon": 76.1258,
+    "market": "Chamba",
+    "district": "Chamba",
+    "state": "Himachal Pradesh"
+  },
+  "Hamirpur, Hamirpur, Himachal Pradesh": {
+    "lat": 31.6862,
+    "lon": 76.5213,
+    "market": "Hamirpur",
+    "district": "Hamirpur",
+    "state": "Himachal Pradesh"
+  },
+  "Hamirpur, Himachal Pradesh": {
+    "lat": 31.6862,
+    "lon": 76.5213,
+    "market": "Hamirpur",
+    "district": "Hamirpur",
+    "state": "Himachal Pradesh"
+  },
+  "Hamirpur": {
+    "lat": 31.6862,
+    "lon": 76.5213,
+    "market": "Hamirpur",
+    "district": "Hamirpur",
+    "state": "Himachal Pradesh"
+  },
+  "Dharamshala, Kangra, Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Dharamshala",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Dharamshala, Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Dharamshala",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Dharamshala": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Dharamshala",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra, Kangra, Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra, Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Baijnath), Kangra, Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra(Baijnath)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Baijnath), Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra(Baijnath)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Baijnath)": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra(Baijnath)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Jaisinghpur), Kangra, Himachal Pradesh": {
+    "lat": 31.9,
+    "lon": 76.6,
+    "market": "Kangra(Jaisinghpur)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Jaisinghpur), Himachal Pradesh": {
+    "lat": 31.9,
+    "lon": 76.6,
+    "market": "Kangra(Jaisinghpur)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Jaisinghpur)": {
+    "lat": 31.9,
+    "lon": 76.6,
+    "market": "Kangra(Jaisinghpur)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Nagrota Bagwan), Kangra, Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra(Nagrota Bagwan)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Nagrota Bagwan), Himachal Pradesh": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra(Nagrota Bagwan)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Kangra(Nagrota Bagwan)": {
+    "lat": 32.0998,
+    "lon": 76.2691,
+    "market": "Kangra(Nagrota Bagwan)",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Palampur, Kangra, Himachal Pradesh": {
+    "lat": 32.1109,
+    "lon": 76.5363,
+    "market": "Palampur",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Palampur, Himachal Pradesh": {
+    "lat": 32.1109,
+    "lon": 76.5363,
+    "market": "Palampur",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Palampur": {
+    "lat": 32.1109,
+    "lon": 76.5363,
+    "market": "Palampur",
+    "district": "Kangra",
+    "state": "Himachal Pradesh"
+  },
+  "Solan(Nalagarh), Solan, Himachal Pradesh": {
+    "lat": 30.9045,
+    "lon": 77.0967,
+    "market": "Solan(Nalagarh)",
+    "district": "Solan",
+    "state": "Himachal Pradesh"
+  },
+  "Solan(Nalagarh), Himachal Pradesh": {
+    "lat": 30.9045,
+    "lon": 77.0967,
+    "market": "Solan(Nalagarh)",
+    "district": "Solan",
+    "state": "Himachal Pradesh"
+  },
+  "Solan(Nalagarh)": {
+    "lat": 30.9045,
+    "lon": 77.0967,
+    "market": "Solan(Nalagarh)",
+    "district": "Solan",
+    "state": "Himachal Pradesh"
+  },
+  "Kathua, Kathua, Jammu and Kashmir": {
+    "lat": 32.3866,
+    "lon": 75.5222,
+    "market": "Kathua",
+    "district": "Kathua",
+    "state": "Jammu and Kashmir"
+  },
+  "Kathua, Jammu and Kashmir": {
+    "lat": 32.3866,
+    "lon": 75.5222,
+    "market": "Kathua",
+    "district": "Kathua",
+    "state": "Jammu and Kashmir"
+  },
+  "Kathua": {
+    "lat": 32.3866,
+    "lon": 75.5222,
+    "market": "Kathua",
+    "district": "Kathua",
+    "state": "Jammu and Kashmir"
+  },
+  "Rajouri (F&V), Rajouri, Jammu and Kashmir": {
+    "lat": 33.3768,
+    "lon": 74.3129,
+    "market": "Rajouri (F&V)",
+    "district": "Rajouri",
+    "state": "Jammu and Kashmir"
+  },
+  "Rajouri (F&V), Jammu and Kashmir": {
+    "lat": 33.3768,
+    "lon": 74.3129,
+    "market": "Rajouri (F&V)",
+    "district": "Rajouri",
+    "state": "Jammu and Kashmir"
+  },
+  "Rajouri (F&V)": {
+    "lat": 33.3768,
+    "lon": 74.3129,
+    "market": "Rajouri (F&V)",
+    "district": "Rajouri",
+    "state": "Jammu and Kashmir"
+  },
+  "Chengannur, Alappuzha, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Chengannur",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Chengannur, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Chengannur",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Chengannur": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Chengannur",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Cherthala, Alappuzha, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Cherthala",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Cherthala, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Cherthala",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Cherthala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Cherthala",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Harippad, Alappuzha, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Harippad",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Harippad, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Harippad",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Harippad": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Harippad",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Mannar, Alappuzha, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Mannar",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Mannar, Kerala": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Mannar",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Mannar": {
+    "lat": 9.4981,
+    "lon": 76.3388,
+    "market": "Mannar",
+    "district": "Alappuzha",
+    "state": "Kerala"
+  },
+  "Angamaly, Ernakulam, Kerala": {
+    "lat": 10.1852,
+    "lon": 76.3869,
+    "market": "Angamaly",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Angamaly, Kerala": {
+    "lat": 10.1852,
+    "lon": 76.3869,
+    "market": "Angamaly",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Angamaly": {
+    "lat": 10.1852,
+    "lon": 76.3869,
+    "market": "Angamaly",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Ernakulam, Ernakulam, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Ernakulam",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Ernakulam, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Ernakulam",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Ernakulam": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Ernakulam",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "North Paravur, Ernakulam, Kerala": {
+    "lat": 10.1444,
+    "lon": 76.2294,
+    "market": "North Paravur",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "North Paravur, Kerala": {
+    "lat": 10.1444,
+    "lon": 76.2294,
+    "market": "North Paravur",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "North Paravur": {
+    "lat": 10.1444,
+    "lon": 76.2294,
+    "market": "North Paravur",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Perumbavoor, Ernakulam, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Perumbavoor",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Perumbavoor, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Perumbavoor",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Perumbavoor": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Perumbavoor",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Thrippunithura, Ernakulam, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Thrippunithura",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Thrippunithura, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Thrippunithura",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Thrippunithura": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Thrippunithura",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Thalasserry, Kannur, Kerala": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Thalasserry",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Thalasserry, Kerala": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Thalasserry",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Thalasserry": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Thalasserry",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Ettumanoor, Kottayam, Kerala": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Ettumanoor",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Ettumanoor, Kerala": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Ettumanoor",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Ettumanoor": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Ettumanoor",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Pampady, Kottayam, Kerala": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Pampady",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Pampady, Kerala": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Pampady",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Pampady": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Pampady",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Thalayolaparambu, Kottayam, Kerala": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Thalayolaparambu",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Thalayolaparambu, Kerala": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Thalayolaparambu",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Thalayolaparambu": {
+    "lat": 9.5916,
+    "lon": 76.5222,
+    "market": "Thalayolaparambu",
+    "district": "Kottayam",
+    "state": "Kerala"
+  },
+  "Mukkom, Kozhikode(Calicut), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Mukkom",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Mukkom, Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Mukkom",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Mukkom": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Mukkom",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Palayam, Kozhikode(Calicut), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Palayam",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Palayam, Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Palayam",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Palayam": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Palayam",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Quilandy, Kozhikode(Calicut), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Quilandy",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Quilandy, Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Quilandy",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Quilandy": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Quilandy",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Vengeri(Kozhikode), Kozhikode(Calicut), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Vengeri(Kozhikode)",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Vengeri(Kozhikode), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Vengeri(Kozhikode)",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Vengeri(Kozhikode)": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Vengeri(Kozhikode)",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Kottakkal, Malappuram, Kerala": {
+    "lat": 11.0,
+    "lon": 76.0,
+    "market": "Kottakkal",
+    "district": "Malappuram",
+    "state": "Kerala"
+  },
+  "Kottakkal, Kerala": {
+    "lat": 11.0,
+    "lon": 76.0,
+    "market": "Kottakkal",
+    "district": "Malappuram",
+    "state": "Kerala"
+  },
+  "Kottakkal": {
+    "lat": 11.0,
+    "lon": 76.0,
+    "market": "Kottakkal",
+    "district": "Malappuram",
+    "state": "Kerala"
+  },
+  "Perinthalmanna, Malappuram, Kerala": {
+    "lat": 11.051,
+    "lon": 76.0711,
+    "market": "Perinthalmanna",
+    "district": "Malappuram",
+    "state": "Kerala"
+  },
+  "Perinthalmanna, Kerala": {
+    "lat": 11.051,
+    "lon": 76.0711,
+    "market": "Perinthalmanna",
+    "district": "Malappuram",
+    "state": "Kerala"
+  },
+  "Perinthalmanna": {
+    "lat": 11.051,
+    "lon": 76.0711,
+    "market": "Perinthalmanna",
+    "district": "Malappuram",
+    "state": "Kerala"
+  },
+  "Koduvayoor, Palakad, Kerala": {
+    "lat": 10.6833,
+    "lon": 76.6833,
+    "market": "Koduvayoor",
+    "district": "Palakad",
+    "state": "Kerala"
+  },
+  "Koduvayoor, Kerala": {
+    "lat": 10.6833,
+    "lon": 76.6833,
+    "market": "Koduvayoor",
+    "district": "Palakad",
+    "state": "Kerala"
+  },
+  "Koduvayoor": {
+    "lat": 10.6833,
+    "lon": 76.6833,
+    "market": "Koduvayoor",
+    "district": "Palakad",
+    "state": "Kerala"
+  },
+  "Kalanjoor  VFPCK, Pathanamthitta, Kerala": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Kalanjoor  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Kalanjoor  VFPCK, Kerala": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Kalanjoor  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Kalanjoor  VFPCK": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Kalanjoor  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Mezhuveli  VFPCK, Pathanamthitta, Kerala": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Mezhuveli  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Mezhuveli  VFPCK, Kerala": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Mezhuveli  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Mezhuveli  VFPCK": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Mezhuveli  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Irinjalakkuda, Thirssur, Kerala": {
+    "lat": 10.5276,
+    "lon": 76.2144,
+    "market": "Irinjalakkuda",
+    "district": "Thirssur",
+    "state": "Kerala"
+  },
+  "Irinjalakkuda, Kerala": {
+    "lat": 10.5276,
+    "lon": 76.2144,
+    "market": "Irinjalakkuda",
+    "district": "Thirssur",
+    "state": "Kerala"
+  },
+  "Irinjalakkuda": {
+    "lat": 10.5276,
+    "lon": 76.2144,
+    "market": "Irinjalakkuda",
+    "district": "Thirssur",
+    "state": "Kerala"
+  },
+  "Thrissur, Thirssur, Kerala": {
+    "lat": 10.5276,
+    "lon": 76.2144,
+    "market": "Thrissur",
+    "district": "Thirssur",
+    "state": "Kerala"
+  },
+  "Thrissur, Kerala": {
+    "lat": 10.5276,
+    "lon": 76.2144,
+    "market": "Thrissur",
+    "district": "Thirssur",
+    "state": "Kerala"
+  },
+  "Thrissur": {
+    "lat": 10.5276,
+    "lon": 76.2144,
+    "market": "Thrissur",
+    "district": "Thirssur",
+    "state": "Kerala"
+  },
+  "Parassala, Thiruvananthapuram, Kerala": {
+    "lat": 8.5241,
+    "lon": 76.9366,
+    "market": "Parassala",
+    "district": "Thiruvananthapuram",
+    "state": "Kerala"
+  },
+  "Parassala, Kerala": {
+    "lat": 8.5241,
+    "lon": 76.9366,
+    "market": "Parassala",
+    "district": "Thiruvananthapuram",
+    "state": "Kerala"
+  },
+  "Parassala": {
+    "lat": 8.5241,
+    "lon": 76.9366,
+    "market": "Parassala",
+    "district": "Thiruvananthapuram",
+    "state": "Kerala"
+  },
+  "Sabalgarh(F&V), Morena, Madhya Pradesh": {
+    "lat": 26.495,
+    "lon": 77.994,
+    "market": "Sabalgarh(F&V)",
+    "district": "Morena",
+    "state": "Madhya Pradesh"
+  },
+  "Sabalgarh(F&V), Madhya Pradesh": {
+    "lat": 26.495,
+    "lon": 77.994,
+    "market": "Sabalgarh(F&V)",
+    "district": "Morena",
+    "state": "Madhya Pradesh"
+  },
+  "Sabalgarh(F&V)": {
+    "lat": 26.495,
+    "lon": 77.994,
+    "market": "Sabalgarh(F&V)",
+    "district": "Morena",
+    "state": "Madhya Pradesh"
+  },
+  "Kohima, Kohima, Nagaland": {
+    "lat": 25.6751,
+    "lon": 94.1086,
+    "market": "Kohima",
+    "district": "Kohima",
+    "state": "Nagaland"
+  },
+  "Kohima, Nagaland": {
+    "lat": 25.6751,
+    "lon": 94.1086,
+    "market": "Kohima",
+    "district": "Kohima",
+    "state": "Nagaland"
+  },
+  "Kohima": {
+    "lat": 25.6751,
+    "lon": 94.1086,
+    "market": "Kohima",
+    "district": "Kohima",
+    "state": "Nagaland"
+  },
+  "Jaleswar, Balasore, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Jaleswar",
+    "district": "Balasore",
+    "state": "Odisha"
+  },
+  "Jaleswar, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Jaleswar",
+    "district": "Balasore",
+    "state": "Odisha"
+  },
+  "Jaleswar": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Jaleswar",
+    "district": "Balasore",
+    "state": "Odisha"
+  },
+  "Attabira, Bargarh, Odisha": {
+    "lat": 21.3333,
+    "lon": 83.6167,
+    "market": "Attabira",
+    "district": "Bargarh",
+    "state": "Odisha"
+  },
+  "Attabira, Odisha": {
+    "lat": 21.3333,
+    "lon": 83.6167,
+    "market": "Attabira",
+    "district": "Bargarh",
+    "state": "Odisha"
+  },
+  "Attabira": {
+    "lat": 21.3333,
+    "lon": 83.6167,
+    "market": "Attabira",
+    "district": "Bargarh",
+    "state": "Odisha"
+  },
+  "Chandabali, Bhadrak, Odisha": {
+    "lat": 21.0574,
+    "lon": 86.516,
+    "market": "Chandabali",
+    "district": "Bhadrak",
+    "state": "Odisha"
+  },
+  "Chandabali, Odisha": {
+    "lat": 21.0574,
+    "lon": 86.516,
+    "market": "Chandabali",
+    "district": "Bhadrak",
+    "state": "Odisha"
+  },
+  "Chandabali": {
+    "lat": 21.0574,
+    "lon": 86.516,
+    "market": "Chandabali",
+    "district": "Bhadrak",
+    "state": "Odisha"
+  },
+  "Khunthabandha, Boudh, Odisha": {
+    "lat": 20.8407,
+    "lon": 84.3262,
+    "market": "Khunthabandha",
+    "district": "Boudh",
+    "state": "Odisha"
+  },
+  "Khunthabandha, Odisha": {
+    "lat": 20.8407,
+    "lon": 84.3262,
+    "market": "Khunthabandha",
+    "district": "Boudh",
+    "state": "Odisha"
+  },
+  "Khunthabandha": {
+    "lat": 20.8407,
+    "lon": 84.3262,
+    "market": "Khunthabandha",
+    "district": "Boudh",
+    "state": "Odisha"
+  },
+  "Hindol, Dhenkanal, Odisha": {
+    "lat": 20.6667,
+    "lon": 85.6,
+    "market": "Hindol",
+    "district": "Dhenkanal",
+    "state": "Odisha"
+  },
+  "Hindol, Odisha": {
+    "lat": 20.6667,
+    "lon": 85.6,
+    "market": "Hindol",
+    "district": "Dhenkanal",
+    "state": "Odisha"
+  },
+  "Hindol": {
+    "lat": 20.6667,
+    "lon": 85.6,
+    "market": "Hindol",
+    "district": "Dhenkanal",
+    "state": "Odisha"
+  },
+  "Kamakhyanagar, Dhenkanal, Odisha": {
+    "lat": 20.6667,
+    "lon": 85.6,
+    "market": "Kamakhyanagar",
+    "district": "Dhenkanal",
+    "state": "Odisha"
+  },
+  "Kamakhyanagar, Odisha": {
+    "lat": 20.6667,
+    "lon": 85.6,
+    "market": "Kamakhyanagar",
+    "district": "Dhenkanal",
+    "state": "Odisha"
+  },
+  "Kamakhyanagar": {
+    "lat": 20.6667,
+    "lon": 85.6,
+    "market": "Kamakhyanagar",
+    "district": "Dhenkanal",
+    "state": "Odisha"
+  },
+  "Parlakhemundi, Gajapati, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Parlakhemundi",
+    "district": "Gajapati",
+    "state": "Odisha"
+  },
+  "Parlakhemundi, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Parlakhemundi",
+    "district": "Gajapati",
+    "state": "Odisha"
+  },
+  "Parlakhemundi": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Parlakhemundi",
+    "district": "Gajapati",
+    "state": "Odisha"
+  },
+  "Bhanjanagar, Ganjam, Odisha": {
+    "lat": 19.3833,
+    "lon": 85.0667,
+    "market": "Bhanjanagar",
+    "district": "Ganjam",
+    "state": "Odisha"
+  },
+  "Bhanjanagar, Odisha": {
+    "lat": 19.3833,
+    "lon": 85.0667,
+    "market": "Bhanjanagar",
+    "district": "Ganjam",
+    "state": "Odisha"
+  },
+  "Bhanjanagar": {
+    "lat": 19.3833,
+    "lon": 85.0667,
+    "market": "Bhanjanagar",
+    "district": "Ganjam",
+    "state": "Odisha"
+  },
+  "Kendrapara, Kendrapara, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Kendrapara",
+    "district": "Kendrapara",
+    "state": "Odisha"
+  },
+  "Kendrapara, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Kendrapara",
+    "district": "Kendrapara",
+    "state": "Odisha"
+  },
+  "Kendrapara": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Kendrapara",
+    "district": "Kendrapara",
+    "state": "Odisha"
+  },
+  "Kendrapara(Marshaghai), Kendrapara, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Kendrapara(Marshaghai)",
+    "district": "Kendrapara",
+    "state": "Odisha"
+  },
+  "Kendrapara(Marshaghai), Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Kendrapara(Marshaghai)",
+    "district": "Kendrapara",
+    "state": "Odisha"
+  },
+  "Kendrapara(Marshaghai)": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Kendrapara(Marshaghai)",
+    "district": "Kendrapara",
+    "state": "Odisha"
+  },
+  "Bahadajholla, Nayagarh, Odisha": {
+    "lat": 20.1251,
+    "lon": 85.107,
+    "market": "Bahadajholla",
+    "district": "Nayagarh",
+    "state": "Odisha"
+  },
+  "Bahadajholla, Odisha": {
+    "lat": 20.1251,
+    "lon": 85.107,
+    "market": "Bahadajholla",
+    "district": "Nayagarh",
+    "state": "Odisha"
+  },
+  "Bahadajholla": {
+    "lat": 20.1251,
+    "lon": 85.107,
+    "market": "Bahadajholla",
+    "district": "Nayagarh",
+    "state": "Odisha"
+  },
+  "Gunpur, Rayagada, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Gunpur",
+    "district": "Rayagada",
+    "state": "Odisha"
+  },
+  "Gunpur, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Gunpur",
+    "district": "Rayagada",
+    "state": "Odisha"
+  },
+  "Gunpur": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Gunpur",
+    "district": "Rayagada",
+    "state": "Odisha"
+  },
+  "Rayagada(Muniguda), Rayagada, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Rayagada(Muniguda)",
+    "district": "Rayagada",
+    "state": "Odisha"
+  },
+  "Rayagada(Muniguda), Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Rayagada(Muniguda)",
+    "district": "Rayagada",
+    "state": "Odisha"
+  },
+  "Rayagada(Muniguda)": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Rayagada(Muniguda)",
+    "district": "Rayagada",
+    "state": "Odisha"
+  },
+  "Sargipali, Sundergarh, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Sargipali",
+    "district": "Sundergarh",
+    "state": "Odisha"
+  },
+  "Sargipali, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Sargipali",
+    "district": "Sundergarh",
+    "state": "Odisha"
+  },
+  "Sargipali": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Sargipali",
+    "district": "Sundergarh",
+    "state": "Odisha"
+  },
+  "Chogawan, Amritsar, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Chogawan",
+    "district": "Amritsar",
+    "state": "Punjab"
+  },
+  "Chogawan, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Chogawan",
+    "district": "Amritsar",
+    "state": "Punjab"
+  },
+  "Chogawan": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Chogawan",
+    "district": "Amritsar",
+    "state": "Punjab"
+  },
+  "Rayya, Amritsar, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Rayya",
+    "district": "Amritsar",
+    "state": "Punjab"
+  },
+  "Rayya, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Rayya",
+    "district": "Amritsar",
+    "state": "Punjab"
+  },
+  "Rayya": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Rayya",
+    "district": "Amritsar",
+    "state": "Punjab"
+  },
+  "Fazilka, Fazilka, Punjab": {
+    "lat": 30.4037,
+    "lon": 74.0254,
+    "market": "Fazilka",
+    "district": "Fazilka",
+    "state": "Punjab"
+  },
+  "Fazilka, Punjab": {
+    "lat": 30.4037,
+    "lon": 74.0254,
+    "market": "Fazilka",
+    "district": "Fazilka",
+    "state": "Punjab"
+  },
+  "Fazilka": {
+    "lat": 30.4037,
+    "lon": 74.0254,
+    "market": "Fazilka",
+    "district": "Fazilka",
+    "state": "Punjab"
+  },
+  "Kalanaur, Gurdaspur, Punjab": {
+    "lat": 32.0419,
+    "lon": 75.4053,
+    "market": "Kalanaur",
+    "district": "Gurdaspur",
+    "state": "Punjab"
+  },
+  "Kalanaur, Punjab": {
+    "lat": 32.0419,
+    "lon": 75.4053,
+    "market": "Kalanaur",
+    "district": "Gurdaspur",
+    "state": "Punjab"
+  },
+  "Kalanaur": {
+    "lat": 32.0419,
+    "lon": 75.4053,
+    "market": "Kalanaur",
+    "district": "Gurdaspur",
+    "state": "Punjab"
+  },
+  "Garh Shankar, Hoshiarpur, Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Garh Shankar",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Garh Shankar, Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Garh Shankar",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Garh Shankar": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Garh Shankar",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Mukerian(Talwara), Hoshiarpur, Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Mukerian(Talwara)",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Mukerian(Talwara), Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Mukerian(Talwara)",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Mukerian(Talwara)": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Mukerian(Talwara)",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Tanda Urmur, Hoshiarpur, Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Tanda Urmur",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Tanda Urmur, Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Tanda Urmur",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Tanda Urmur": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "Tanda Urmur",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Nakodar, Jalandhar, Punjab": {
+    "lat": 31.326,
+    "lon": 75.5762,
+    "market": "Nakodar",
+    "district": "Jalandhar",
+    "state": "Punjab"
+  },
+  "Nakodar, Punjab": {
+    "lat": 31.326,
+    "lon": 75.5762,
+    "market": "Nakodar",
+    "district": "Jalandhar",
+    "state": "Punjab"
+  },
+  "Nakodar": {
+    "lat": 31.326,
+    "lon": 75.5762,
+    "market": "Nakodar",
+    "district": "Jalandhar",
+    "state": "Punjab"
+  },
+  "Doraha, Ludhiana, Punjab": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Doraha",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Doraha, Punjab": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Doraha",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Doraha": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Doraha",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Khanna, Ludhiana, Punjab": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Khanna",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Khanna, Punjab": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Khanna",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Khanna": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Khanna",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Sahnewal, Ludhiana, Punjab": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Sahnewal",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Sahnewal, Punjab": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Sahnewal",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Sahnewal": {
+    "lat": 30.901,
+    "lon": 75.8573,
+    "market": "Sahnewal",
+    "district": "Ludhiana",
+    "state": "Punjab"
+  },
+  "Nihal Singh Wala, Moga, Punjab": {
+    "lat": 30.8165,
+    "lon": 75.1717,
+    "market": "Nihal Singh Wala",
+    "district": "Moga",
+    "state": "Punjab"
+  },
+  "Nihal Singh Wala, Punjab": {
+    "lat": 30.8165,
+    "lon": 75.1717,
+    "market": "Nihal Singh Wala",
+    "district": "Moga",
+    "state": "Punjab"
+  },
+  "Nihal Singh Wala": {
+    "lat": 30.8165,
+    "lon": 75.1717,
+    "market": "Nihal Singh Wala",
+    "district": "Moga",
+    "state": "Punjab"
+  },
+  "Nawan Shahar(Subzi Mandi), Nawanshahr, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Nawan Shahar(Subzi Mandi)",
+    "district": "Nawanshahr",
+    "state": "Punjab"
+  },
+  "Nawan Shahar(Subzi Mandi), Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Nawan Shahar(Subzi Mandi)",
+    "district": "Nawanshahr",
+    "state": "Punjab"
+  },
+  "Nawan Shahar(Subzi Mandi)": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Nawan Shahar(Subzi Mandi)",
+    "district": "Nawanshahr",
+    "state": "Punjab"
+  },
+  "Pathankot, Pathankot, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Pathankot",
+    "district": "Pathankot",
+    "state": "Punjab"
+  },
+  "Pathankot, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Pathankot",
+    "district": "Pathankot",
+    "state": "Punjab"
+  },
+  "Pathankot": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Pathankot",
+    "district": "Pathankot",
+    "state": "Punjab"
+  },
+  "Ghanaur, Patiala, Punjab": {
+    "lat": 30.3398,
+    "lon": 76.3869,
+    "market": "Ghanaur",
+    "district": "Patiala",
+    "state": "Punjab"
+  },
+  "Ghanaur, Punjab": {
+    "lat": 30.3398,
+    "lon": 76.3869,
+    "market": "Ghanaur",
+    "district": "Patiala",
+    "state": "Punjab"
+  },
+  "Ghanaur": {
+    "lat": 30.3398,
+    "lon": 76.3869,
+    "market": "Ghanaur",
+    "district": "Patiala",
+    "state": "Punjab"
+  },
+  "Morinda, Ropar (Rupnagar), Punjab": {
+    "lat": 30.9664,
+    "lon": 76.5331,
+    "market": "Morinda",
+    "district": "Ropar (Rupnagar)",
+    "state": "Punjab"
+  },
+  "Morinda, Punjab": {
+    "lat": 30.9664,
+    "lon": 76.5331,
+    "market": "Morinda",
+    "district": "Ropar (Rupnagar)",
+    "state": "Punjab"
+  },
+  "Morinda": {
+    "lat": 30.9664,
+    "lon": 76.5331,
+    "market": "Morinda",
+    "district": "Ropar (Rupnagar)",
+    "state": "Punjab"
+  },
+  "Naushera Pannuan, Tarntaran, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Naushera Pannuan",
+    "district": "Tarntaran",
+    "state": "Punjab"
+  },
+  "Naushera Pannuan, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Naushera Pannuan",
+    "district": "Tarntaran",
+    "state": "Punjab"
+  },
+  "Naushera Pannuan": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Naushera Pannuan",
+    "district": "Tarntaran",
+    "state": "Punjab"
+  },
+  "Patti, Tarntaran, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Patti",
+    "district": "Tarntaran",
+    "state": "Punjab"
+  },
+  "Patti, Punjab": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Patti",
+    "district": "Tarntaran",
+    "state": "Punjab"
+  },
+  "Patti": {
+    "lat": 31.634,
+    "lon": 74.8723,
+    "market": "Patti",
+    "district": "Tarntaran",
+    "state": "Punjab"
+  },
+  "Beawar, Beawar, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Beawar",
+    "district": "Beawar",
+    "state": "Rajasthan"
+  },
+  "Beawar, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Beawar",
+    "district": "Beawar",
+    "state": "Rajasthan"
+  },
+  "Beawar": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Beawar",
+    "district": "Beawar",
+    "state": "Rajasthan"
+  },
+  "Sadulpur, Churu, Rajasthan": {
+    "lat": 28.29,
+    "lon": 74.96,
+    "market": "Sadulpur",
+    "district": "Churu",
+    "state": "Rajasthan"
+  },
+  "Sadulpur, Rajasthan": {
+    "lat": 28.29,
+    "lon": 74.96,
+    "market": "Sadulpur",
+    "district": "Churu",
+    "state": "Rajasthan"
+  },
+  "Sadulpur": {
+    "lat": 28.29,
+    "lon": 74.96,
+    "market": "Sadulpur",
+    "district": "Churu",
+    "state": "Rajasthan"
+  },
+  "Sriganganagar (F&V), Ganganagar, Rajasthan": {
+    "lat": 29.9038,
+    "lon": 73.8772,
+    "market": "Sriganganagar (F&V)",
+    "district": "Ganganagar",
+    "state": "Rajasthan"
+  },
+  "Sriganganagar (F&V), Rajasthan": {
+    "lat": 29.9038,
+    "lon": 73.8772,
+    "market": "Sriganganagar (F&V)",
+    "district": "Ganganagar",
+    "state": "Rajasthan"
+  },
+  "Sriganganagar (F&V)": {
+    "lat": 29.9038,
+    "lon": 73.8772,
+    "market": "Sriganganagar (F&V)",
+    "district": "Ganganagar",
+    "state": "Rajasthan"
+  },
+  "Goluwala, Hanumangarh, Rajasthan": {
+    "lat": 29.5816,
+    "lon": 74.3294,
+    "market": "Goluwala",
+    "district": "Hanumangarh",
+    "state": "Rajasthan"
+  },
+  "Goluwala, Rajasthan": {
+    "lat": 29.5816,
+    "lon": 74.3294,
+    "market": "Goluwala",
+    "district": "Hanumangarh",
+    "state": "Rajasthan"
+  },
+  "Goluwala": {
+    "lat": 29.5816,
+    "lon": 74.3294,
+    "market": "Goluwala",
+    "district": "Hanumangarh",
+    "state": "Rajasthan"
+  },
+  "Sangriya, Hanumangarh, Rajasthan": {
+    "lat": 29.5816,
+    "lon": 74.3294,
+    "market": "Sangriya",
+    "district": "Hanumangarh",
+    "state": "Rajasthan"
+  },
+  "Sangriya, Rajasthan": {
+    "lat": 29.5816,
+    "lon": 74.3294,
+    "market": "Sangriya",
+    "district": "Hanumangarh",
+    "state": "Rajasthan"
+  },
+  "Sangriya": {
+    "lat": 29.5816,
+    "lon": 74.3294,
+    "market": "Sangriya",
+    "district": "Hanumangarh",
+    "state": "Rajasthan"
+  },
+  "Jaipur (F&V), Jaipur, Rajasthan": {
+    "lat": 26.9124,
+    "lon": 75.7873,
+    "market": "Jaipur (F&V)",
+    "district": "Jaipur",
+    "state": "Rajasthan"
+  },
+  "Jaipur (F&V), Rajasthan": {
+    "lat": 26.9124,
+    "lon": 75.7873,
+    "market": "Jaipur (F&V)",
+    "district": "Jaipur",
+    "state": "Rajasthan"
+  },
+  "Jaipur (F&V)": {
+    "lat": 26.9124,
+    "lon": 75.7873,
+    "market": "Jaipur (F&V)",
+    "district": "Jaipur",
+    "state": "Rajasthan"
+  },
+  "Bassi, Jaipur Rural, Rajasthan": {
+    "lat": 26.9124,
+    "lon": 75.7873,
+    "market": "Bassi",
+    "district": "Jaipur Rural",
+    "state": "Rajasthan"
+  },
+  "Bassi, Rajasthan": {
+    "lat": 26.9124,
+    "lon": 75.7873,
+    "market": "Bassi",
+    "district": "Jaipur Rural",
+    "state": "Rajasthan"
+  },
+  "Bassi": {
+    "lat": 26.9124,
+    "lon": 75.7873,
+    "market": "Bassi",
+    "district": "Jaipur Rural",
+    "state": "Rajasthan"
+  },
+  "Jodhpur (Grain), Jodhpur, Rajasthan": {
+    "lat": 26.2389,
+    "lon": 73.0243,
+    "market": "Jodhpur (Grain)",
+    "district": "Jodhpur",
+    "state": "Rajasthan"
+  },
+  "Jodhpur (Grain), Rajasthan": {
+    "lat": 26.2389,
+    "lon": 73.0243,
+    "market": "Jodhpur (Grain)",
+    "district": "Jodhpur",
+    "state": "Rajasthan"
+  },
+  "Jodhpur (Grain)": {
+    "lat": 26.2389,
+    "lon": 73.0243,
+    "market": "Jodhpur (Grain)",
+    "district": "Jodhpur",
+    "state": "Rajasthan"
+  },
+  "Kota, Kota, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Kota",
+    "district": "Kota",
+    "state": "Rajasthan"
+  },
+  "Kota, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Kota",
+    "district": "Kota",
+    "state": "Rajasthan"
+  },
+  "Kota": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Kota",
+    "district": "Kota",
+    "state": "Rajasthan"
+  },
+  "Rajsamand, Rajsamand, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Rajsamand",
+    "district": "Rajsamand",
+    "state": "Rajasthan"
+  },
+  "Rajsamand, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Rajsamand",
+    "district": "Rajsamand",
+    "state": "Rajasthan"
+  },
+  "Rajsamand": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Rajsamand",
+    "district": "Rajsamand",
+    "state": "Rajasthan"
+  },
+  "Sanchore, Sanchore, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Sanchore",
+    "district": "Sanchore",
+    "state": "Rajasthan"
+  },
+  "Sanchore, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Sanchore",
+    "district": "Sanchore",
+    "state": "Rajasthan"
+  },
+  "Sanchore": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Sanchore",
+    "district": "Sanchore",
+    "state": "Rajasthan"
+  },
+  "Mahboob Manison, Hyderabad, Telangana": {
+    "lat": 17.385,
+    "lon": 78.4867,
+    "market": "Mahboob Manison",
+    "district": "Hyderabad",
+    "state": "Telangana"
+  },
+  "Mahboob Manison, Telangana": {
+    "lat": 17.385,
+    "lon": 78.4867,
+    "market": "Mahboob Manison",
+    "district": "Hyderabad",
+    "state": "Telangana"
+  },
+  "Mahboob Manison": {
+    "lat": 17.385,
+    "lon": 78.4867,
+    "market": "Mahboob Manison",
+    "district": "Hyderabad",
+    "state": "Telangana"
+  },
+  "Vemulawada, Karimnagar, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Vemulawada",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Vemulawada, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Vemulawada",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Vemulawada": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Vemulawada",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Devarkonda(Mallepalli), Nalgonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarkonda(Mallepalli)",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Devarkonda(Mallepalli), Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarkonda(Mallepalli)",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Devarkonda(Mallepalli)": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarkonda(Mallepalli)",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Kukatpally(Rythu Bazar), Ranga Reddy, Telangana": {
+    "lat": 17.3,
+    "lon": 78.4,
+    "market": "Kukatpally(Rythu Bazar)",
+    "district": "Ranga Reddy",
+    "state": "Telangana"
+  },
+  "Kukatpally(Rythu Bazar), Telangana": {
+    "lat": 17.3,
+    "lon": 78.4,
+    "market": "Kukatpally(Rythu Bazar)",
+    "district": "Ranga Reddy",
+    "state": "Telangana"
+  },
+  "Kukatpally(Rythu Bazar)": {
+    "lat": 17.3,
+    "lon": 78.4,
+    "market": "Kukatpally(Rythu Bazar)",
+    "district": "Ranga Reddy",
+    "state": "Telangana"
+  },
+  "Mehndipatnam(Rythu Bazar), Ranga Reddy, Telangana": {
+    "lat": 17.3,
+    "lon": 78.4,
+    "market": "Mehndipatnam(Rythu Bazar)",
+    "district": "Ranga Reddy",
+    "state": "Telangana"
+  },
+  "Mehndipatnam(Rythu Bazar), Telangana": {
+    "lat": 17.3,
+    "lon": 78.4,
+    "market": "Mehndipatnam(Rythu Bazar)",
+    "district": "Ranga Reddy",
+    "state": "Telangana"
+  },
+  "Mehndipatnam(Rythu Bazar)": {
+    "lat": 17.3,
+    "lon": 78.4,
+    "market": "Mehndipatnam(Rythu Bazar)",
+    "district": "Ranga Reddy",
+    "state": "Telangana"
+  },
+  "Warangal, Warangal, Telangana": {
+    "lat": 17.9689,
+    "lon": 79.5941,
+    "market": "Warangal",
+    "district": "Warangal",
+    "state": "Telangana"
+  },
+  "Warangal, Telangana": {
+    "lat": 17.9689,
+    "lon": 79.5941,
+    "market": "Warangal",
+    "district": "Warangal",
+    "state": "Telangana"
+  },
+  "Warangal": {
+    "lat": 17.9689,
+    "lon": 79.5941,
+    "market": "Warangal",
+    "district": "Warangal",
+    "state": "Telangana"
+  },
+  "Nutanbazar, Gomati, Tripura": {
+    "lat": 23.535,
+    "lon": 91.49,
+    "market": "Nutanbazar",
+    "district": "Gomati",
+    "state": "Tripura"
+  },
+  "Nutanbazar, Tripura": {
+    "lat": 23.535,
+    "lon": 91.49,
+    "market": "Nutanbazar",
+    "district": "Gomati",
+    "state": "Tripura"
+  },
+  "Nutanbazar": {
+    "lat": 23.535,
+    "lon": 91.49,
+    "market": "Nutanbazar",
+    "district": "Gomati",
+    "state": "Tripura"
+  },
+  "Teliamura, Khowai, Tripura": {
+    "lat": 24.0625,
+    "lon": 91.6053,
+    "market": "Teliamura",
+    "district": "Khowai",
+    "state": "Tripura"
+  },
+  "Teliamura, Tripura": {
+    "lat": 24.0625,
+    "lon": 91.6053,
+    "market": "Teliamura",
+    "district": "Khowai",
+    "state": "Tripura"
+  },
+  "Teliamura": {
+    "lat": 24.0625,
+    "lon": 91.6053,
+    "market": "Teliamura",
+    "district": "Khowai",
+    "state": "Tripura"
+  },
+  "Dasda, North Tripura, Tripura": {
+    "lat": 24.28,
+    "lon": 92.17,
+    "market": "Dasda",
+    "district": "North Tripura",
+    "state": "Tripura"
+  },
+  "Dasda, Tripura": {
+    "lat": 24.28,
+    "lon": 92.17,
+    "market": "Dasda",
+    "district": "North Tripura",
+    "state": "Tripura"
+  },
+  "Dasda": {
+    "lat": 24.28,
+    "lon": 92.17,
+    "market": "Dasda",
+    "district": "North Tripura",
+    "state": "Tripura"
+  },
+  "Barpathari, South District, Tripura": {
+    "lat": 23.25,
+    "lon": 91.5,
+    "market": "Barpathari",
+    "district": "South District",
+    "state": "Tripura"
+  },
+  "Barpathari, Tripura": {
+    "lat": 23.25,
+    "lon": 91.5,
+    "market": "Barpathari",
+    "district": "South District",
+    "state": "Tripura"
+  },
+  "Barpathari": {
+    "lat": 23.25,
+    "lon": 91.5,
+    "market": "Barpathari",
+    "district": "South District",
+    "state": "Tripura"
+  },
+  "Fatehabad, Agra, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Fatehabad",
+    "district": "Agra",
+    "state": "Uttar Pradesh"
+  },
+  "Fatehabad, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Fatehabad",
+    "district": "Agra",
+    "state": "Uttar Pradesh"
+  },
+  "Charra, Aligarh, Uttar Pradesh": {
+    "lat": 27.8974,
+    "lon": 78.088,
+    "market": "Charra",
+    "district": "Aligarh",
+    "state": "Uttar Pradesh"
+  },
+  "Charra, Uttar Pradesh": {
+    "lat": 27.8974,
+    "lon": 78.088,
+    "market": "Charra",
+    "district": "Aligarh",
+    "state": "Uttar Pradesh"
+  },
+  "Charra": {
+    "lat": 27.8974,
+    "lon": 78.088,
+    "market": "Charra",
+    "district": "Aligarh",
+    "state": "Uttar Pradesh"
+  },
+  "Sultanpur, Amethi, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Sultanpur",
+    "district": "Amethi",
+    "state": "Uttar Pradesh"
+  },
+  "Sultanpur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Sultanpur",
+    "district": "Amethi",
+    "state": "Uttar Pradesh"
+  },
+  "Sultanpur": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Sultanpur",
+    "district": "Amethi",
+    "state": "Uttar Pradesh"
+  },
+  "Amroha, Amroha, Uttar Pradesh": {
+    "lat": 28.9044,
+    "lon": 78.4684,
+    "market": "Amroha",
+    "district": "Amroha",
+    "state": "Uttar Pradesh"
+  },
+  "Amroha, Uttar Pradesh": {
+    "lat": 28.9044,
+    "lon": 78.4684,
+    "market": "Amroha",
+    "district": "Amroha",
+    "state": "Uttar Pradesh"
+  },
+  "Amroha": {
+    "lat": 28.9044,
+    "lon": 78.4684,
+    "market": "Amroha",
+    "district": "Amroha",
+    "state": "Uttar Pradesh"
+  },
+  "Dhanaura, Amroha, Uttar Pradesh": {
+    "lat": 28.9044,
+    "lon": 78.4684,
+    "market": "Dhanaura",
+    "district": "Amroha",
+    "state": "Uttar Pradesh"
+  },
+  "Dhanaura, Uttar Pradesh": {
+    "lat": 28.9044,
+    "lon": 78.4684,
+    "market": "Dhanaura",
+    "district": "Amroha",
+    "state": "Uttar Pradesh"
+  },
+  "Dhanaura": {
+    "lat": 28.9044,
+    "lon": 78.4684,
+    "market": "Dhanaura",
+    "district": "Amroha",
+    "state": "Uttar Pradesh"
+  },
+  "Babrala, Badaun, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Babrala",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Babrala, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Babrala",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Babrala": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Babrala",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Badayoun, Badaun, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Badayoun",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Badayoun, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Badayoun",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Badayoun": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Badayoun",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Ujhani, Badaun, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Ujhani",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Ujhani, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Ujhani",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Ujhani": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Ujhani",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Naanpara, Bahraich, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Naanpara",
+    "district": "Bahraich",
+    "state": "Uttar Pradesh"
+  },
+  "Naanpara, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Naanpara",
+    "district": "Bahraich",
+    "state": "Uttar Pradesh"
+  },
+  "Naanpara": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Naanpara",
+    "district": "Bahraich",
+    "state": "Uttar Pradesh"
+  },
+  "Balrampur, Balrampur, Uttar Pradesh": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Balrampur",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Balrampur, Uttar Pradesh": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Balrampur",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Balrampur": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Balrampur",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Panchpedwa, Balrampur, Uttar Pradesh": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Panchpedwa",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Panchpedwa, Uttar Pradesh": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Panchpedwa",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Panchpedwa": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Panchpedwa",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Tulsipur, Balrampur, Uttar Pradesh": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Tulsipur",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Tulsipur, Uttar Pradesh": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Tulsipur",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Tulsipur": {
+    "lat": 27.4302,
+    "lon": 82.1812,
+    "market": "Tulsipur",
+    "district": "Balrampur",
+    "state": "Uttar Pradesh"
+  },
+  "Anwala, Bareilly, Uttar Pradesh": {
+    "lat": 28.367,
+    "lon": 79.4304,
+    "market": "Anwala",
+    "district": "Bareilly",
+    "state": "Uttar Pradesh"
+  },
+  "Anwala, Uttar Pradesh": {
+    "lat": 28.367,
+    "lon": 79.4304,
+    "market": "Anwala",
+    "district": "Bareilly",
+    "state": "Uttar Pradesh"
+  },
+  "Anwala": {
+    "lat": 28.367,
+    "lon": 79.4304,
+    "market": "Anwala",
+    "district": "Bareilly",
+    "state": "Uttar Pradesh"
+  },
+  "Bijnaur, Bijnor, Uttar Pradesh": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Bijnaur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Bijnaur, Uttar Pradesh": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Bijnaur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Bijnaur": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Bijnaur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Kiratpur, Bijnor, Uttar Pradesh": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Kiratpur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Kiratpur, Uttar Pradesh": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Kiratpur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Kiratpur": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Kiratpur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Gulavati, Bulandshahar, Uttar Pradesh": {
+    "lat": 28.4069,
+    "lon": 77.8498,
+    "market": "Gulavati",
+    "district": "Bulandshahar",
+    "state": "Uttar Pradesh"
+  },
+  "Gulavati, Uttar Pradesh": {
+    "lat": 28.4069,
+    "lon": 77.8498,
+    "market": "Gulavati",
+    "district": "Bulandshahar",
+    "state": "Uttar Pradesh"
+  },
+  "Gulavati": {
+    "lat": 28.4069,
+    "lon": 77.8498,
+    "market": "Gulavati",
+    "district": "Bulandshahar",
+    "state": "Uttar Pradesh"
+  },
+  "Awagarh, Etah, Uttar Pradesh": {
+    "lat": 27.5614,
+    "lon": 78.6653,
+    "market": "Awagarh",
+    "district": "Etah",
+    "state": "Uttar Pradesh"
+  },
+  "Awagarh, Uttar Pradesh": {
+    "lat": 27.5614,
+    "lon": 78.6653,
+    "market": "Awagarh",
+    "district": "Etah",
+    "state": "Uttar Pradesh"
+  },
+  "Awagarh": {
+    "lat": 27.5614,
+    "lon": 78.6653,
+    "market": "Awagarh",
+    "district": "Etah",
+    "state": "Uttar Pradesh"
+  },
+  "Kishunpur, Fatehpur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kishunpur",
+    "district": "Fatehpur",
+    "state": "Uttar Pradesh"
+  },
+  "Kishunpur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kishunpur",
+    "district": "Fatehpur",
+    "state": "Uttar Pradesh"
+  },
+  "Kishunpur": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kishunpur",
+    "district": "Fatehpur",
+    "state": "Uttar Pradesh"
+  },
+  "Sirsaganj, Firozabad, Uttar Pradesh": {
+    "lat": 27.1592,
+    "lon": 78.3957,
+    "market": "Sirsaganj",
+    "district": "Firozabad",
+    "state": "Uttar Pradesh"
+  },
+  "Sirsaganj, Uttar Pradesh": {
+    "lat": 27.1592,
+    "lon": 78.3957,
+    "market": "Sirsaganj",
+    "district": "Firozabad",
+    "state": "Uttar Pradesh"
+  },
+  "Sirsaganj": {
+    "lat": 27.1592,
+    "lon": 78.3957,
+    "market": "Sirsaganj",
+    "district": "Firozabad",
+    "state": "Uttar Pradesh"
+  },
+  "Kurara, Hamirpur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kurara",
+    "district": "Hamirpur",
+    "state": "Uttar Pradesh"
+  },
+  "Kurara, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kurara",
+    "district": "Hamirpur",
+    "state": "Uttar Pradesh"
+  },
+  "Kurara": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kurara",
+    "district": "Hamirpur",
+    "state": "Uttar Pradesh"
+  },
+  "Shadabad, Hathras, Uttar Pradesh": {
+    "lat": 27.5968,
+    "lon": 78.0519,
+    "market": "Shadabad",
+    "district": "Hathras",
+    "state": "Uttar Pradesh"
+  },
+  "Shadabad, Uttar Pradesh": {
+    "lat": 27.5968,
+    "lon": 78.0519,
+    "market": "Shadabad",
+    "district": "Hathras",
+    "state": "Uttar Pradesh"
+  },
+  "Shadabad": {
+    "lat": 27.5968,
+    "lon": 78.0519,
+    "market": "Shadabad",
+    "district": "Hathras",
+    "state": "Uttar Pradesh"
+  },
+  "Kadaura, Jalaun (Orai), Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kadaura",
+    "district": "Jalaun (Orai)",
+    "state": "Uttar Pradesh"
+  },
+  "Kadaura, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kadaura",
+    "district": "Jalaun (Orai)",
+    "state": "Uttar Pradesh"
+  },
+  "Kadaura": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kadaura",
+    "district": "Jalaun (Orai)",
+    "state": "Uttar Pradesh"
+  },
+  "Manjhanpur, Kaushambi, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Manjhanpur",
+    "district": "Kaushambi",
+    "state": "Uttar Pradesh"
+  },
+  "Manjhanpur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Manjhanpur",
+    "district": "Kaushambi",
+    "state": "Uttar Pradesh"
+  },
+  "Manjhanpur": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Manjhanpur",
+    "district": "Kaushambi",
+    "state": "Uttar Pradesh"
+  },
+  "Maigalganj, Khiri (Lakhimpur), Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Maigalganj",
+    "district": "Khiri (Lakhimpur)",
+    "state": "Uttar Pradesh"
+  },
+  "Maigalganj, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Maigalganj",
+    "district": "Khiri (Lakhimpur)",
+    "state": "Uttar Pradesh"
+  },
+  "Maigalganj": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Maigalganj",
+    "district": "Khiri (Lakhimpur)",
+    "state": "Uttar Pradesh"
+  },
+  "Mehrauni, Lalitpur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Mehrauni",
+    "district": "Lalitpur",
+    "state": "Uttar Pradesh"
+  },
+  "Mehrauni, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Mehrauni",
+    "district": "Lalitpur",
+    "state": "Uttar Pradesh"
+  },
+  "Mehrauni": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Mehrauni",
+    "district": "Lalitpur",
+    "state": "Uttar Pradesh"
+  },
+  "Anandnagar, Maharajganj, Uttar Pradesh": {
+    "lat": 27.1444,
+    "lon": 83.5622,
+    "market": "Anandnagar",
+    "district": "Maharajganj",
+    "state": "Uttar Pradesh"
+  },
+  "Anandnagar, Uttar Pradesh": {
+    "lat": 27.1444,
+    "lon": 83.5622,
+    "market": "Anandnagar",
+    "district": "Maharajganj",
+    "state": "Uttar Pradesh"
+  },
+  "Anandnagar": {
+    "lat": 27.1444,
+    "lon": 83.5622,
+    "market": "Anandnagar",
+    "district": "Maharajganj",
+    "state": "Uttar Pradesh"
+  },
+  "Charkhari, Mahoba, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Charkhari",
+    "district": "Mahoba",
+    "state": "Uttar Pradesh"
+  },
+  "Charkhari, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Charkhari",
+    "district": "Mahoba",
+    "state": "Uttar Pradesh"
+  },
+  "Charkhari": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Charkhari",
+    "district": "Mahoba",
+    "state": "Uttar Pradesh"
+  },
+  "Ghiraur, Mainpuri, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Ghiraur",
+    "district": "Mainpuri",
+    "state": "Uttar Pradesh"
+  },
+  "Ghiraur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Ghiraur",
+    "district": "Mainpuri",
+    "state": "Uttar Pradesh"
+  },
+  "Ghiraur": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Ghiraur",
+    "district": "Mainpuri",
+    "state": "Uttar Pradesh"
+  },
+  "Doharighat, Mau(Maunathbhanjan), Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Doharighat",
+    "district": "Mau(Maunathbhanjan)",
+    "state": "Uttar Pradesh"
+  },
+  "Doharighat, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Doharighat",
+    "district": "Mau(Maunathbhanjan)",
+    "state": "Uttar Pradesh"
+  },
+  "Doharighat": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Doharighat",
+    "district": "Mau(Maunathbhanjan)",
+    "state": "Uttar Pradesh"
+  },
+  "Kopaganj, Mau(Maunathbhanjan), Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kopaganj",
+    "district": "Mau(Maunathbhanjan)",
+    "state": "Uttar Pradesh"
+  },
+  "Kopaganj, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kopaganj",
+    "district": "Mau(Maunathbhanjan)",
+    "state": "Uttar Pradesh"
+  },
+  "Kopaganj": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kopaganj",
+    "district": "Mau(Maunathbhanjan)",
+    "state": "Uttar Pradesh"
+  },
+  "Pilibhit, Pillibhit, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Pilibhit",
+    "district": "Pillibhit",
+    "state": "Uttar Pradesh"
+  },
+  "Pilibhit, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Pilibhit",
+    "district": "Pillibhit",
+    "state": "Uttar Pradesh"
+  },
+  "Pilibhit": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Pilibhit",
+    "district": "Pillibhit",
+    "state": "Uttar Pradesh"
+  },
+  "Jasra, Prayagraj, Uttar Pradesh": {
+    "lat": 25.4358,
+    "lon": 81.8463,
+    "market": "Jasra",
+    "district": "Prayagraj",
+    "state": "Uttar Pradesh"
+  },
+  "Jasra, Uttar Pradesh": {
+    "lat": 25.4358,
+    "lon": 81.8463,
+    "market": "Jasra",
+    "district": "Prayagraj",
+    "state": "Uttar Pradesh"
+  },
+  "Jasra": {
+    "lat": 25.4358,
+    "lon": 81.8463,
+    "market": "Jasra",
+    "district": "Prayagraj",
+    "state": "Uttar Pradesh"
+  },
+  "Tanda(Rampur), Rampur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Tanda(Rampur)",
+    "district": "Rampur",
+    "state": "Uttar Pradesh"
+  },
+  "Tanda(Rampur), Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Tanda(Rampur)",
+    "district": "Rampur",
+    "state": "Uttar Pradesh"
+  },
+  "Tanda(Rampur)": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Tanda(Rampur)",
+    "district": "Rampur",
+    "state": "Uttar Pradesh"
+  },
+  "Vilaspur, Rampur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Vilaspur",
+    "district": "Rampur",
+    "state": "Uttar Pradesh"
+  },
+  "Vilaspur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Vilaspur",
+    "district": "Rampur",
+    "state": "Uttar Pradesh"
+  },
+  "Vilaspur": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Vilaspur",
+    "district": "Rampur",
+    "state": "Uttar Pradesh"
+  },
+  "Khalilabad, Sant Kabir Nagar, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Khalilabad",
+    "district": "Sant Kabir Nagar",
+    "state": "Uttar Pradesh"
+  },
+  "Khalilabad, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Khalilabad",
+    "district": "Sant Kabir Nagar",
+    "state": "Uttar Pradesh"
+  },
+  "Khalilabad": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Khalilabad",
+    "district": "Sant Kabir Nagar",
+    "state": "Uttar Pradesh"
+  },
+  "Kairana, Shamli, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kairana",
+    "district": "Shamli",
+    "state": "Uttar Pradesh"
+  },
+  "Kairana, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kairana",
+    "district": "Shamli",
+    "state": "Uttar Pradesh"
+  },
+  "Kairana": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Kairana",
+    "district": "Shamli",
+    "state": "Uttar Pradesh"
+  },
+  "Hargaon (Laharpur), Sitapur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Hargaon (Laharpur)",
+    "district": "Sitapur",
+    "state": "Uttar Pradesh"
+  },
+  "Hargaon (Laharpur), Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Hargaon (Laharpur)",
+    "district": "Sitapur",
+    "state": "Uttar Pradesh"
+  },
+  "Hargaon (Laharpur)": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Hargaon (Laharpur)",
+    "district": "Sitapur",
+    "state": "Uttar Pradesh"
+  },
+  "Sitapur, Sitapur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Sitapur",
+    "district": "Sitapur",
+    "state": "Uttar Pradesh"
+  },
+  "Sitapur, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Sitapur",
+    "district": "Sitapur",
+    "state": "Uttar Pradesh"
+  },
+  "Sitapur": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Sitapur",
+    "district": "Sitapur",
+    "state": "Uttar Pradesh"
+  },
+  "Rishikesh, Dehradoon, Uttrakhand": {
+    "lat": 30.3165,
+    "lon": 78.0322,
+    "market": "Rishikesh",
+    "district": "Dehradoon",
+    "state": "Uttrakhand"
+  },
+  "Rishikesh, Uttrakhand": {
+    "lat": 30.3165,
+    "lon": 78.0322,
+    "market": "Rishikesh",
+    "district": "Dehradoon",
+    "state": "Uttrakhand"
+  },
+  "Rishikesh": {
+    "lat": 30.3165,
+    "lon": 78.0322,
+    "market": "Rishikesh",
+    "district": "Dehradoon",
+    "state": "Uttrakhand"
+  },
+  "Vikasnagar, Dehradoon, Uttrakhand": {
+    "lat": 30.3165,
+    "lon": 78.0322,
+    "market": "Vikasnagar",
+    "district": "Dehradoon",
+    "state": "Uttrakhand"
+  },
+  "Vikasnagar, Uttrakhand": {
+    "lat": 30.3165,
+    "lon": 78.0322,
+    "market": "Vikasnagar",
+    "district": "Dehradoon",
+    "state": "Uttrakhand"
+  },
+  "Vikasnagar": {
+    "lat": 30.3165,
+    "lon": 78.0322,
+    "market": "Vikasnagar",
+    "district": "Dehradoon",
+    "state": "Uttrakhand"
+  },
+  "Haridwar Union, Haridwar, Uttrakhand": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Haridwar Union",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Haridwar Union, Uttrakhand": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Haridwar Union",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Haridwar Union": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Haridwar Union",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Manglaur, Haridwar, Uttrakhand": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Manglaur",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Manglaur, Uttrakhand": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Manglaur",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Manglaur": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Manglaur",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Roorkee, Haridwar, Uttrakhand": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Roorkee",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Roorkee, Uttrakhand": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Roorkee",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Roorkee": {
+    "lat": 29.9457,
+    "lon": 78.1642,
+    "market": "Roorkee",
+    "district": "Haridwar",
+    "state": "Uttrakhand"
+  },
+  "Ramnagar, Nanital, Uttrakhand": {
+    "lat": 29.3919,
+    "lon": 79.4542,
+    "market": "Ramnagar",
+    "district": "Nanital",
+    "state": "Uttrakhand"
+  },
+  "Ramnagar, Uttrakhand": {
+    "lat": 29.3919,
+    "lon": 79.4542,
+    "market": "Ramnagar",
+    "district": "Nanital",
+    "state": "Uttrakhand"
+  },
+  "Ramnagar": {
+    "lat": 29.3919,
+    "lon": 79.4542,
+    "market": "Ramnagar",
+    "district": "Nanital",
+    "state": "Uttrakhand"
+  },
+  "Bazpur, UdhamSinghNagar, Uttrakhand": {
+    "lat": 28.98,
+    "lon": 79.4,
+    "market": "Bazpur",
+    "district": "UdhamSinghNagar",
+    "state": "Uttrakhand"
+  },
+  "Bazpur, Uttrakhand": {
+    "lat": 28.98,
+    "lon": 79.4,
+    "market": "Bazpur",
+    "district": "UdhamSinghNagar",
+    "state": "Uttrakhand"
+  },
+  "Bazpur": {
+    "lat": 28.98,
+    "lon": 79.4,
+    "market": "Bazpur",
+    "district": "UdhamSinghNagar",
+    "state": "Uttrakhand"
+  },
+  "Indus(Bankura Sadar), Bankura, West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Indus(Bankura Sadar)",
+    "district": "Bankura",
+    "state": "West Bengal"
+  },
+  "Indus(Bankura Sadar), West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Indus(Bankura Sadar)",
+    "district": "Bankura",
+    "state": "West Bengal"
+  },
+  "Indus(Bankura Sadar)": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Indus(Bankura Sadar)",
+    "district": "Bankura",
+    "state": "West Bengal"
+  },
+  "Sheoraphuly, Hooghly, West Bengal": {
+    "lat": 22.8963,
+    "lon": 88.2461,
+    "market": "Sheoraphuly",
+    "district": "Hooghly",
+    "state": "West Bengal"
+  },
+  "Sheoraphuly, West Bengal": {
+    "lat": 22.8963,
+    "lon": 88.2461,
+    "market": "Sheoraphuly",
+    "district": "Hooghly",
+    "state": "West Bengal"
+  },
+  "Sheoraphuly": {
+    "lat": 22.8963,
+    "lon": 88.2461,
+    "market": "Sheoraphuly",
+    "district": "Hooghly",
+    "state": "West Bengal"
+  },
+  "Belacoba, Jalpaiguri, West Bengal": {
+    "lat": 26.5414,
+    "lon": 88.7196,
+    "market": "Belacoba",
+    "district": "Jalpaiguri",
+    "state": "West Bengal"
+  },
+  "Belacoba, West Bengal": {
+    "lat": 26.5414,
+    "lon": 88.7196,
+    "market": "Belacoba",
+    "district": "Jalpaiguri",
+    "state": "West Bengal"
+  },
+  "Belacoba": {
+    "lat": 26.5414,
+    "lon": 88.7196,
+    "market": "Belacoba",
+    "district": "Jalpaiguri",
+    "state": "West Bengal"
+  },
+  "Jhargram, Jhargram, West Bengal": {
+    "lat": 22.45,
+    "lon": 86.9833,
+    "market": "Jhargram",
+    "district": "Jhargram",
+    "state": "West Bengal"
+  },
+  "Jhargram, West Bengal": {
+    "lat": 22.45,
+    "lon": 86.9833,
+    "market": "Jhargram",
+    "district": "Jhargram",
+    "state": "West Bengal"
+  },
+  "Jhargram": {
+    "lat": 22.45,
+    "lon": 86.9833,
+    "market": "Jhargram",
+    "district": "Jhargram",
+    "state": "West Bengal"
+  },
+  "English Bazar, Malda, West Bengal": {
+    "lat": 25.0108,
+    "lon": 88.1411,
+    "market": "English Bazar",
+    "district": "Malda",
+    "state": "West Bengal"
+  },
+  "English Bazar, West Bengal": {
+    "lat": 25.0108,
+    "lon": 88.1411,
+    "market": "English Bazar",
+    "district": "Malda",
+    "state": "West Bengal"
+  },
+  "English Bazar": {
+    "lat": 25.0108,
+    "lon": 88.1411,
+    "market": "English Bazar",
+    "district": "Malda",
+    "state": "West Bengal"
+  },
+  "Samsi, Malda, West Bengal": {
+    "lat": 25.0108,
+    "lon": 88.1411,
+    "market": "Samsi",
+    "district": "Malda",
+    "state": "West Bengal"
+  },
+  "Samsi, West Bengal": {
+    "lat": 25.0108,
+    "lon": 88.1411,
+    "market": "Samsi",
+    "district": "Malda",
+    "state": "West Bengal"
+  },
+  "Samsi": {
+    "lat": 25.0108,
+    "lon": 88.1411,
+    "market": "Samsi",
+    "district": "Malda",
+    "state": "West Bengal"
+  },
+  "Ghatal, Medinipur(W), West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Ghatal",
+    "district": "Medinipur(W)",
+    "state": "West Bengal"
+  },
+  "Ghatal, West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Ghatal",
+    "district": "Medinipur(W)",
+    "state": "West Bengal"
+  },
+  "Ghatal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Ghatal",
+    "district": "Medinipur(W)",
+    "state": "West Bengal"
+  },
+  "Kandi, Murshidabad, West Bengal": {
+    "lat": 24.1759,
+    "lon": 88.2802,
+    "market": "Kandi",
+    "district": "Murshidabad",
+    "state": "West Bengal"
+  },
+  "Kandi, West Bengal": {
+    "lat": 24.1759,
+    "lon": 88.2802,
+    "market": "Kandi",
+    "district": "Murshidabad",
+    "state": "West Bengal"
+  },
+  "Kandi": {
+    "lat": 24.1759,
+    "lon": 88.2802,
+    "market": "Kandi",
+    "district": "Murshidabad",
+    "state": "West Bengal"
+  },
+  "Balarampur, Puruliya, West Bengal": {
+    "lat": 23.3321,
+    "lon": 86.3652,
+    "market": "Balarampur",
+    "district": "Puruliya",
+    "state": "West Bengal"
+  },
+  "Balarampur, West Bengal": {
+    "lat": 23.3321,
+    "lon": 86.3652,
+    "market": "Balarampur",
+    "district": "Puruliya",
+    "state": "West Bengal"
+  },
+  "Balarampur": {
+    "lat": 23.3321,
+    "lon": 86.3652,
+    "market": "Balarampur",
+    "district": "Puruliya",
+    "state": "West Bengal"
+  },
+  "Baruipur(Canning), Sounth 24 Parganas, West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Baruipur(Canning)",
+    "district": "Sounth 24 Parganas",
+    "state": "West Bengal"
+  },
+  "Baruipur(Canning), West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Baruipur(Canning)",
+    "district": "Sounth 24 Parganas",
+    "state": "West Bengal"
+  },
+  "Baruipur(Canning)": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Baruipur(Canning)",
+    "district": "Sounth 24 Parganas",
+    "state": "West Bengal"
+  },
+  "Islampur, Uttar Dinajpur, West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Islampur",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal"
+  },
+  "Islampur, West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Islampur",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal"
+  },
+  "Islampur": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Islampur",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal"
+  },
+  "Raiganj, Uttar Dinajpur, West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Raiganj",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal"
+  },
+  "Raiganj, West Bengal": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Raiganj",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal"
+  },
+  "Raiganj": {
+    "lat": 23.2324,
+    "lon": 87.0716,
+    "market": "Raiganj",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal"
+  },
+  "Ravulapelem, East Godavari, Andhra Pradesh": {
+    "lat": 17.0005,
+    "lon": 81.804,
+    "market": "Ravulapelem",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Ravulapelem, Andhra Pradesh": {
+    "lat": 17.0005,
+    "lon": 81.804,
+    "market": "Ravulapelem",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Ravulapelem": {
+    "lat": 17.0005,
+    "lon": 81.804,
+    "market": "Ravulapelem",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Jambusar, Bharuch, Gujarat": {
+    "lat": 21.7051,
+    "lon": 72.9959,
+    "market": "Jambusar",
+    "district": "Bharuch",
+    "state": "Gujarat"
+  },
+  "Jambusar, Gujarat": {
+    "lat": 21.7051,
+    "lon": 72.9959,
+    "market": "Jambusar",
+    "district": "Bharuch",
+    "state": "Gujarat"
+  },
+  "Jambusar": {
+    "lat": 21.7051,
+    "lon": 72.9959,
+    "market": "Jambusar",
+    "district": "Bharuch",
+    "state": "Gujarat"
+  },
+  "Bhesan, Junagarh, Gujarat": {
+    "lat": 21.5222,
+    "lon": 70.4579,
+    "market": "Bhesan",
+    "district": "Junagarh",
+    "state": "Gujarat"
+  },
+  "Bhesan, Gujarat": {
+    "lat": 21.5222,
+    "lon": 70.4579,
+    "market": "Bhesan",
+    "district": "Junagarh",
+    "state": "Gujarat"
+  },
+  "Bhesan": {
+    "lat": 21.5222,
+    "lon": 70.4579,
+    "market": "Bhesan",
+    "district": "Junagarh",
+    "state": "Gujarat"
+  },
+  "Modasa, Sabarkantha, Gujarat": {
+    "lat": 23.6823,
+    "lon": 73.0458,
+    "market": "Modasa",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Modasa, Gujarat": {
+    "lat": 23.6823,
+    "lon": 73.0458,
+    "market": "Modasa",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Modasa": {
+    "lat": 23.6823,
+    "lon": 73.0458,
+    "market": "Modasa",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Barwala(Hisar), Hissar, Haryana": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Barwala(Hisar)",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Barwala(Hisar), Haryana": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Barwala(Hisar)",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Barwala(Hisar)": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Barwala(Hisar)",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Pehowa, Kurukshetra, Haryana": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Pehowa",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Pehowa, Haryana": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Pehowa",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Pehowa": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Pehowa",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Pipli, Kurukshetra, Haryana": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Pipli",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Pipli, Haryana": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Pipli",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Pipli": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Pipli",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Kullu(Chauri Bihal), Kullu, Himachal Pradesh": {
+    "lat": 31.9579,
+    "lon": 77.1095,
+    "market": "Kullu(Chauri Bihal)",
+    "district": "Kullu",
+    "state": "Himachal Pradesh"
+  },
+  "Kullu(Chauri Bihal), Himachal Pradesh": {
+    "lat": 31.9579,
+    "lon": 77.1095,
+    "market": "Kullu(Chauri Bihal)",
+    "district": "Kullu",
+    "state": "Himachal Pradesh"
+  },
+  "Kullu(Chauri Bihal)": {
+    "lat": 31.9579,
+    "lon": 77.1095,
+    "market": "Kullu(Chauri Bihal)",
+    "district": "Kullu",
+    "state": "Himachal Pradesh"
+  },
+  "Kunnukara  VFPCK, Ernakulam, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Kunnukara  VFPCK",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Kunnukara  VFPCK, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Kunnukara  VFPCK",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Kunnukara  VFPCK": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Kunnukara  VFPCK",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Malayattoor  VFPCK, Ernakulam, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Malayattoor  VFPCK",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Malayattoor  VFPCK, Kerala": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Malayattoor  VFPCK",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Malayattoor  VFPCK": {
+    "lat": 9.9816,
+    "lon": 76.2999,
+    "market": "Malayattoor  VFPCK",
+    "district": "Ernakulam",
+    "state": "Kerala"
+  },
+  "Munnar, Idukki, Kerala": {
+    "lat": 9.8494,
+    "lon": 76.981,
+    "market": "Munnar",
+    "district": "Idukki",
+    "state": "Kerala"
+  },
+  "Munnar, Kerala": {
+    "lat": 9.8494,
+    "lon": 76.981,
+    "market": "Munnar",
+    "district": "Idukki",
+    "state": "Kerala"
+  },
+  "Munnar": {
+    "lat": 9.8494,
+    "lon": 76.981,
+    "market": "Munnar",
+    "district": "Idukki",
+    "state": "Kerala"
+  },
+  "Kannur, Kannur, Kerala": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Kannur",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Kannur, Kerala": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Kannur",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Kannur": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Kannur",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Perambra, Kozhikode(Calicut), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Perambra",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Perambra, Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Perambra",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Perambra": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Perambra",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Nilagiri, Balasore, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Nilagiri",
+    "district": "Balasore",
+    "state": "Odisha"
+  },
+  "Nilagiri, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Nilagiri",
+    "district": "Balasore",
+    "state": "Odisha"
+  },
+  "Nilagiri": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Nilagiri",
+    "district": "Balasore",
+    "state": "Odisha"
+  },
+  "Godabhaga, Bargarh, Odisha": {
+    "lat": 21.3333,
+    "lon": 83.6167,
+    "market": "Godabhaga",
+    "district": "Bargarh",
+    "state": "Odisha"
+  },
+  "Godabhaga, Odisha": {
+    "lat": 21.3333,
+    "lon": 83.6167,
+    "market": "Godabhaga",
+    "district": "Bargarh",
+    "state": "Odisha"
+  },
+  "Godabhaga": {
+    "lat": 21.3333,
+    "lon": 83.6167,
+    "market": "Godabhaga",
+    "district": "Bargarh",
+    "state": "Odisha"
+  },
+  "Boudh, Boudh, Odisha": {
+    "lat": 20.8407,
+    "lon": 84.3262,
+    "market": "Boudh",
+    "district": "Boudh",
+    "state": "Odisha"
+  },
+  "Boudh, Odisha": {
+    "lat": 20.8407,
+    "lon": 84.3262,
+    "market": "Boudh",
+    "district": "Boudh",
+    "state": "Odisha"
+  },
+  "Boudh": {
+    "lat": 20.8407,
+    "lon": 84.3262,
+    "market": "Boudh",
+    "district": "Boudh",
+    "state": "Odisha"
+  },
+  "Rahama, Jagatsinghpur, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Rahama",
+    "district": "Jagatsinghpur",
+    "state": "Odisha"
+  },
+  "Rahama, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Rahama",
+    "district": "Jagatsinghpur",
+    "state": "Odisha"
+  },
+  "Rahama": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Rahama",
+    "district": "Jagatsinghpur",
+    "state": "Odisha"
+  },
+  "Karanjia, Mayurbhanja, Odisha": {
+    "lat": 21.9287,
+    "lon": 86.7369,
+    "market": "Karanjia",
+    "district": "Mayurbhanja",
+    "state": "Odisha"
+  },
+  "Karanjia, Odisha": {
+    "lat": 21.9287,
+    "lon": 86.7369,
+    "market": "Karanjia",
+    "district": "Mayurbhanja",
+    "state": "Odisha"
+  },
+  "Karanjia": {
+    "lat": 21.9287,
+    "lon": 86.7369,
+    "market": "Karanjia",
+    "district": "Mayurbhanja",
+    "state": "Odisha"
+  },
+  "Panposh, Sundergarh, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Panposh",
+    "district": "Sundergarh",
+    "state": "Odisha"
+  },
+  "Panposh, Odisha": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Panposh",
+    "district": "Sundergarh",
+    "state": "Odisha"
+  },
+  "Panposh": {
+    "lat": 21.4934,
+    "lon": 86.9135,
+    "market": "Panposh",
+    "district": "Sundergarh",
+    "state": "Odisha"
+  },
+  "Kot ise Khan, Moga, Punjab": {
+    "lat": 30.8165,
+    "lon": 75.1717,
+    "market": "Kot ise Khan",
+    "district": "Moga",
+    "state": "Punjab"
+  },
+  "Kot ise Khan, Punjab": {
+    "lat": 30.8165,
+    "lon": 75.1717,
+    "market": "Kot ise Khan",
+    "district": "Moga",
+    "state": "Punjab"
+  },
+  "Kot ise Khan": {
+    "lat": 30.8165,
+    "lon": 75.1717,
+    "market": "Kot ise Khan",
+    "district": "Moga",
+    "state": "Punjab"
+  },
+  "Ahmedgarh, Sangrur, Punjab": {
+    "lat": 30.6833,
+    "lon": 75.8333,
+    "market": "Ahmedgarh",
+    "district": "Sangrur",
+    "state": "Punjab"
+  },
+  "Ahmedgarh, Punjab": {
+    "lat": 30.6833,
+    "lon": 75.8333,
+    "market": "Ahmedgarh",
+    "district": "Sangrur",
+    "state": "Punjab"
+  },
+  "Ahmedgarh": {
+    "lat": 30.6833,
+    "lon": 75.8333,
+    "market": "Ahmedgarh",
+    "district": "Sangrur",
+    "state": "Punjab"
+  },
+  "Kapasan, Chittorgarh, Rajasthan": {
+    "lat": 24.8887,
+    "lon": 74.6269,
+    "market": "Kapasan",
+    "district": "Chittorgarh",
+    "state": "Rajasthan"
+  },
+  "Kapasan, Rajasthan": {
+    "lat": 24.8887,
+    "lon": 74.6269,
+    "market": "Kapasan",
+    "district": "Chittorgarh",
+    "state": "Rajasthan"
+  },
+  "Kapasan": {
+    "lat": 24.8887,
+    "lon": 74.6269,
+    "market": "Kapasan",
+    "district": "Chittorgarh",
+    "state": "Rajasthan"
+  },
+  "Sikri, Deeg, Rajasthan": {
+    "lat": 27.4728,
+    "lon": 77.3258,
+    "market": "Sikri",
+    "district": "Deeg",
+    "state": "Rajasthan"
+  },
+  "Sikri, Rajasthan": {
+    "lat": 27.4728,
+    "lon": 77.3258,
+    "market": "Sikri",
+    "district": "Deeg",
+    "state": "Rajasthan"
+  },
+  "Sikri": {
+    "lat": 27.4728,
+    "lon": 77.3258,
+    "market": "Sikri",
+    "district": "Deeg",
+    "state": "Rajasthan"
+  },
+  "Suratgarh, Ganganagar, Rajasthan": {
+    "lat": 29.9038,
+    "lon": 73.8772,
+    "market": "Suratgarh",
+    "district": "Ganganagar",
+    "state": "Rajasthan"
+  },
+  "Suratgarh, Rajasthan": {
+    "lat": 29.9038,
+    "lon": 73.8772,
+    "market": "Suratgarh",
+    "district": "Ganganagar",
+    "state": "Rajasthan"
+  },
+  "Suratgarh": {
+    "lat": 29.9038,
+    "lon": 73.8772,
+    "market": "Suratgarh",
+    "district": "Ganganagar",
+    "state": "Rajasthan"
+  },
+  "Gadwal(Lezza), Mahbubnagar, Telangana": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Gadwal(Lezza)",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Gadwal(Lezza), Telangana": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Gadwal(Lezza)",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Gadwal(Lezza)": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Gadwal(Lezza)",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Achnera, Agra, Uttar Pradesh": {
+    "lat": 27.1833,
+    "lon": 77.7667,
+    "market": "Achnera",
+    "district": "Agra",
+    "state": "Uttar Pradesh"
+  },
+  "Achnera, Uttar Pradesh": {
+    "lat": 27.1833,
+    "lon": 77.7667,
+    "market": "Achnera",
+    "district": "Agra",
+    "state": "Uttar Pradesh"
+  },
+  "Achnera": {
+    "lat": 27.1833,
+    "lon": 77.7667,
+    "market": "Achnera",
+    "district": "Agra",
+    "state": "Uttar Pradesh"
+  },
+  "Visoli, Badaun, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Visoli",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Visoli, Uttar Pradesh": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Visoli",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Visoli": {
+    "lat": 28.0315,
+    "lon": 79.1235,
+    "market": "Visoli",
+    "district": "Badaun",
+    "state": "Uttar Pradesh"
+  },
+  "Rasda, Ballia, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Rasda",
+    "district": "Ballia",
+    "state": "Uttar Pradesh"
+  },
+  "Rasda, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Rasda",
+    "district": "Ballia",
+    "state": "Uttar Pradesh"
+  },
+  "Rasda": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Rasda",
+    "district": "Ballia",
+    "state": "Uttar Pradesh"
+  },
+  "Jasvantnagar, Etawah, Uttar Pradesh": {
+    "lat": 26.7855,
+    "lon": 79.0215,
+    "market": "Jasvantnagar",
+    "district": "Etawah",
+    "state": "Uttar Pradesh"
+  },
+  "Jasvantnagar, Uttar Pradesh": {
+    "lat": 26.7855,
+    "lon": 79.0215,
+    "market": "Jasvantnagar",
+    "district": "Etawah",
+    "state": "Uttar Pradesh"
+  },
+  "Jasvantnagar": {
+    "lat": 26.7855,
+    "lon": 79.0215,
+    "market": "Jasvantnagar",
+    "district": "Etawah",
+    "state": "Uttar Pradesh"
+  },
+  "Bhehjoi, Sambhal, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Bhehjoi",
+    "district": "Sambhal",
+    "state": "Uttar Pradesh"
+  },
+  "Bhehjoi, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Bhehjoi",
+    "district": "Sambhal",
+    "state": "Uttar Pradesh"
+  },
+  "Bhehjoi": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Bhehjoi",
+    "district": "Sambhal",
+    "state": "Uttar Pradesh"
+  },
+  "Pandua, Hooghly, West Bengal": {
+    "lat": 22.8963,
+    "lon": 88.2461,
+    "market": "Pandua",
+    "district": "Hooghly",
+    "state": "West Bengal"
+  },
+  "Pandua, West Bengal": {
+    "lat": 22.8963,
+    "lon": 88.2461,
+    "market": "Pandua",
+    "district": "Hooghly",
+    "state": "West Bengal"
+  },
+  "Pandua": {
+    "lat": 22.8963,
+    "lon": 88.2461,
+    "market": "Pandua",
+    "district": "Hooghly",
+    "state": "West Bengal"
+  },
+  "Kalikiri, Chittor, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Kalikiri",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Kalikiri, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Kalikiri",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Kalikiri": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Kalikiri",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Punganur, Chittor, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Punganur",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Punganur, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Punganur",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Punganur": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Punganur",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Vayalapadu, Chittor, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Vayalapadu",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Vayalapadu, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Vayalapadu",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Vayalapadu": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Vayalapadu",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Yemmiganur, Kurnool, Andhra Pradesh": {
+    "lat": 15.8281,
+    "lon": 78.0373,
+    "market": "Yemmiganur",
+    "district": "Kurnool",
+    "state": "Andhra Pradesh"
+  },
+  "Yemmiganur, Andhra Pradesh": {
+    "lat": 15.8281,
+    "lon": 78.0373,
+    "market": "Yemmiganur",
+    "district": "Kurnool",
+    "state": "Andhra Pradesh"
+  },
+  "Yemmiganur": {
+    "lat": 15.8281,
+    "lon": 78.0373,
+    "market": "Yemmiganur",
+    "district": "Kurnool",
+    "state": "Andhra Pradesh"
+  },
+  "Gudur, Nellore, Andhra Pradesh": {
+    "lat": 14.4426,
+    "lon": 79.9865,
+    "market": "Gudur",
+    "district": "Nellore",
+    "state": "Andhra Pradesh"
+  },
+  "Gudur, Andhra Pradesh": {
+    "lat": 14.4426,
+    "lon": 79.9865,
+    "market": "Gudur",
+    "district": "Nellore",
+    "state": "Andhra Pradesh"
+  },
+  "Gudur": {
+    "lat": 14.4426,
+    "lon": 79.9865,
+    "market": "Gudur",
+    "district": "Nellore",
+    "state": "Andhra Pradesh"
+  },
+  "Devgadhbaria, Dahod, Gujarat": {
+    "lat": 22.8378,
+    "lon": 74.2546,
+    "market": "Devgadhbaria",
+    "district": "Dahod",
+    "state": "Gujarat"
+  },
+  "Devgadhbaria, Gujarat": {
+    "lat": 22.8378,
+    "lon": 74.2546,
+    "market": "Devgadhbaria",
+    "district": "Dahod",
+    "state": "Gujarat"
+  },
+  "Devgadhbaria": {
+    "lat": 22.8378,
+    "lon": 74.2546,
+    "market": "Devgadhbaria",
+    "district": "Dahod",
+    "state": "Gujarat"
+  },
+  "Rajpipla, Narmada, Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Rajpipla",
+    "district": "Narmada",
+    "state": "Gujarat"
+  },
+  "Rajpipla, Gujarat": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Rajpipla",
+    "district": "Narmada",
+    "state": "Gujarat"
+  },
+  "Rajpipla": {
+    "lat": 21.6032,
+    "lon": 71.2221,
+    "market": "Rajpipla",
+    "district": "Narmada",
+    "state": "Gujarat"
+  },
+  "Uklana, Hissar, Haryana": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Uklana",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Uklana, Haryana": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Uklana",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Uklana": {
+    "lat": 29.1492,
+    "lon": 75.7217,
+    "market": "Uklana",
+    "district": "Hissar",
+    "state": "Haryana"
+  },
+  "Cheeka, Kaithal, Haryana": {
+    "lat": 29.8015,
+    "lon": 76.3996,
+    "market": "Cheeka",
+    "district": "Kaithal",
+    "state": "Haryana"
+  },
+  "Cheeka, Haryana": {
+    "lat": 29.8015,
+    "lon": 76.3996,
+    "market": "Cheeka",
+    "district": "Kaithal",
+    "state": "Haryana"
+  },
+  "Cheeka": {
+    "lat": 29.8015,
+    "lon": 76.3996,
+    "market": "Cheeka",
+    "district": "Kaithal",
+    "state": "Haryana"
+  },
+  "New Grain Market , Panchkula, Panchkula, Haryana": {
+    "lat": 30.6942,
+    "lon": 76.8606,
+    "market": "New Grain Market , Panchkula",
+    "district": "Panchkula",
+    "state": "Haryana"
+  },
+  "New Grain Market , Panchkula, Haryana": {
+    "lat": 30.6942,
+    "lon": 76.8606,
+    "market": "New Grain Market , Panchkula",
+    "district": "Panchkula",
+    "state": "Haryana"
+  },
+  "New Grain Market , Panchkula": {
+    "lat": 30.6942,
+    "lon": 76.8606,
+    "market": "New Grain Market , Panchkula",
+    "district": "Panchkula",
+    "state": "Haryana"
+  },
+  "Panchkul(Kalka), Panchkula, Haryana": {
+    "lat": 30.6942,
+    "lon": 76.8606,
+    "market": "Panchkul(Kalka)",
+    "district": "Panchkula",
+    "state": "Haryana"
+  },
+  "Panchkul(Kalka), Haryana": {
+    "lat": 30.6942,
+    "lon": 76.8606,
+    "market": "Panchkul(Kalka)",
+    "district": "Panchkula",
+    "state": "Haryana"
+  },
+  "Panchkul(Kalka)": {
+    "lat": 30.6942,
+    "lon": 76.8606,
+    "market": "Panchkul(Kalka)",
+    "district": "Panchkula",
+    "state": "Haryana"
+  },
+  "Mavoor  VFPCK, Kozhikode(Calicut), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Mavoor  VFPCK",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Mavoor  VFPCK, Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Mavoor  VFPCK",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Mavoor  VFPCK": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Mavoor  VFPCK",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "GarhShankar (Kotfatuhi), Hoshiarpur, Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "GarhShankar (Kotfatuhi)",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "GarhShankar (Kotfatuhi), Punjab": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "GarhShankar (Kotfatuhi)",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "GarhShankar (Kotfatuhi)": {
+    "lat": 31.5273,
+    "lon": 75.9149,
+    "market": "GarhShankar (Kotfatuhi)",
+    "district": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  "Begu, Chittorgarh, Rajasthan": {
+    "lat": 24.8887,
+    "lon": 74.6269,
+    "market": "Begu",
+    "district": "Chittorgarh",
+    "state": "Rajasthan"
+  },
+  "Begu, Rajasthan": {
+    "lat": 24.8887,
+    "lon": 74.6269,
+    "market": "Begu",
+    "district": "Chittorgarh",
+    "state": "Rajasthan"
+  },
+  "Begu": {
+    "lat": 24.8887,
+    "lon": 74.6269,
+    "market": "Begu",
+    "district": "Chittorgarh",
+    "state": "Rajasthan"
+  },
+  "Bhinmal, Jalore, Rajasthan": {
+    "lat": 25.3444,
+    "lon": 72.6156,
+    "market": "Bhinmal",
+    "district": "Jalore",
+    "state": "Rajasthan"
+  },
+  "Bhinmal, Rajasthan": {
+    "lat": 25.3444,
+    "lon": 72.6156,
+    "market": "Bhinmal",
+    "district": "Jalore",
+    "state": "Rajasthan"
+  },
+  "Bhinmal": {
+    "lat": 25.3444,
+    "lon": 72.6156,
+    "market": "Bhinmal",
+    "district": "Jalore",
+    "state": "Rajasthan"
+  },
+  "Ositan Mathania, Jodhpur Rural, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Ositan Mathania",
+    "district": "Jodhpur Rural",
+    "state": "Rajasthan"
+  },
+  "Ositan Mathania, Rajasthan": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Ositan Mathania",
+    "district": "Jodhpur Rural",
+    "state": "Rajasthan"
+  },
+  "Ositan Mathania": {
+    "lat": 26.1012,
+    "lon": 74.3218,
+    "market": "Ositan Mathania",
+    "district": "Jodhpur Rural",
+    "state": "Rajasthan"
+  },
+  "Khanapur, Adilabad, Telangana": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Khanapur",
+    "district": "Adilabad",
+    "state": "Telangana"
+  },
+  "Khanapur, Telangana": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Khanapur",
+    "district": "Adilabad",
+    "state": "Telangana"
+  },
+  "Khanapur": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Khanapur",
+    "district": "Adilabad",
+    "state": "Telangana"
+  },
+  "Gangadhara, Karimnagar, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Gangadhara",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Gangadhara, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Gangadhara",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Gangadhara": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Gangadhara",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Huzzurabad, Karimnagar, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Huzzurabad",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Huzzurabad, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Huzzurabad",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Huzzurabad": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Huzzurabad",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Charla, Khammam, Telangana": {
+    "lat": 17.2473,
+    "lon": 80.1514,
+    "market": "Charla",
+    "district": "Khammam",
+    "state": "Telangana"
+  },
+  "Charla, Telangana": {
+    "lat": 17.2473,
+    "lon": 80.1514,
+    "market": "Charla",
+    "district": "Khammam",
+    "state": "Telangana"
+  },
+  "Charla": {
+    "lat": 17.2473,
+    "lon": 80.1514,
+    "market": "Charla",
+    "district": "Khammam",
+    "state": "Telangana"
+  },
+  "Alampur, Mahbubnagar, Telangana": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Alampur",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Alampur, Telangana": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Alampur",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Alampur": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Alampur",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Kulai, Dhalai, Tripura": {
+    "lat": 23.9,
+    "lon": 88.7,
+    "market": "Kulai",
+    "district": "Dhalai",
+    "state": "Tripura"
+  },
+  "Kulai, Tripura": {
+    "lat": 23.9,
+    "lon": 88.7,
+    "market": "Kulai",
+    "district": "Dhalai",
+    "state": "Tripura"
+  },
+  "Kulai": {
+    "lat": 23.9,
+    "lon": 88.7,
+    "market": "Kulai",
+    "district": "Dhalai",
+    "state": "Tripura"
+  },
+  "Haldaur, Bijnor, Uttar Pradesh": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Haldaur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Haldaur, Uttar Pradesh": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Haldaur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Haldaur": {
+    "lat": 29.3724,
+    "lon": 78.1358,
+    "market": "Haldaur",
+    "district": "Bijnor",
+    "state": "Uttar Pradesh"
+  },
+  "Hardoi, Hardoi, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Hardoi",
+    "district": "Hardoi",
+    "state": "Uttar Pradesh"
+  },
+  "Hardoi, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Hardoi",
+    "district": "Hardoi",
+    "state": "Uttar Pradesh"
+  },
+  "Hardoi": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Hardoi",
+    "district": "Hardoi",
+    "state": "Uttar Pradesh"
+  },
+  "Muzzafarnagar, Muzaffarnagar, Uttar Pradesh": {
+    "lat": 29.4727,
+    "lon": 77.7085,
+    "market": "Muzzafarnagar",
+    "district": "Muzaffarnagar",
+    "state": "Uttar Pradesh"
+  },
+  "Muzzafarnagar, Uttar Pradesh": {
+    "lat": 29.4727,
+    "lon": 77.7085,
+    "market": "Muzzafarnagar",
+    "district": "Muzaffarnagar",
+    "state": "Uttar Pradesh"
+  },
+  "Muzzafarnagar": {
+    "lat": 29.4727,
+    "lon": 77.7085,
+    "market": "Muzzafarnagar",
+    "district": "Muzaffarnagar",
+    "state": "Uttar Pradesh"
+  },
+  "Ajuha, Prayagraj, Uttar Pradesh": {
+    "lat": 25.5667,
+    "lon": 81.3167,
+    "market": "Ajuha",
+    "district": "Prayagraj",
+    "state": "Uttar Pradesh"
+  },
+  "Ajuha, Uttar Pradesh": {
+    "lat": 25.5667,
+    "lon": 81.3167,
+    "market": "Ajuha",
+    "district": "Prayagraj",
+    "state": "Uttar Pradesh"
+  },
+  "Ajuha": {
+    "lat": 25.5667,
+    "lon": 81.3167,
+    "market": "Ajuha",
+    "district": "Prayagraj",
+    "state": "Uttar Pradesh"
+  },
+  "Gadarpur, UdhamSinghNagar, Uttrakhand": {
+    "lat": 28.98,
+    "lon": 79.4,
+    "market": "Gadarpur",
+    "district": "UdhamSinghNagar",
+    "state": "Uttrakhand"
+  },
+  "Gadarpur, Uttrakhand": {
+    "lat": 28.98,
+    "lon": 79.4,
+    "market": "Gadarpur",
+    "district": "UdhamSinghNagar",
+    "state": "Uttrakhand"
+  },
+  "Gadarpur": {
+    "lat": 28.98,
+    "lon": 79.4,
+    "market": "Gadarpur",
+    "district": "UdhamSinghNagar",
+    "state": "Uttrakhand"
+  },
+  "Kasimbazar, Murshidabad, West Bengal": {
+    "lat": 24.1759,
+    "lon": 88.2802,
+    "market": "Kasimbazar",
+    "district": "Murshidabad",
+    "state": "West Bengal"
+  },
+  "Kasimbazar, West Bengal": {
+    "lat": 24.1759,
+    "lon": 88.2802,
+    "market": "Kasimbazar",
+    "district": "Murshidabad",
+    "state": "West Bengal"
+  },
+  "Kasimbazar": {
+    "lat": 24.1759,
+    "lon": 88.2802,
+    "market": "Kasimbazar",
+    "district": "Murshidabad",
+    "state": "West Bengal"
+  },
+  "Anantapur, Anantapur, Andhra Pradesh": {
+    "lat": 14.6819,
+    "lon": 77.6006,
+    "market": "Anantapur",
+    "district": "Anantapur",
+    "state": "Andhra Pradesh"
+  },
+  "Anantapur, Andhra Pradesh": {
+    "lat": 14.6819,
+    "lon": 77.6006,
+    "market": "Anantapur",
+    "district": "Anantapur",
+    "state": "Andhra Pradesh"
+  },
+  "Anantapur": {
+    "lat": 14.6819,
+    "lon": 77.6006,
+    "market": "Anantapur",
+    "district": "Anantapur",
+    "state": "Andhra Pradesh"
+  },
+  "Chittoor, Chittor, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Chittoor",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Chittoor, Andhra Pradesh": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Chittoor",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Chittoor": {
+    "lat": 13.2172,
+    "lon": 79.1003,
+    "market": "Chittoor",
+    "district": "Chittor",
+    "state": "Andhra Pradesh"
+  },
+  "Nandyal, Kurnool, Andhra Pradesh": {
+    "lat": 15.8281,
+    "lon": 78.0373,
+    "market": "Nandyal",
+    "district": "Kurnool",
+    "state": "Andhra Pradesh"
+  },
+  "Nandyal, Andhra Pradesh": {
+    "lat": 15.8281,
+    "lon": 78.0373,
+    "market": "Nandyal",
+    "district": "Kurnool",
+    "state": "Andhra Pradesh"
+  },
+  "Nandyal": {
+    "lat": 15.8281,
+    "lon": 78.0373,
+    "market": "Nandyal",
+    "district": "Kurnool",
+    "state": "Andhra Pradesh"
+  },
+  "Chintapally, Visakhapatnam, Andhra Pradesh": {
+    "lat": 17.6868,
+    "lon": 83.2185,
+    "market": "Chintapally",
+    "district": "Visakhapatnam",
+    "state": "Andhra Pradesh"
+  },
+  "Chintapally, Andhra Pradesh": {
+    "lat": 17.6868,
+    "lon": 83.2185,
+    "market": "Chintapally",
+    "district": "Visakhapatnam",
+    "state": "Andhra Pradesh"
+  },
+  "Chintapally": {
+    "lat": 17.6868,
+    "lon": 83.2185,
+    "market": "Chintapally",
+    "district": "Visakhapatnam",
+    "state": "Andhra Pradesh"
+  },
+  "Bardoli(Katod), Surat, Gujarat": {
+    "lat": 21.1702,
+    "lon": 72.8311,
+    "market": "Bardoli(Katod)",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Bardoli(Katod), Gujarat": {
+    "lat": 21.1702,
+    "lon": 72.8311,
+    "market": "Bardoli(Katod)",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Bardoli(Katod)": {
+    "lat": 21.1702,
+    "lon": 72.8311,
+    "market": "Bardoli(Katod)",
+    "district": "Surat",
+    "state": "Gujarat"
+  },
+  "Babain, Kurukshetra, Haryana": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Babain",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Babain, Haryana": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Babain",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Babain": {
+    "lat": 29.9695,
+    "lon": 76.8783,
+    "market": "Babain",
+    "district": "Kurukshetra",
+    "state": "Haryana"
+  },
+  "Erath  VFPCK, Pathanamthitta, Kerala": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Erath  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Erath  VFPCK, Kerala": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Erath  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Erath  VFPCK": {
+    "lat": 9.2648,
+    "lon": 76.787,
+    "market": "Erath  VFPCK",
+    "district": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  "Devarakonda, Nalgonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarakonda",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Devarakonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarakonda",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Devarakonda": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarakonda",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Devarkonda(Dindi), Nalgonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarkonda(Dindi)",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Devarkonda(Dindi), Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarkonda(Dindi)",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Devarkonda(Dindi)": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Devarkonda(Dindi)",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Thungathurthy, Nalgonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Thungathurthy",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Thungathurthy, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Thungathurthy",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Thungathurthy": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Thungathurthy",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Aliganj, Etah, Uttar Pradesh": {
+    "lat": 27.5614,
+    "lon": 78.6653,
+    "market": "Aliganj",
+    "district": "Etah",
+    "state": "Uttar Pradesh"
+  },
+  "Aliganj, Uttar Pradesh": {
+    "lat": 27.5614,
+    "lon": 78.6653,
+    "market": "Aliganj",
+    "district": "Etah",
+    "state": "Uttar Pradesh"
+  },
+  "Aliganj": {
+    "lat": 27.5614,
+    "lon": 78.6653,
+    "market": "Aliganj",
+    "district": "Etah",
+    "state": "Uttar Pradesh"
+  },
+  "Ait, Jalaun (Orai), Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Ait",
+    "district": "Jalaun (Orai)",
+    "state": "Uttar Pradesh"
+  },
+  "Ait, Uttar Pradesh": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Ait",
+    "district": "Jalaun (Orai)",
+    "state": "Uttar Pradesh"
+  },
+  "Ait": {
+    "lat": 27.1767,
+    "lon": 78.0081,
+    "market": "Ait",
+    "district": "Jalaun (Orai)",
+    "state": "Uttar Pradesh"
+  },
+  "Ambajipeta, East Godavari, Andhra Pradesh": {
+    "lat": 17.0005,
+    "lon": 81.804,
+    "market": "Ambajipeta",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Ambajipeta, Andhra Pradesh": {
+    "lat": 17.0005,
+    "lon": 81.804,
+    "market": "Ambajipeta",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Ambajipeta": {
+    "lat": 17.0005,
+    "lon": 81.804,
+    "market": "Ambajipeta",
+    "district": "East Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Atmakur(SPS), Nellore, Andhra Pradesh": {
+    "lat": 14.4426,
+    "lon": 79.9865,
+    "market": "Atmakur(SPS)",
+    "district": "Nellore",
+    "state": "Andhra Pradesh"
+  },
+  "Atmakur(SPS), Andhra Pradesh": {
+    "lat": 14.4426,
+    "lon": 79.9865,
+    "market": "Atmakur(SPS)",
+    "district": "Nellore",
+    "state": "Andhra Pradesh"
+  },
+  "Atmakur(SPS)": {
+    "lat": 14.4426,
+    "lon": 79.9865,
+    "market": "Atmakur(SPS)",
+    "district": "Nellore",
+    "state": "Andhra Pradesh"
+  },
+  "Chintalapudi, West Godavari, Andhra Pradesh": {
+    "lat": 14.6819,
+    "lon": 77.6006,
+    "market": "Chintalapudi",
+    "district": "West Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Chintalapudi, Andhra Pradesh": {
+    "lat": 14.6819,
+    "lon": 77.6006,
+    "market": "Chintalapudi",
+    "district": "West Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Chintalapudi": {
+    "lat": 14.6819,
+    "lon": 77.6006,
+    "market": "Chintalapudi",
+    "district": "West Godavari",
+    "state": "Andhra Pradesh"
+  },
+  "Davgadbaria(Piplod), Dahod, Gujarat": {
+    "lat": 22.8378,
+    "lon": 74.2546,
+    "market": "Davgadbaria(Piplod)",
+    "district": "Dahod",
+    "state": "Gujarat"
+  },
+  "Davgadbaria(Piplod), Gujarat": {
+    "lat": 22.8378,
+    "lon": 74.2546,
+    "market": "Davgadbaria(Piplod)",
+    "district": "Dahod",
+    "state": "Gujarat"
+  },
+  "Davgadbaria(Piplod)": {
+    "lat": 22.8378,
+    "lon": 74.2546,
+    "market": "Davgadbaria(Piplod)",
+    "district": "Dahod",
+    "state": "Gujarat"
+  },
+  "Khedbrahma, Sabarkantha, Gujarat": {
+    "lat": 23.6823,
+    "lon": 73.0458,
+    "market": "Khedbrahma",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Khedbrahma, Gujarat": {
+    "lat": 23.6823,
+    "lon": 73.0458,
+    "market": "Khedbrahma",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "Khedbrahma": {
+    "lat": 23.6823,
+    "lon": 73.0458,
+    "market": "Khedbrahma",
+    "district": "Sabarkantha",
+    "state": "Gujarat"
+  },
+  "kalanwali, Sirsa, Haryana": {
+    "lat": 29.5349,
+    "lon": 75.0298,
+    "market": "kalanwali",
+    "district": "Sirsa",
+    "state": "Haryana"
+  },
+  "kalanwali, Haryana": {
+    "lat": 29.5349,
+    "lon": 75.0298,
+    "market": "kalanwali",
+    "district": "Sirsa",
+    "state": "Haryana"
+  },
+  "kalanwali": {
+    "lat": 29.5349,
+    "lon": 75.0298,
+    "market": "kalanwali",
+    "district": "Sirsa",
+    "state": "Haryana"
+  },
+  "Maloor VFPCK, Kannur, Kerala": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Maloor VFPCK",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Maloor VFPCK, Kerala": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Maloor VFPCK",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Maloor VFPCK": {
+    "lat": 11.8745,
+    "lon": 75.3704,
+    "market": "Maloor VFPCK",
+    "district": "Kannur",
+    "state": "Kerala"
+  },
+  "Vellannur  VFPCK, Kozhikode(Calicut), Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Vellannur  VFPCK",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Vellannur  VFPCK, Kerala": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Vellannur  VFPCK",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Vellannur  VFPCK": {
+    "lat": 11.2588,
+    "lon": 75.7804,
+    "market": "Vellannur  VFPCK",
+    "district": "Kozhikode(Calicut)",
+    "state": "Kerala"
+  },
+  "Adilabad, Adilabad, Telangana": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Adilabad",
+    "district": "Adilabad",
+    "state": "Telangana"
+  },
+  "Adilabad, Telangana": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Adilabad",
+    "district": "Adilabad",
+    "state": "Telangana"
+  },
+  "Adilabad": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Adilabad",
+    "district": "Adilabad",
+    "state": "Telangana"
+  },
+  "Husnabad, Karimnagar, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Husnabad",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Husnabad, Telangana": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Husnabad",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Husnabad": {
+    "lat": 18.4386,
+    "lon": 79.1288,
+    "market": "Husnabad",
+    "district": "Karimnagar",
+    "state": "Telangana"
+  },
+  "Wyra, Khammam, Telangana": {
+    "lat": 17.2473,
+    "lon": 80.1514,
+    "market": "Wyra",
+    "district": "Khammam",
+    "state": "Telangana"
+  },
+  "Wyra, Telangana": {
+    "lat": 17.2473,
+    "lon": 80.1514,
+    "market": "Wyra",
+    "district": "Khammam",
+    "state": "Telangana"
+  },
+  "Wyra": {
+    "lat": 17.2473,
+    "lon": 80.1514,
+    "market": "Wyra",
+    "district": "Khammam",
+    "state": "Telangana"
+  },
+  "Kollapur, Mahbubnagar, Telangana": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Kollapur",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Kollapur, Telangana": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Kollapur",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Kollapur": {
+    "lat": 16.7488,
+    "lon": 77.9847,
+    "market": "Kollapur",
+    "district": "Mahbubnagar",
+    "state": "Telangana"
+  },
+  "Gajwel, Medak, Telangana": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Gajwel",
+    "district": "Medak",
+    "state": "Telangana"
+  },
+  "Gajwel, Telangana": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Gajwel",
+    "district": "Medak",
+    "state": "Telangana"
+  },
+  "Gajwel": {
+    "lat": 19.6641,
+    "lon": 78.532,
+    "market": "Gajwel",
+    "district": "Medak",
+    "state": "Telangana"
+  },
+  "Bhongir, Nalgonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Bhongir",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Bhongir, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Bhongir",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Bhongir": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Bhongir",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Kodad, Nalgonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Kodad",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Kodad, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Kodad",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Kodad": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Kodad",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Miryalaguda, Nalgonda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Miryalaguda",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Miryalaguda, Telangana": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Miryalaguda",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Miryalaguda": {
+    "lat": 17.0577,
+    "lon": 79.2684,
+    "market": "Miryalaguda",
+    "district": "Nalgonda",
+    "state": "Telangana"
+  },
+  "Divai, Bulandshahar, Uttar Pradesh": {
+    "lat": 28.4069,
+    "lon": 77.8498,
+    "market": "Divai",
+    "district": "Bulandshahar",
+    "state": "Uttar Pradesh"
+  },
+  "Divai, Uttar Pradesh": {
+    "lat": 28.4069,
+    "lon": 77.8498,
+    "market": "Divai",
+    "district": "Bulandshahar",
+    "state": "Uttar Pradesh"
+  },
+  "Divai": {
+    "lat": 28.4069,
+    "lon": 77.8498,
+    "market": "Divai",
+    "district": "Bulandshahar",
+    "state": "Uttar Pradesh"
+  },
+  "Tanakpur, Champawat, Uttrakhand": {
+    "lat": 29.3364,
+    "lon": 80.0914,
+    "market": "Tanakpur",
+    "district": "Champawat",
+    "state": "Uttrakhand"
+  },
+  "Tanakpur, Uttrakhand": {
+    "lat": 29.3364,
+    "lon": 80.0914,
+    "market": "Tanakpur",
+    "district": "Champawat",
+    "state": "Uttrakhand"
+  },
+  "Tanakpur": {
+    "lat": 29.3364,
+    "lon": 80.0914,
+    "market": "Tanakpur",
+    "district": "Champawat",
+    "state": "Uttrakhand"
+  }
+}
