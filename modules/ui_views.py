@@ -40,6 +40,7 @@ from modules.crop_advisor import recommend_crop
 from modules.soil_intelligence import evaluate_soil_health
 from modules.fertilizer_advisor import calculate_fertilizer_prescription
 from modules.fraud_detector import evaluate_buyer_offer
+from modules.trend_shift_detector import detect_market_trend_shifts, analyze_weather_and_yield_shifts
 from modules.auth_db import (
     save_user_prediction, get_user_predictions, update_farm_profile, change_user_password
 )
@@ -911,4 +912,186 @@ def render_settings_view(user, farm):
                     else:
                         st.error(ch_msg)
 
-            st.html(f"<div style='margin-top:20px; font-size:0.85rem; color:#64748B;'>Account ID: #{user['id']} • Role: {user['role'].upper()}</div>")
+            st.html(f"<div style='margin-top:20px; font-size:0.85rem; color:#64748B;'>Account ID: #{user['id']} | Role: {user['role'].upper()}</div>")
+
+
+# ==============================================================================
+# 13. TREND SHIFT INTELLIGENCE VIEW
+# ==============================================================================
+def render_trend_shift_view(user, farm, df_market):
+    st.markdown("#### 📈 Trend Shift Intelligence & Early Warning System")
+    st.caption("Change-point detection and structural inflection monitoring across 16.37M historical mandi transactions and micro-climate telemetry.")
+
+    TOP_CROPS = ["Tomato", "Onion", "Potato", "Wheat", "Rice", "Banana", "Brinjal", "Cabbage", "Cauliflower", "Maize"]
+    INDIAN_STATES = ["Karnataka", "Maharashtra", "All States", "Gujarat", "Haryana", "Punjab", "Rajasthan", "Madhya Pradesh", "Uttar Pradesh", "Tamil Nadu", "Kerala"]
+
+    farm_crop = farm.get("primary_crops", "Tomato").split(",")[0].strip()
+    crop_idx = TOP_CROPS.index(farm_crop) if farm_crop in TOP_CROPS else 0
+    farm_state = farm.get("state", "Karnataka")
+    state_idx = INDIAN_STATES.index(farm_state) if farm_state in INDIAN_STATES else 0
+
+    col_f1, col_f2, col_f3 = st.columns([1.2, 1.2, 1])
+    with col_f1:
+        sel_crop = st.selectbox("Agricultural Commodity", TOP_CROPS, index=crop_idx, key="ts_crop")
+    with col_f2:
+        sel_state = st.selectbox("Target Geography", INDIAN_STATES, index=state_idx, key="ts_state")
+    with col_f3:
+        max_shifts = st.slider("Shifts to Inspect", min_value=3, max_value=12, value=6, key="ts_slider")
+
+    with st.spinner(f"Detecting structural momentum and supply-shock inflections for {sel_crop} ({sel_state})..."):
+        shift_res = detect_market_trend_shifts(sel_crop, state=sel_state)
+        clim_res = analyze_weather_and_yield_shifts(sel_crop, state=sel_state)
+
+    if shift_res.get("status") and not shift_res.get("shifts_count"):
+        st.warning(shift_res["status"])
+        return
+
+    # REGIME ALERT BANNER
+    regime = shift_res.get("current_regime", "Neutral")
+    regime_color = shift_res.get("regime_color", "#15803D")
+    latest_p = shift_res.get("latest_price", 0.0)
+    vel_7d = shift_res.get("velocity_7d_pct", 0.0)
+    mom_30d = shift_res.get("momentum_30d_pct", 0.0)
+    sma_7 = shift_res.get("sma_7", 0.0)
+    sma_30 = shift_res.get("sma_30", 0.0)
+    shifts_cnt = shift_res.get("shifts_count", 0)
+
+    # Pick background tint for banner
+    if "Bullish" in regime:
+        banner_bg = "#F0FDF4"
+        banner_border = "#86EFAC"
+        regime_desc = "Wholesale prices are gaining upward momentum above the 30-day baseline. Buyer bidding competition is favorable."
+    elif "Bearish" in regime:
+        banner_bg = "#FEF2F2"
+        banner_border = "#FCA5A5"
+        regime_desc = "Wholesale prices are decelerating below the 30-day baseline. Mandi arrivals are elevated or demand is soft."
+    else:
+        banner_bg = "#FFFBEB"
+        banner_border = "#FCD34D"
+        regime_desc = "Prices are trading within normal statistical volatility envelopes without directional momentum."
+
+    st.html(f"""
+    <div style="background-color:{banner_bg}; border:1.5px solid {banner_border}; border-radius:10px; padding:16px 20px; margin: 12px 0 20px 0;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div>
+                <div style="font-size:0.8rem; font-weight:800; color:{regime_color}; text-transform:uppercase; letter-spacing:0.5px;">ACTIVE REGIME STATUS</div>
+                <div style="font-size:1.35rem; font-weight:800; color:{regime_color}; margin:3px 0 4px 0;">{regime}</div>
+                <div style="font-size:0.88rem; color:#475569;">{regime_desc}</div>
+            </div>
+            <div style="text-align:right;">
+                <div style="font-size:0.8rem; color:#64748B; font-weight:600;">Spot Modal Price</div>
+                <div style="font-size:1.6rem; font-weight:800; color:#0F172A;">₹{latest_p:.2f} <span style="font-size:0.9rem; font-weight:600; color:#64748B;">/ kg</span></div>
+            </div>
+        </div>
+    </div>
+    """)
+
+    # 4 MODERN KPI METRIC CARDS
+    k1, k2, k3, k4 = st.columns(4)
+    with k1:
+        st.metric(label="Current Regime", value=regime.split("(")[0].strip())
+    with k2:
+        st.metric(label="7-Day Price Velocity", value=f"{vel_7d:+.1f}%", delta=f"Fast SMA: ₹{sma_7:.2f}/kg")
+    with k3:
+        st.metric(label="30-Day Momentum", value=f"{mom_30d:+.1f}%", delta=f"Base SMA: ₹{sma_30:.2f}/kg")
+    with k4:
+        st.metric(label="Structural Inflections", value=f"{shifts_cnt} Detected", delta=f"Latest {max_shifts} profiled")
+
+    st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
+
+    # INTERACTIVE TIME-SERIES WITH INFLECTION MARKERS
+    with st.container(border=True):
+        st.html("<div style='font-size:1.1rem; font-weight:700; color:#0D5C3A; margin-bottom:4px;'>Wholesale Price Trajectory & Inflection Timeline</div><div style='font-size:0.85rem; color:#64748B; margin-bottom:12px;'>Historical daily prices overlaid with Fast 7-Day SMA, 30-Day Base SMA, and Bollinger Volatility Envelopes (±2σ). Colored diamonds mark validated trend shift events.</div>")
+        if shift_res.get("plot_fig"):
+            st.plotly_chart(shift_res["plot_fig"], use_container_width=True)
+
+    st.markdown("<div style='height: 16px;'></div>", unsafe_allow_html=True)
+
+    # SECTION: DETECTED TREND SHIFTS & EARLY WARNING INTELLIGENCE
+    st.markdown(f"#### 🔍 Detected Trend Shift Timeline — Top {max_shifts} Structural Inflections")
+    st.caption("Each shift reflects a verified mathematical change-point (moving average crossover, volatility breakout, or arrival surge).")
+
+    shifts_list = shift_res.get("recent_shifts", [])[:max_shifts]
+    if not shifts_list:
+        st.info("No significant structural trend shifts detected for this commodity/state filter.")
+    else:
+        for idx, s in enumerate(shifts_list):
+            with st.container(border=True):
+                # Header of the shift card
+                st.html(f"""
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid #E2E8F0; padding-bottom:8px;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="background-color:{s['badge_color']}; color:#FFFFFF; padding:4px 12px; border-radius:16px; font-size:0.82rem; font-weight:700;">
+                            {s['badge']}
+                        </span>
+                        <span style="font-size:0.95rem; font-weight:700; color:#0F172A;">Detected on {s['date']}</span>
+                    </div>
+                    <div style="font-size:1.05rem; font-weight:800; color:#0D5C3A;">
+                        ₹{s['price']:.2f} <span style="font-size:0.8rem; font-weight:600; color:#64748B;">/ kg</span>
+                    </div>
+                </div>
+                """)
+
+                # The 6 Mandatory Intelligence Fields
+                c_s1, c_s2 = st.columns(2)
+                with c_s1:
+                    st.html(f"""
+                    <div style="font-size:0.82rem; font-weight:700; color:#64748B; text-transform:uppercase;">1. Previous Trend</div>
+                    <div style="font-size:0.92rem; color:#0F172A; font-weight:600; margin-bottom:10px;">{s['previous_trend']}</div>
+
+                    <div style="font-size:0.82rem; font-weight:700; color:#64748B; text-transform:uppercase;">2. Current Trend</div>
+                    <div style="font-size:0.92rem; color:#0F172A; font-weight:600; margin-bottom:10px;">{s['current_trend']}</div>
+
+                    <div style="font-size:0.82rem; font-weight:700; color:#64748B; text-transform:uppercase;">3. Magnitude of Change</div>
+                    <div style="font-size:0.95rem; color:{s['badge_color']}; font-weight:700; margin-bottom:10px;">{s['magnitude']}</div>
+                    """)
+
+                with c_s2:
+                    st.html(f"""
+                    <div style="font-size:0.82rem; font-weight:700; color:#64748B; text-transform:uppercase;">4. Possible Reasons (Data Evidence)</div>
+                    <div style="font-size:0.9rem; color:#334155; margin-bottom:10px;">{s['data_evidence']}</div>
+
+                    <div style="font-size:0.82rem; font-weight:700; color:#64748B; text-transform:uppercase;">5. Potential Future Impact</div>
+                    <div style="font-size:0.9rem; color:#334155; margin-bottom:10px;">{s['potential_impact']}</div>
+
+                    <div style="font-size:0.82rem; font-weight:700; color:#0D5C3A; text-transform:uppercase;">6. Recommended Action</div>
+                    <div style="font-size:0.92rem; color:#0D5C3A; font-weight:700; background:#DCFCE7; padding:6px 12px; border-radius:6px; border-left:3px solid #15803D;">{s['recommended_action']}</div>
+                    """)
+
+    st.markdown("<div style='height: 16px;'></div>", unsafe_allow_html=True)
+
+    # SECTION: MULTI-SEASON AGRO-CLIMATIC & PRODUCTION SHIFTS
+    st.markdown("#### 🌦️ Multi-Season Weather & Yield Structural Shifts")
+    st.caption("Long-term agronomic changes in climatic patterns, continuous cropping yields, and post-harvest margins.")
+
+    col_w, col_y = st.columns(2)
+
+    with col_w:
+        with st.container(border=True):
+            st.html("<div style='font-size:1.05rem; font-weight:700; color:#0D5C3A; margin-bottom:10px;'>🌧️ Agro-Climatic & Weather Pattern Shifts</div>")
+            for w in clim_res.get("weather_shifts", []):
+                st.html(f"""
+                <div style="background:#F8FAF8; border:1px solid #E2E8F0; border-radius:8px; padding:12px; margin-bottom:12px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                        <span style="font-weight:700; color:#0F172A; font-size:0.92rem;">{w['parameter']}</span>
+                        <span style="font-size:0.78rem; font-weight:700; color:#D97706; background:#FEF3C7; padding:2px 8px; border-radius:12px;">{w['direction']}</span>
+                    </div>
+                    <div style="font-size:0.82rem; color:#64748B; margin-bottom:4px;"><b>Historical Baseline:</b> {w['historical_baseline']}</div>
+                    <div style="font-size:0.85rem; color:#B45309; font-weight:600; margin-bottom:4px;"><b>Detected Shift:</b> {w['detected_shift']}</div>
+                    <div style="font-size:0.82rem; color:#334155; margin-bottom:6px;"><b>Agronomic Impact:</b> {w['impact']}</div>
+                    <div style="font-size:0.82rem; color:#0D5C3A; font-weight:700; background:#E2F3E7; padding:4px 8px; border-radius:4px;"><b>Mitigation:</b> {w['mitigation']}</div>
+                </div>
+                """)
+
+    with col_y:
+        with st.container(border=True):
+            st.html("<div style='font-size:1.05rem; font-weight:700; color:#0D5C3A; margin-bottom:10px;'>🌾 Yield Deceleration & Logistics Shifts</div>")
+            for y in clim_res.get("yield_shifts", []):
+                st.html(f"""
+                <div style="background:#F8FAF8; border:1px solid #E2E8F0; border-radius:8px; padding:12px; margin-bottom:12px;">
+                    <div style="font-weight:700; color:#0F172A; font-size:0.92rem; margin-bottom:4px;">{y['metric']}</div>
+                    <div style="font-size:0.85rem; color:#0D5C3A; font-weight:700; margin-bottom:4px;"><b>Observed Pattern:</b> {y['trend']}</div>
+                    <div style="font-size:0.82rem; color:#334155; margin-bottom:6px;"><b>Field Telemetry:</b> {y['evidence']}</div>
+                    <div style="font-size:0.82rem; color:#15803D; font-weight:700; background:#DCFCE7; padding:4px 8px; border-radius:4px;"><b>Recommended Action:</b> {y['recommendation']}</div>
+                </div>
+                """)

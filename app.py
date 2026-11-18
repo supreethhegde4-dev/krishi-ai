@@ -79,7 +79,8 @@ from modules.ui_views import (
     render_decision_reports_view,
     render_crop_soil_advisor_view,
     render_anti_fraud_view,
-    render_settings_view
+    render_settings_view,
+    render_trend_shift_view
 )
 
 # Page Configuration
@@ -571,6 +572,7 @@ def render_main_application():
             ("📜 Historical Analysis", "Historical Analysis"),
             ("🌾 Crop Yield Prediction", "Crop Yield Prediction"),
             ("💰 Market Intelligence", "Market Intelligence"),
+            ("📈 Trend Shift Intelligence", "Trend Shift Intelligence"),
             ("🗓️ Seasonal Intelligence", "Seasonal Intelligence"),
             ("⚠️ Agricultural Risk Analysis", "Agricultural Risk Analysis"),
             ("🧪 What-If Simulator", "What-If Simulator"),
@@ -625,6 +627,8 @@ def render_main_application():
         render_crop_yield_view(user, farm)
     elif st.session_state.active_nav == "Market Intelligence":
         render_market_intelligence_view(user, farm, df_market)
+    elif st.session_state.active_nav == "Trend Shift Intelligence":
+        render_trend_shift_view(user, farm, df_market)
     elif st.session_state.active_nav == "Seasonal Intelligence":
         render_seasonal_intelligence_view(user, farm)
     elif st.session_state.active_nav == "Agricultural Risk Analysis":
