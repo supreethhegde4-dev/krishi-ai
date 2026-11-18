@@ -81,6 +81,12 @@ importlib.reload(modules.geo_ors)
 importlib.reload(modules.explainable_ai)
 importlib.reload(modules.ui_views)
 
+from modules.extended_views import (
+    render_weather_intelligence_view,
+    render_crop_image_quality_view,
+    render_transaction_protection_view,
+    render_ai_assistant_view
+)
 from modules.ui_views import (
     render_intelligence_overview_view,
     render_historical_analysis_view,
@@ -674,17 +680,42 @@ def render_main_application():
         """)
 
         st.html("<div style='font-size:0.7rem; font-weight:600; color:#86868B; text-transform:uppercase; letter-spacing:0.06em; margin:0 4px 8px 4px;'>Platform Modules</div>")
-        NAV_ITEMS = [
-            ("📊 Intelligence Overview", "Intelligence Overview"),
-            ("📜 Historical Analysis", "Historical Analysis"),
-            ("🌾 Crop Yield Prediction", "Crop Yield Prediction"),
-            ("💰 Market Intelligence", "Market Intelligence"),
-            ("📈 Trend Shift Intelligence", "Trend Shift Intelligence"),
-            ("🤝 Buyer & Industry Connect", "Buyer Connect"),
-            ("⚠️ Agricultural Risk Analysis", "Agricultural Risk Analysis"),
-            ("📋 AI Decision Reports", "AI Decision Reports"),
-            ("👤 Profile & Settings", "Settings")
-        ]
+        role = user.get("role", "farmer")
+        if role == "buyer":
+            NAV_ITEMS = [
+                ("📊 Buyer Command Center", "Buyer Connect"),
+                ("💰 Market Intelligence", "Market Intelligence"),
+                ("📈 Trend Shift Intelligence", "Trend Shift Intelligence"),
+                ("🛡️ Transaction Protection", "Transaction Protection"),
+                ("🤖 AI Assistant", "AI Assistant"),
+                ("👤 Profile & Settings", "Settings")
+            ]
+        elif role == "inspector":
+            NAV_ITEMS = [
+                ("🔍 Inspector Quality Portal", "Crop Quality"),
+                ("📋 AI Decision Reports", "AI Decision Reports"),
+                ("🛡️ Transaction Protection", "Transaction Protection"),
+                ("⛅ Weather Intelligence", "Weather Intelligence"),
+                ("🤖 AI Assistant", "AI Assistant"),
+                ("👤 Profile & Settings", "Settings")
+            ]
+        else:
+            NAV_ITEMS = [
+                ("📊 Intelligence Overview", "Intelligence Overview"),
+                ("🧪 Soil & Fertilizer Advisor", "Crop Soil Advisor"),
+                ("🌾 Crop Yield Prediction", "Crop Yield Prediction"),
+                ("💰 Market Intelligence", "Market Intelligence"),
+                ("📈 Trend Shift Intelligence", "Trend Shift Intelligence"),
+                ("🤝 Buyer Marketplace", "Buyer Connect"),
+                ("⚖️ Fair Price Analysis", "Anti Fraud"),
+                ("📸 Crop Quality & Inspection", "Crop Quality"),
+                ("⛅ Weather Intelligence", "Weather Intelligence"),
+                ("🛡️ Transaction Protection", "Transaction Protection"),
+                ("🤖 Gemini AI Assistant", "AI Assistant"),
+                ("⚠️ Agricultural Risk Analysis", "Agricultural Risk Analysis"),
+                ("📋 AI Decision Reports", "AI Decision Reports"),
+                ("👤 Profile & Settings", "Settings")
+            ]
 
         for label, key in NAV_ITEMS:
             btn_type = "primary" if st.session_state.active_nav == key else "secondary"
@@ -740,6 +771,18 @@ def render_main_application():
         render_risk_analysis_view(user, farm)
     elif st.session_state.active_nav == "AI Decision Reports":
         render_decision_reports_view(user, farm, df_market)
+    elif st.session_state.active_nav == "Crop Soil Advisor":
+        render_crop_soil_advisor_view(user, farm)
+    elif st.session_state.active_nav == "Anti Fraud":
+        render_anti_fraud_view(user, farm)
+    elif st.session_state.active_nav == "Crop Quality":
+        render_crop_image_quality_view(user, farm)
+    elif st.session_state.active_nav == "Weather Intelligence":
+        render_weather_intelligence_view(user, farm)
+    elif st.session_state.active_nav == "Transaction Protection":
+        render_transaction_protection_view(user, farm)
+    elif st.session_state.active_nav == "AI Assistant":
+        render_ai_assistant_view(user, farm, df_market)
     elif st.session_state.active_nav == "Settings":
         render_settings_view(user, farm)
     else:

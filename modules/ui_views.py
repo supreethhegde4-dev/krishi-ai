@@ -33,6 +33,7 @@ from modules.risk_analytics import evaluate_agricultural_risks
 from modules.what_if_simulator import run_what_if_simulation
 from modules.explainable_ai import explain_yield_prediction
 from modules.decision_engine import generate_unified_decision_report
+from modules.pdf_report_generator import generate_unified_pdf_report
 from modules.yield_analytics import predict_crop_yield
 from modules.proceeds_calculator import compute_mandi_proceeds_table
 from modules.transport_engine import DEFAULT_VEHICLE_CONFIGS
@@ -1095,20 +1096,33 @@ def render_decision_reports_view(user, farm, df_market):
         for dec in report.get("8_recommended_decisions", []):
             st.markdown(dec)
 
-    # Export Buttons
-    c_dl1, c_dl2 = st.columns([1, 1])
+    # Export Buttons (PDF & TXT & Ledger)
+    c_dl1, c_dl2, c_dl3 = st.columns([1.2, 1, 1])
     with c_dl1:
+        try:
+            pdf_bytes = generate_unified_pdf_report(report)
+            st.download_button(
+                label="📥 Download Official Executive Report (PDF)",
+                data=pdf_bytes,
+                file_name=f"krishi_ai_report_{r_crop}_{datetime.date.today()}.pdf",
+                mime="application/pdf",
+                use_container_width=True
+            )
+        except Exception as e:
+            st.error(f"PDF generation error: {e}")
+    with c_dl2:
         farmer_name = user.get("full_name", "Farmer Enterprise")
         farm_title = farm.get("farm_name", "Agricultural Enterprise")
         md_text = f"# Krishi AI Decision Brief - {r_crop}\n\nFarmer: {farmer_name}\nFarm: {farm_title}\n\n## Recommendations:\n" + "\n".join(report.get("8_recommended_decisions", []))
         st.download_button(
-            label="📥 Download Complete Decision Brief (TXT)",
+            label="📄 Download Summary (TXT)",
             data=md_text,
             file_name=f"krishi_ai_brief_{r_crop}_{datetime.date.today()}.txt",
-            mime="text/plain"
+            mime="text/plain",
+            use_container_width=True
         )
-    with c_dl2:
-        if st.button("💾 Save Brief to User Audit Ledger", use_container_width=True):
+    with c_dl3:
+        if st.button("💾 Save to Account Ledger", use_container_width=True):
             save_user_prediction(
                 user_id=user["id"],
                 module_name="AI Decision Reports",
