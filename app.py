@@ -588,13 +588,8 @@ def render_main_application():
             ("💰 Market Intelligence", "Market Intelligence"),
             ("📈 Trend Shift Intelligence", "Trend Shift Intelligence"),
             ("🤝 Buyer & Industry Connect", "Buyer Connect"),
-            ("🗓️ Seasonal Intelligence", "Seasonal Intelligence"),
             ("⚠️ Agricultural Risk Analysis", "Agricultural Risk Analysis"),
-            ("🧪 What-If Simulator", "What-If Simulator"),
-            ("🔍 Explainable AI (XAI)", "Explainable AI"),
-            ("📑 AI Decision Reports", "AI Decision Reports"),
-            ("🌱 Crop & Soil Advisor", "Crop & Soil Advisor"),
-            ("🛡️ Anti-Fraud Detector", "Anti-Fraud Detector"),
+            ("📋 AI Decision Reports", "AI Decision Reports"),
             ("👤 Profile & Settings", "Settings")
         ]
 
@@ -646,22 +641,14 @@ def render_main_application():
         render_trend_shift_view(user, farm, df_market)
     elif st.session_state.active_nav == "Buyer Connect":
         render_buyer_connect_view(user, farm, df_market)
-    elif st.session_state.active_nav == "Seasonal Intelligence":
-        render_seasonal_intelligence_view(user, farm)
     elif st.session_state.active_nav == "Agricultural Risk Analysis":
         render_risk_analysis_view(user, farm)
-    elif st.session_state.active_nav == "What-If Simulator":
-        render_what_if_view(user, farm)
-    elif st.session_state.active_nav == "Explainable AI":
-        render_explainable_ai_view(user, farm)
     elif st.session_state.active_nav == "AI Decision Reports":
         render_decision_reports_view(user, farm, df_market)
-    elif st.session_state.active_nav == "Crop & Soil Advisor":
-        render_crop_soil_advisor_view(user, farm)
-    elif st.session_state.active_nav == "Anti-Fraud Detector":
-        render_anti_fraud_view(user, farm)
     elif st.session_state.active_nav == "Settings":
         render_settings_view(user, farm)
+    else:
+        render_intelligence_overview_view(user, farm, df_market)
 
 
 # ==============================================================================

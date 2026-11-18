@@ -304,6 +304,31 @@ def render_historical_analysis_view(user, farm):
             if not df_md.empty:
                 st.dataframe(df_md.rename(columns={"avg_price_kg": "Avg Price (₹/kg)", "total_arrivals": "Arrivals"}), use_container_width=True)
 
+    # MERGED: Seasonal Cropping Calendar & Optimal Planting Windows
+    seasonal_data = get_seasonal_crop_intelligence(sel_crop, state=sel_state)
+    with st.expander("🗓️ Seasonal Cropping Calendar & Planting Windows", expanded=False):
+        sc1, sc2 = st.columns([1, 1.5])
+        with sc1:
+            st.html(f"""
+            <div style="background:#F0FDF4; border:1.5px solid #86EFAC; border-radius:8px; padding:12px;">
+                <div style="font-size:0.75rem; font-weight:800; color:#15803D; text-transform:uppercase;">Current Agro Stage</div>
+                <div style="font-size:1.25rem; font-weight:800; color:#0D5C3A; margin:4px 0;">{seasonal_data['current_season_stage']}</div>
+                <div style="font-size:0.85rem; color:#475569;">Primary Season: <b>{seasonal_data['primary_season']}</b></div>
+                <div style="font-size:0.82rem; color:#64748B; margin-top:4px;">Peak Yield Season: <b>{seasonal_data['peak_yield_season']}</b></div>
+            </div>
+            """)
+        with sc2:
+            st.html(f"""
+            <div style="background:#FFFFFF; border:1px solid #CBD5E1; border-radius:8px; padding:12px;">
+                <div style="font-size:0.85rem; font-weight:700; color:#0D5C3A; margin-bottom:4px;">Optimal Agro-Climatic Windows:</div>
+                <div style="font-size:0.82rem; color:#334155; line-height:1.5;">
+                    • <b>Sowing Window:</b> {seasonal_data['sowing_window']}<br>
+                    • <b>Harvest Period:</b> {seasonal_data['harvest_window']}<br>
+                    • <b>Advisory:</b> {seasonal_data['climate_suitability']}
+                </div>
+            </div>
+            """)
+
 
 # ==============================================================================
 # 3. CROP YIELD PREDICTION VIEW (SECTION 3A OF PROMPT)
@@ -357,20 +382,67 @@ def render_crop_yield_view(user, farm):
             )
             st.plotly_chart(fig_y, use_container_width=True)
 
-            c_act1, c_act2 = st.columns(2)
-            with c_act1:
-                if st.button("🔍 Explain with SHAP", use_container_width=True):
-                    st.session_state.active_nav = "Explainable AI"
-                    st.rerun()
-            with c_act2:
-                if st.button("💾 Save Yield Audit", use_container_width=True):
-                    save_user_prediction(
-                        user_id=user["id"], module_name="Crop Yield Prediction",
-                        title=f"{y_crop} Yield: {tot_q:.1f} Quintals ({py_acre:.1f} Q/ac)",
-                        inputs_json=json.dumps({"acres": y_acres, "n": y_n, "p": y_p, "k": y_k, "rain": y_rain, "ph": y_ph}),
-                        outputs_json=json.dumps(yield_res)
-                    )
-                    st.success("Yield forecast logged to private farm ledger!")
+            if st.button("💾 Save Yield Audit to Farm Ledger", type="primary", use_container_width=True):
+                save_user_prediction(
+                    user_id=user["id"], module_name="Crop Yield Prediction",
+                    title=f"{y_crop} Yield: {tot_q:.1f} Quintals ({py_acre:.1f} Q/ac)",
+                    inputs_json=json.dumps({"acres": y_acres, "n": y_n, "p": y_p, "k": y_k, "rain": y_rain, "ph": y_ph}),
+                    outputs_json=json.dumps(yield_res)
+                )
+                st.success("Yield forecast logged to private farm ledger!")
+
+    # MERGED: Explainable AI (SHAP Waterfall Attributions inside Yield Results)
+    st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
+    with st.expander("🔍 Explainable AI: SHAP Feature Attributions (Why was this yield predicted?)", expanded=True):
+        xai_res = explain_yield_prediction(
+            crop_name=y_crop, acreage=y_acres,
+            soil_n=y_n, soil_p=y_p, soil_k=y_k, rainfall=y_rain, ph=y_ph
+        )
+        x_c1, x_c2 = st.columns([1, 1.8])
+        with x_c1:
+            st.html(f"""
+            <div style="background:#F0FDF4; border:1.5px solid #86EFAC; border-radius:8px; padding:12px; margin-bottom:10px;">
+                <div style="font-size:0.75rem; font-weight:800; color:#15803D;">BASE VALUE E[f(x)]</div>
+                <div style="font-size:1.4rem; font-weight:800; color:#0F172A;">{xai_res['base_value_quintal']} <span style="font-size:0.8rem; color:#64748B;">Q/acre</span></div>
+                <div style="font-size:0.75rem; color:#64748B;">District historical mean baseline</div>
+            </div>
+            <div style="background:#FFFFFF; border:1.5px solid #CBD5E1; border-radius:8px; padding:12px;">
+                <div style="font-size:0.75rem; font-weight:800; color:#0D5C3A;">TOP DRIVER INFLUENCE</div>
+                <div style="font-size:1.1rem; font-weight:800; color:#0D5C3A;">{xai_res['top_positive_driver']}</div>
+                <div style="font-size:0.8rem; color:#475569; margin-top:4px;">Primary parameter increasing projected yield above average.</div>
+            </div>
+            """)
+        with x_c2:
+            if xai_res.get("waterfall_fig"):
+                st.plotly_chart(xai_res["waterfall_fig"], use_container_width=True)
+
+    # MERGED: Crop & Soil Health Diagnostics & Fertilizer Prescriptions
+    with st.expander("🌱 Soil Health Diagnostics & Fertilizer Prescription", expanded=False):
+        soil_res = evaluate_soil_health(soil_n=y_n, soil_p=y_p, soil_k=y_k, ph=y_ph, organic_carbon=0.65)
+        fert_res = calculate_fertilizer_prescription(y_crop, y_acres, y_n, y_p, y_k)
+
+        s_c1, s_c2 = st.columns(2)
+        with s_c1:
+            st.html(f"""
+            <div style="background:#F8FAF8; border:1px solid #E2E8F0; border-radius:8px; padding:12px;">
+                <div style="font-weight:700; color:#0D5C3A; font-size:1.0rem; margin-bottom:6px;">Soil Fertility Assessment</div>
+                <div style="font-size:0.88rem; color:#0F172A;"><b>Health Index:</b> {soil_res['soil_health_index']:.1f}/100 ({soil_res['fertility_status']})</div>
+                <div style="font-size:0.85rem; color:#475569; margin-top:4px;"><b>pH Reaction:</b> {y_ph:.1f} ({soil_res['ph_status']})</div>
+                <div style="font-size:0.82rem; color:#334155; margin-top:6px;">{soil_res['organic_amendment']}</div>
+            </div>
+            """)
+        with s_c2:
+            st.html(f"""
+            <div style="background:#F8FAF8; border:1px solid #E2E8F0; border-radius:8px; padding:12px;">
+                <div style="font-weight:700; color:#0D5C3A; font-size:1.0rem; margin-bottom:6px;">Prescription for {y_acres} Acres ({y_crop})</div>
+                <div style="font-size:0.85rem; color:#0F172A;">
+                    • <b>Urea (46% N):</b> {fert_res['urea_bags_50kg']} bags (50kg)<br>
+                    • <b>DAP (18:46:0):</b> {fert_res['dap_bags_50kg']} bags (50kg)<br>
+                    • <b>MOP (60% K2O):</b> {fert_res['mop_bags_50kg']} bags (50kg)
+                </div>
+                <div style="font-size:0.8rem; color:#15803D; font-weight:700; margin-top:6px;">Schedule: Apply 50% N + 100% P & K as basal; 25% N at vegetative; 25% N at flowering.</div>
+            </div>
+            """)
 
 
 # ==============================================================================
