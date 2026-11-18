@@ -451,20 +451,25 @@ def render_authentication_page():
 
     with col_card:
         with st.container(border=True):
-            # View Selector Tabs
-            t_col1, t_col2, t_col3 = st.columns(3)
+            # View Selector Tabs (Farmer & Commercial Buyer Portals)
+            t_col1, t_col2, t_col3, t_col4 = st.columns(4)
             with t_col1:
                 btn_signin_active = st.button("🔑 Sign In", use_container_width=True, type="primary" if st.session_state.auth_view == "signin" else "secondary")
                 if btn_signin_active:
                     st.session_state.auth_view = "signin"
                     st.rerun()
             with t_col2:
-                btn_signup_active = st.button("✨ Create Account", use_container_width=True, type="primary" if st.session_state.auth_view == "signup" else "secondary")
+                btn_signup_active = st.button("👨‍🌾 Farmer Join", use_container_width=True, type="primary" if st.session_state.auth_view == "signup" else "secondary")
                 if btn_signup_active:
                     st.session_state.auth_view = "signup"
                     st.rerun()
             with t_col3:
-                btn_forgot_active = st.button("🔒 Reset Token", use_container_width=True, type="primary" if st.session_state.auth_view == "forgot" else "secondary")
+                btn_buyer_active = st.button("🏢 Buyer Join", use_container_width=True, type="primary" if st.session_state.auth_view == "buyer_signup" else "secondary")
+                if btn_buyer_active:
+                    st.session_state.auth_view = "buyer_signup"
+                    st.rerun()
+            with t_col4:
+                btn_forgot_active = st.button("🔒 Reset", use_container_width=True, type="primary" if st.session_state.auth_view == "forgot" else "secondary")
                 if btn_forgot_active:
                     st.session_state.auth_view = "forgot"
                     st.rerun()
@@ -480,8 +485,11 @@ def render_authentication_page():
                 </div>
                 """)
 
-                login_email = st.text_input("Email Address", value="farmer@krishiai.com", placeholder="name@farm.com", key="auth_email")
-                login_pwd = st.text_input("Password", value="Password@123", type="password", key="auth_pwd")
+                is_dev_env = os.environ.get("KRISHI_ENV", "production").lower() == "development"
+                default_email = "farmer@krishiai.com" if is_dev_env else ""
+                default_pwd = "Password@123" if is_dev_env else ""
+                login_email = st.text_input("Email Address", value=default_email, placeholder="name@farm.com", key="auth_email")
+                login_pwd = st.text_input("Password", value=default_pwd, type="password", placeholder="Enter your secret password", key="auth_pwd")
 
                 c_rem, c_fgt = st.columns([1, 1])
                 with c_rem:
@@ -507,40 +515,40 @@ def render_authentication_page():
                             else:
                                 st.error(msg)
 
-                st.html("""
-                <div style="text-align:center; margin: 20px 0 12px 0; border-top: 1px solid #E2E8F0; padding-top: 14px;">
-                    <span style="background:#F1F5F9; color:#475569; padding:4px 12px; border-radius:12px; font-size:0.75rem; font-weight:800; letter-spacing:0.5px;">
-                        ⚡ 1-CLICK INSTANT DEMO ACCESS
-                    </span>
-                </div>
-                """)
-
-                cd1, cd2, cd3 = st.columns(3)
-                with cd1:
-                    if st.button("👨‍🌾 Demo Farmer (Ramesh)", use_container_width=True):
-                        s, m, t, u = authenticate_user("farmer@krishiai.com", "Password@123", remember_me=True)
-                        if s:
-                            st.session_state.auth_token = t
-                            st.session_state.current_user = u
-                            st.rerun()
-                    st.caption("5-Acre Tomato Farm • Ramanagara")
-                with cd2:
-                    if st.button("🏢 Demo Buyer (ITC Agro)", use_container_width=True):
-                        s, m, t, u = authenticate_user("buyer@krishiai.com", "Password@123", remember_me=True)
-                        if s:
-                            st.session_state.auth_token = t
-                            st.session_state.current_user = u
-                            st.session_state.active_nav = "Buyer Connect"
-                            st.rerun()
-                    st.caption("Industrial Procurement Hub")
-                with cd3:
-                    if st.button("🛡️ Demo Administrator", use_container_width=True):
-                        s, m, t, u = authenticate_user("admin@krishiai.com", "Admin@123", remember_me=True)
-                        if s:
-                            st.session_state.auth_token = t
-                            st.session_state.current_user = u
-                            st.rerun()
-                    st.caption("APMC & Agronomic Oversight")
+                if is_dev_env:
+                    st.html("""
+                    <div style="text-align:center; margin: 20px 0 12px 0; border-top: 1px solid #E2E8F0; padding-top: 14px;">
+                        <span style="background:#FEF3C7; color:#92400E; padding:4px 12px; border-radius:12px; font-size:0.75rem; font-weight:800; letter-spacing:0.5px;">
+                            🧪 DEVELOPMENT SANDBOX TEST ACCOUNTS
+                        </span>
+                    </div>
+                    """)
+                    cd1, cd2, cd3 = st.columns(3)
+                    with cd1:
+                        if st.button("👨‍🌾 Test Farmer", use_container_width=True):
+                            s, m, t, u = authenticate_user("farmer@krishiai.com", "Password@123", remember_me=True)
+                            if s:
+                                st.session_state.auth_token = t
+                                st.session_state.current_user = u
+                                st.rerun()
+                        st.caption("Ramanagara • Sandbox")
+                    with cd2:
+                        if st.button("🏢 Test Buyer", use_container_width=True):
+                            s, m, t, u = authenticate_user("buyer@krishiai.com", "Password@123", remember_me=True)
+                            if s:
+                                st.session_state.auth_token = t
+                                st.session_state.current_user = u
+                                st.session_state.active_nav = "Buyer Connect"
+                                st.rerun()
+                        st.caption("Procurement • Sandbox")
+                    with cd3:
+                        if st.button("🛡️ Test Admin", use_container_width=True):
+                            s, m, t, u = authenticate_user("admin@krishiai.com", "Admin@123", remember_me=True)
+                            if s:
+                                st.session_state.auth_token = t
+                                st.session_state.current_user = u
+                                st.rerun()
+                        st.caption("Oversight • Sandbox")
 
             elif st.session_state.auth_view == "signup":
                 st.html("""

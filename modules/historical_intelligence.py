@@ -8,6 +8,16 @@ import duckdb
 import pandas as pd
 import numpy as np
 
+
+import re
+
+def _sanitize_sql_param(val):
+    if val is None:
+        return ""
+    # Whitelist alphanumeric, spaces, dashes, dots, parentheses, slashes
+    clean = re.sub(r"[^\w\s\-\(\)\.\/]", "", str(val)).strip()
+    return clean
+
 PARQUET_GLOB = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     "data", "historical_parquet", "parquet", "*.parquet"
@@ -42,11 +52,14 @@ def get_commodity_yoy_trends(commodity: str, state: str = None, district: str = 
     """
     con = duckdb.connect()
     try:
-        where_clauses = [f"Commodity = '{commodity}'", "Modal_Price > 0"]
+        clean_comm = _sanitize_sql_param(commodity)
+        where_clauses = [f"Commodity = '{clean_comm}'", "Modal_Price > 0"]
         if state and state != "All States":
-            where_clauses.append(f"State = '{state}'")
+            clean_state = _sanitize_sql_param(state)
+            where_clauses.append(f"State = '{clean_state}'")
         if district and district != "All Districts":
-            where_clauses.append(f"District = '{district}'")
+            clean_dist = _sanitize_sql_param(district)
+            where_clauses.append(f"District = '{clean_dist}'")
         
         where_str = " AND ".join(where_clauses)
 
@@ -98,9 +111,11 @@ def get_monthly_seasonal_profile(commodity: str, state: str = None):
     """
     con = duckdb.connect()
     try:
-        where_clauses = [f"Commodity = '{commodity}'", "Modal_Price > 0"]
+        clean_comm = _sanitize_sql_param(commodity)
+        where_clauses = [f"Commodity = '{clean_comm}'", "Modal_Price > 0"]
         if state and state != "All States":
-            where_clauses.append(f"State = '{state}'")
+            clean_state = _sanitize_sql_param(state)
+            where_clauses.append(f"State = '{clean_state}'")
         
         where_str = " AND ".join(where_clauses)
 
@@ -148,9 +163,11 @@ def detect_historical_price_anomalies(commodity: str, state: str = None, thresho
     """
     con = duckdb.connect()
     try:
-        where_clauses = [f"Commodity = '{commodity}'", "Modal_Price > 0"]
+        clean_comm = _sanitize_sql_param(commodity)
+        where_clauses = [f"Commodity = '{clean_comm}'", "Modal_Price > 0"]
         if state and state != "All States":
-            where_clauses.append(f"State = '{state}'")
+            clean_state = _sanitize_sql_param(state)
+            where_clauses.append(f"State = '{clean_state}'")
         
         where_str = " AND ".join(where_clauses)
 

@@ -495,7 +495,7 @@ def render_buyer_connect_view(user, farm, df_market=None):
         st.markdown(f"**Incoming Farmer Quotations for {active_buyer['company_name']} ({len(buyer_received_quots)} Total):**")
 
         if not buyer_received_quots:
-            st.info(f"No farmer quotations have been submitted to {active_buyer['company_name']} yet. Seeded bids exist for ITC and Nilgiris.")
+            st.info(f"No farmer quotations have been submitted to {active_buyer['company_name']} yet. As registered farmers submit quotes against your posted requirements, they will appear here.")
         else:
             for bq in buyer_received_quots:
                 with st.container(border=True):

@@ -24,7 +24,7 @@ def init_buyer_connect_tables():
     conn = get_db_connection()
     c = conn.cursor()
 
-    # 1. Registered Buyers & Industries
+    # 1. Registered Buyers & Industries (Production Schema)
     c.execute("""
     CREATE TABLE IF NOT EXISTS buyers (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -39,12 +39,17 @@ def init_buyer_connect_tables():
         state TEXT NOT NULL,
         latitude REAL NOT NULL,
         longitude REAL NOT NULL,
-        verified_status INTEGER NOT NULL DEFAULT 1,
-        rating REAL NOT NULL DEFAULT 4.8,
-        total_deals_completed INTEGER NOT NULL DEFAULT 10,
-        payment_terms TEXT NOT NULL DEFAULT 'Within 24 Hours of Delivery / Quality Check',
+        gstin TEXT,
+        apmc_license TEXT,
+        verified_status INTEGER NOT NULL DEFAULT 0,
+        verified_by INTEGER,
+        verification_remarks TEXT,
+        rating REAL NOT NULL DEFAULT 5.0,
+        total_deals_completed INTEGER NOT NULL DEFAULT 0,
+        payment_terms TEXT NOT NULL DEFAULT 'Within 24 Hours of Delivery / Gate Weighbridge Clearance',
         created_at TEXT NOT NULL,
-        FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL
+        FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE SET NULL,
+        FOREIGN KEY (verified_by) REFERENCES users (id) ON DELETE SET NULL
     )
     """)
 
@@ -204,268 +209,67 @@ def init_buyer_connect_tables():
     ''')
 
     conn.commit()
-    seed_verified_buyers_and_requirements(conn)
+        # Database Migrations: Ensure production columns exist
+    c.execute("PRAGMA table_info(buyers)")
+    existing_cols = [r[1] for r in c.fetchall()]
+    if "gstin" not in existing_cols:
+        c.execute("ALTER TABLE buyers ADD COLUMN gstin TEXT")
+    if "apmc_license" not in existing_cols:
+        c.execute("ALTER TABLE buyers ADD COLUMN apmc_license TEXT")
+    if "verified_by" not in existing_cols:
+        c.execute("ALTER TABLE buyers ADD COLUMN verified_by INTEGER")
+    if "verification_remarks" not in existing_cols:
+        c.execute("ALTER TABLE buyers ADD COLUMN verification_remarks TEXT")
+    conn.commit()
+    active_env = os.environ.get("KRISHI_ENV", "production").lower()
+    if active_env == "development":
+        seed_development_sandbox_buyers(conn)
     conn.close()
 
 
-def seed_verified_buyers_and_requirements(conn: sqlite3.Connection):
-    """Seeds verified, realistic Indian agro-processors, mills, and retail aggregators."""
+def seed_development_sandbox_buyers(conn: sqlite3.Connection):
+    """
+    Seeds generic demonstration buyer profiles ONLY in development mode.
+    Does NOT use unauthorized real commercial brand names.
+    """
     c = conn.cursor()
     c.execute("SELECT COUNT(*) FROM buyers")
     if c.fetchone()[0] > 0:
         return
 
     now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
-    today = datetime.date.today()
-
-    # Seeded Buyer Profiles (Centered around South & Central India with realistic logistics hubs)
     sample_buyers = [
         (
-            1, "ITC Agri-Business Division", "Food Processing & FMCG",
-            "Sanjay Kulkarni", "+91 98451 22334", "sanjay.k@itcagri.in",
-            "ITC Food Processing Plant, Bidadi Industrial Area Phase II",
-            "Ramanagara", "Karnataka", 12.7981, 77.4005, 1, 4.9, 48,
+            1, "Apex Agro-Processing Hub (Sandbox)", "Food Processing & Milling",
+            "S. Kulkarni (Test)", "+91 98451 00001", "procure@apexagro-test.in",
+            "Bidadi Industrial Complex Phase II",
+            "Ramanagara", "Karnataka", 12.7981, 77.4005, "29AABCU9603R1ZM", "APMC-KAR-9821", 1, 4.9, 12,
             "100% Direct Bank Transfer within 24h of Gate Inspection", now_str
         ),
         (
-            None, "Nilgiris Fresh Agro Foods Ltd", "Wholesale & Supermarket Chain",
-            "Praveen Nair", "+91 97410 88991", "procure@nilgirisfresh.com",
-            "Nilgiris Central Cold Hub, Mysore Road, Kengeri",
-            "Bangalore Urban", "Karnataka", 12.9121, 77.4833, 1, 4.8, 32,
+            None, "Southern Wholesale Cold Chain (Sandbox)", "Wholesale & Aggregator Chain",
+            "P. Nair (Test)", "+91 97410 00002", "procure@southerncold-test.in",
+            "Mysore Road Agro Hub, Kengeri",
+            "Bangalore Urban", "Karnataka", 12.9121, 77.4833, "29AABCS1234F1ZX", "APMC-BLR-4512", 1, 4.8, 8,
             "Immediate payment on weighbridge receipt + quality clearance", now_str
         ),
         (
-            None, "Haldiram Snacks Procurement Unit", "Snacks & Savory Processing",
-            "Rajesh Agarwal", "+91 94221 66770", "procure.south@haldirams.biz",
-            "Haldiram Southern Logistics Hub, Electronic City Phase 2",
-            "Bangalore Urban", "Karnataka", 12.8399, 77.6770, 1, 4.7, 56,
-            "RTGS within 48 Hours of Lab Grade Certification", now_str
-        ),
-        (
-            None, "Akshayakalpa Organic Foods", "Organic Dairy & Farm Produce",
-            "Dr. Shashi Kumar", "+91 99002 44551", "sourcing@akshayakalpa.org",
-            "Akshayakalpa Processing Campus, Tiptur Highway",
-            "Tumakuru", "Karnataka", 13.2584, 76.4789, 1, 4.9, 29,
+            None, "Deccan Organic Millers (Sandbox)", "Organic Cereals & Pulses",
+            "R. Kumar (Test)", "+91 99002 00003", "sourcing@deccanorganic-test.in",
+            "Tiptur Highway Industrial Park",
+            "Tumakuru", "Karnataka", 13.2584, 76.4789, "29AABCO5566G1ZQ", "APMC-TUM-3310", 1, 4.9, 5,
             "Weekly settlement with premium organic certification bonus", now_str
-        ),
-        (
-            None, "BigBasket Fresh Sourcing Logistics", "E-Commerce Fresh Aggregator",
-            "Kavitha Swaminathan", "+91 98801 33445", "farmer.connect@bigbasket.com",
-            "BigBasket Regional Distribution Center, Hoskote Industrial Area",
-            "Bangalore Rural", "Karnataka", 13.0722, 77.7983, 1, 4.8, 74,
-            "T+1 settlement via UPI / Bank IMPS upon grading", now_str
-        ),
-        (
-            None, "Mother Dairy Fruit & Vegetable (Safal)", "Horticultural Processing Hub",
-            "Maheshwar Reddy", "+91 98112 77889", "horticulture.blr@safal.in",
-            "Safal Agro Park, Doddaballapur Integrated Food Complex",
-            "Bangalore Rural", "Karnataka", 13.2924, 77.5417, 1, 4.7, 61,
-            "Direct NEFT payment on official APMC weigh slip clearance", now_str
-        ),
-        (
-            None, "Godrej Agrovet Procurement Center", "Feed & Agricultural Processing",
-            "Venkatesh Prasad", "+91 96200 11223", "v.prasad@godrejagrovet.com",
-            "Godrej Processing Facility, SIPCOT Industrial Park, Hosur",
-            "Krishnagiri", "Tamil Nadu", 12.7409, 77.8253, 1, 4.6, 38,
-            "Net 3 days bank settlement with transparent digital moisture test", now_str
-        ),
-        (
-            None, "Keventer Agro Processing Ltd", "Beverages & Puree Processing",
-            "Aniruddha Bose", "+91 93310 55442", "procurement@keventeragro.com",
-            "Keventer Food Park, Chittoor Highway Bypass",
-            "Chittoor", "Andhra Pradesh", 13.2172, 79.1003, 1, 4.8, 22,
-            "Immediate gate pass token with RTGS payment within 24h", now_str
         )
     ]
-
-    c.executemany("""
-    INSERT INTO buyers (
-        user_id, company_name, business_type, contact_person, phone, email,
-        facility_address, district, state, latitude, longitude,
-        verified_status, rating, total_deals_completed, payment_terms, created_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, sample_buyers)
-
-    # Fetch buyer IDs
-    c.execute("SELECT id, company_name, district, state, latitude, longitude FROM buyers")
-    buyer_map = {row["company_name"]: row for row in c.fetchall()}
-
-    # Sample Industry Requirements
-    sample_reqs = [
-        # 1. ITC - Tomato Puree & Ketchup Grade
-        (
-            buyer_map["ITC Agri-Business Division"]["id"],
-            "Tomato", 250.0, "Grade A (Premium)", 2400.0,
-            "ITC Food Processing Plant, Gate 3, Bidadi Phase II",
-            "Ramanagara", "Karnataka", 12.7981, 77.4005,
-            (today + datetime.timedelta(days=7)).strftime("%Y-%m-%d"),
-            "Firm ripe tomatoes, TSS Brix > 4.5, uniform red color, zero fruit borer damage. Crates supplied by ITC at delivery bay.",
-            "Urgent", "OPEN", now_str
-        ),
-        # 2. Nilgiris - Table Fresh Tomato
-        (
-            buyer_map["Nilgiris Fresh Agro Foods Ltd"]["id"],
-            "Tomato", 80.0, "Grade A (Premium)", 2550.0,
-            "Nilgiris Distribution Center, Kengeri",
-            "Bangalore Urban", "Karnataka", 12.9121, 77.4833,
-            (today + datetime.timedelta(days=4)).strftime("%Y-%m-%d"),
-            "Semi-ripe to ripe table quality. Minimum diameter 50mm, no mechanical bruising. Packed in 20kg plastic crates.",
-            "Standard", "OPEN", now_str
-        ),
-        # 3. BigBasket - Daily Tomato Sourcing
-        (
-            buyer_map["BigBasket Fresh Sourcing Logistics"]["id"],
-            "Tomato", 120.0, "Grade B (Standard)", 2200.0,
-            "BigBasket DC, Hoskote Hub",
-            "Bangalore Rural", "Karnataka", 13.0722, 77.7983,
-            (today + datetime.timedelta(days=3)).strftime("%Y-%m-%d"),
-            "Standard hybrid tomatoes. Brix > 3.8. Sorting on unloading belt with instant digital payment.",
-            "Urgent", "OPEN", now_str
-        ),
-        # 4. Haldiram - Chip Grade Potato
-        (
-            buyer_map["Haldiram Snacks Procurement Unit"]["id"],
-            "Potato", 350.0, "Grade A (Premium)", 2100.0,
-            "Haldiram Southern Logistics Hub, Electronic City",
-            "Bangalore Urban", "Karnataka", 12.8399, 77.6770,
-            (today + datetime.timedelta(days=10)).strftime("%Y-%m-%d"),
-            "Processing varieties (Kufri Chipsona / Atlantic). Sugar < 0.1%, specific gravity > 1.080, dry matter > 20%. Size 45-75mm.",
-            "Contract Season", "OPEN", now_str
-        ),
-        # 5. Mother Dairy / Safal - Fresh Potato
-        (
-            buyer_map["Mother Dairy Fruit & Vegetable (Safal)"]["id"],
-            "Potato", 150.0, "Grade B (Standard)", 1850.0,
-            "Safal Agro Park, Doddaballapur",
-            "Bangalore Rural", "Karnataka", 13.2924, 77.5417,
-            (today + datetime.timedelta(days=8)).strftime("%Y-%m-%d"),
-            "Firm potatoes, free from greening and internal browning. Size > 40mm. 50kg ventilated gunny bags.",
-            "Standard", "OPEN", now_str
-        ),
-        # 6. Nilgiris - Nashik/Karnataka Onion
-        (
-            buyer_map["Nilgiris Fresh Agro Foods Ltd"]["id"],
-            "Onion", 180.0, "Grade A (Premium)", 2650.0,
-            "Nilgiris Central Cold Hub, Kengeri",
-            "Bangalore Urban", "Karnataka", 12.9121, 77.4833,
-            (today + datetime.timedelta(days=6)).strftime("%Y-%m-%d"),
-            "Medium-large red onions (50-65mm). Well-cured thin neck, dry papery scales, zero sprouting or mold.",
-            "Urgent", "OPEN", now_str
-        ),
-        # 7. BigBasket - Red Onion
-        (
-            buyer_map["BigBasket Fresh Sourcing Logistics"]["id"],
-            "Onion", 200.0, "Grade B (Standard)", 2400.0,
-            "BigBasket Regional DC, Hoskote",
-            "Bangalore Rural", "Karnataka", 13.0722, 77.7983,
-            (today + datetime.timedelta(days=5)).strftime("%Y-%m-%d"),
-            "Grade B standard onions. Moisture content < 14%. Immediate gate inspection.",
-            "Standard", "OPEN", now_str
-        ),
-        # 8. Akshayakalpa - Certified Organic Tomato
-        (
-            buyer_map["Akshayakalpa Organic Foods"]["id"],
-            "Tomato", 40.0, "Certified Organic", 3200.0,
-            "Akshayakalpa Processing Campus, Tiptur",
-            "Tumakuru", "Karnataka", 13.2584, 76.4789,
-            (today + datetime.timedelta(days=9)).strftime("%Y-%m-%d"),
-            "100% NPOP / Jaivik Bharat certified organic. Zero chemical residue test mandatory before intake. Premium price paid.",
-            "Standard", "OPEN", now_str
-        ),
-        # 9. Godrej Agrovet - Feed Maize
-        (
-            buyer_map["Godrej Agrovet Procurement Center"]["id"],
-            "Maize", 500.0, "Grade B (Standard)", 2250.0,
-            "Godrej Facility, SIPCOT Hosur",
-            "Krishnagiri", "Tamil Nadu", 12.7409, 77.8253,
-            (today + datetime.timedelta(days=14)).strftime("%Y-%m-%d"),
-            "Yellow feed maize. Moisture < 12.5%, foreign matter < 1%, aflatoxin < 20 ppb. Bulk tanker or 50kg bags accepted.",
-            "Contract Season", "OPEN", now_str
-        ),
-        # 10. Keventer Agro - Fresh Banana (Robusta / Yelakki)
-        (
-            buyer_map["Keventer Agro Processing Ltd"]["id"],
-            "Banana", 200.0, "Grade A (Premium)", 1950.0,
-            "Keventer Food Park, Chittoor Highway",
-            "Chittoor", "Andhra Pradesh", 13.2172, 79.1003,
-            (today + datetime.timedelta(days=7)).strftime("%Y-%m-%d"),
-            "Robusta / Cavendish green mature banana for ripening chambers. 3/4 full, clean bunches without latex staining.",
-            "Standard", "OPEN", now_str
-        ),
-        # 11. Mother Dairy Safal - Fresh Cabbage & Cauliflower
-        (
-            buyer_map["Mother Dairy Fruit & Vegetable (Safal)"]["id"],
-            "Cabbage", 100.0, "Grade A (Premium)", 1450.0,
-            "Safal Agro Park, Doddaballapur",
-            "Bangalore Rural", "Karnataka", 13.2924, 77.5417,
-            (today + datetime.timedelta(days=5)).strftime("%Y-%m-%d"),
-            "Solid green heads, outer wrapper leaves intact, 1.0 - 1.8 kg head size. Unsprayed in final 10 days.",
-            "Urgent", "OPEN", now_str
-        ),
-        # 12. ITC Agri-Business - Premium Milling Wheat
-        (
-            buyer_map["ITC Agri-Business Division"]["id"],
-            "Wheat", 450.0, "Grade A (Premium)", 2850.0,
-            "ITC Aashirvaad Milling Unit, Bidadi Industrial Area",
-            "Ramanagara", "Karnataka", 12.7981, 77.4005,
-            (today + datetime.timedelta(days=15)).strftime("%Y-%m-%d"),
-            "Lok-1 or Sharbati hard amber durum wheat. Gluten > 11%, moisture < 11%, zero weeviled grains. Instant laboratory test.",
-            "Contract Season", "OPEN", now_str
-        )
-    ]
-
-    c.executemany("""
-    INSERT INTO buyer_requirements (
-        buyer_id, crop, quantity_quintals, min_quality_grade, offered_price_per_quintal,
-        delivery_location, delivery_district, delivery_state, delivery_lat, delivery_lon,
-        required_by_date, additional_specs, urgency_level, status, created_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, sample_reqs)
-
-    # Seed Sample Farmer Quotations to demonstrate full status workflow
-    c.execute("SELECT id FROM buyer_requirements WHERE crop = 'Tomato' LIMIT 2")
-    req_rows = c.fetchall()
-    if req_rows:
-        req1_id = req_rows[0][0]
-        req2_id = req_rows[1][0] if len(req_rows) > 1 else req1_id
-
-        past_date = (today - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+    for b in sample_buyers:
         c.execute("""
-        INSERT INTO farmer_quotations (
-            requirement_id, farmer_id, farmer_name, farmer_phone, crop,
-            offered_quantity_quintals, quoted_price_per_quintal, offered_grade,
-            dispatch_location, dispatch_district, dispatch_state, dispatch_lat, dispatch_lon,
-            expected_delivery_date, farmer_notes, status, counter_price_per_quintal, buyer_feedback,
-            created_at, updated_at
-        ) VALUES (
-            ?, 1, 'Ramesh Gowda', '+91 98450 12345', 'Tomato',
-            45.0, 2450.0, 'Grade A (Premium)',
-            'Ramanagara Rural Holding', 'Ramanagara', 'Karnataka', 12.7209, 77.2799,
-            ?, 'Fresh morning harvest. Tomatoes harvested in semi-ripe condition, sorted in plastic crates.',
-            'ACCEPTED', NULL, 'Quotation approved. Please dispatch batch to Bidadi Gate 3 between 7:00 AM and 11:00 AM.',
-            ?, ?
-        )
-        """, (req1_id, (today + datetime.timedelta(days=2)).strftime("%Y-%m-%d"), past_date, now_str))
-
-        c.execute("""
-        INSERT INTO farmer_quotations (
-            requirement_id, farmer_id, farmer_name, farmer_phone, crop,
-            offered_quantity_quintals, quoted_price_per_quintal, offered_grade,
-            dispatch_location, dispatch_district, dispatch_state, dispatch_lat, dispatch_lon,
-            expected_delivery_date, farmer_notes, status, counter_price_per_quintal, buyer_feedback,
-            created_at, updated_at
-        ) VALUES (
-            ?, 1, 'Ramesh Gowda', '+91 98450 12345', 'Tomato',
-            30.0, 2600.0, 'Grade A (Premium)',
-            'Ramanagara Rural Holding', 'Ramanagara', 'Karnataka', 12.7209, 77.2799,
-            ?, 'Batch available from polyhouse drip block.',
-            'UNDER_REVIEW', NULL, 'Under physical sample review by QC Officer.',
-            ?, ?
-        )
-        """, (req2_id, (today + datetime.timedelta(days=3)).strftime("%Y-%m-%d"), now_str, now_str))
-
+        INSERT INTO buyers (
+            user_id, company_name, business_type, contact_person, phone, email,
+            facility_address, district, state, latitude, longitude, gstin, apmc_license,
+            verified_status, rating, total_deals_completed, payment_terms, created_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, b)
     conn.commit()
-
 
 # ==============================================================================
 # BUYER & REQUIREMENT RETRIEVAL APIS
@@ -1050,5 +854,84 @@ def file_transaction_dispute(
     except Exception as e:
         conn.rollback()
         return False, f"Failed to file dispute: {str(e)}"
+    finally:
+        conn.close()
+
+
+# ==============================================================================
+# REAL PRODUCTION BUYER REGISTRATION & VERIFICATION WORKFLOW
+# ==============================================================================
+def register_buyer_profile(
+    user_id: int,
+    company_name: str,
+    business_type: str,
+    contact_person: str,
+    phone: str,
+    email: str,
+    facility_address: str,
+    district: str,
+    state: str,
+    latitude: float,
+    longitude: float,
+    gstin: str,
+    apmc_license: Optional[str] = None,
+    payment_terms: str = "Immediate Bank Transfer on Weighbridge Clearance"
+) -> Tuple[bool, str, Optional[int]]:
+    """
+    Registers a genuine commercial buyer profile in pending verification state (0).
+    Requires valid GSTIN / APMC License for compliance auditing.
+    """
+    clean_gst = gstin.strip().upper()
+    if len(clean_gst) < 10:
+        return False, "A valid GSTIN or Business Identification Number is required for buyer registration.", None
+
+    conn = get_db_connection()
+    c = conn.cursor()
+    now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    try:
+        c.execute("""
+        INSERT INTO buyers (
+            user_id, company_name, business_type, contact_person, phone, email,
+            facility_address, district, state, latitude, longitude, gstin, apmc_license,
+            verified_status, rating, total_deals_completed, payment_terms, created_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 5.0, 0, ?, ?)
+        """, (
+            user_id, company_name.strip(), business_type, contact_person.strip(),
+            phone.strip(), email.strip().lower(), facility_address.strip(),
+            district.strip(), state.strip(), latitude, longitude, clean_gst,
+            apmc_license.strip() if apmc_license else None, payment_terms, now_str
+        ))
+        conn.commit()
+        return True, "Buyer profile registered successfully. Awaiting administrative license verification.", c.lastrowid
+    except Exception as e:
+        conn.rollback()
+        return False, f"Failed to register buyer profile: {str(e)}", None
+    finally:
+        conn.close()
+
+
+def verify_buyer_account(
+    buyer_id: int,
+    admin_id: int,
+    remarks: str = "Verified official GSTIN and APMC market license."
+) -> Tuple[bool, str]:
+    """
+    Grants official verified status (1) to a registered buyer after regulatory due diligence.
+    """
+    conn = get_db_connection()
+    c = conn.cursor()
+    try:
+        c.execute("""
+        UPDATE buyers
+        SET verified_status = 1,
+            verified_by = ?,
+            verification_remarks = ?
+        WHERE id = ?
+        """, (admin_id, remarks, buyer_id))
+        conn.commit()
+        return True, f"Buyer #{buyer_id} verified successfully."
+    except Exception as e:
+        conn.rollback()
+        return False, f"Verification failed: {str(e)}"
     finally:
         conn.close()

@@ -39,3 +39,10 @@ Thumbs.db
 
 # Streamlit secrets (if any)
 .streamlit/secrets.toml
+
+# Local database backups and journals
+data/backups/
+*.db-journal
+*.db-wal
+*.db-shm
+
