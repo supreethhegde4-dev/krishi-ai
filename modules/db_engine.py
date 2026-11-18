@@ -260,9 +260,21 @@ def get_db_connection(unpooled: bool = False):
     return conn
 
 
+REQUIRED_TABLES = [
+    "users", "farm_profiles", "sessions", "login_attempts", "password_resets",
+    "audit_logs", "buyers", "buyer_requirements", "farmer_produce_listings",
+    "farmer_quotations", "crop_inspections", "trade_transactions",
+    "transaction_disputes", "user_predictions"
+]
+
 def check_database_health() -> Dict[str, Any]:
     """
     Comprehensive Database Health & Persistence Telemetry.
+    Validates presence of all 14 required tables.
+    Status returns:
+      - HEALTHY: Database reachable and all 14 required tables present
+      - DEGRADED: Database reachable but tables are missing or foreign-key violations exist
+      - UNHEALTHY: Database unreachable or severe exception
     Redacts all passwords and connection URLs.
     """
     t0 = time.time()
@@ -273,6 +285,10 @@ def check_database_health() -> Dict[str, Any]:
         conn = get_db_connection()
         cur = conn.cursor()
         
+        existing_tables = set()
+        fk_violations = 0
+        indexes_count = 0
+
         if is_postgres:
             cur.execute("SELECT 1;")
             cur.fetchone()
@@ -280,6 +296,19 @@ def check_database_health() -> Dict[str, Any]:
             info = cur.fetchone()
             db_type = "Neon PostgreSQL (Production Persistent)"
             storage_label = f"Neon Cloud ({info['current_database']} / {info['current_user']})"
+            
+            # Inspect existing tables in public schema
+            cur.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';")
+            rows = cur.fetchall()
+            existing_tables = set(r["table_name"] if isinstance(r, dict) or hasattr(r, "get") else r[0] for r in rows)
+
+            # Inspect indexes
+            try:
+                cur.execute("SELECT COUNT(*) as cnt FROM pg_indexes WHERE schemaname = 'public';")
+                idx_row = cur.fetchone()
+                indexes_count = idx_row["cnt"] if isinstance(idx_row, dict) or hasattr(idx_row, "get") else idx_row[0]
+            except Exception:
+                indexes_count = 0
         else:
             cur.execute("PRAGMA integrity_check;")
             res = cur.fetchone()
@@ -288,28 +317,53 @@ def check_database_health() -> Dict[str, Any]:
             db_type = "SQLite (Local Embedded)"
             storage_label = "Local Disk (data/krishi_ai.db)"
 
+            cur.execute("SELECT name FROM sqlite_master WHERE type='table';")
+            existing_tables = set(r[0] for r in cur.fetchall())
+
+            try:
+                cur.execute("PRAGMA foreign_key_check;")
+                fk_rows = cur.fetchall()
+                fk_violations = len(fk_rows)
+            except Exception:
+                fk_violations = 0
+
+            cur.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='index';")
+            idx_row = cur.fetchone()
+            indexes_count = idx_row[0] if idx_row else 0
+
         latency_ms = round((time.time() - t0) * 1000.0, 2)
 
-        # Record table counts
-        table_list = ["users", "farm_profiles", "buyers", "buyer_requirements", "crop_inspections", "farmer_produce_listings", "farmer_quotations", "trade_transactions"]
-        counts = {}
-        for tbl in table_list:
+        # Audit all 14 required tables
+        missing_tables = [t for t in REQUIRED_TABLES if t not in existing_tables]
+        table_counts = {}
+        for tbl in existing_tables:
             try:
                 cur.execute(f"SELECT COUNT(*) as cnt FROM {tbl};")
                 row = cur.fetchone()
-                counts[tbl] = row["cnt"] if "cnt" in row else row[0]
+                table_counts[tbl] = row["cnt"] if "cnt" in row else row[0]
             except Exception:
-                counts[tbl] = 0
+                table_counts[tbl] = -1
 
         conn.close()
 
+        # Determine true status
+        if missing_tables or fk_violations > 0:
+            status = "DEGRADED"
+        else:
+            status = "HEALTHY"
+
         return {
-            "status": "HEALTHY",
+            "status": status,
             "database_type": db_type,
             "is_persistent_cloud": is_postgres,
             "latency_ms": latency_ms,
             "storage_path": storage_label,
-            "table_record_counts": counts,
+            "required_tables_count": len(REQUIRED_TABLES),
+            "present_tables_count": len(existing_tables),
+            "missing_tables": missing_tables,
+            "table_record_counts": table_counts,
+            "fk_violations": fk_violations,
+            "indexes_count": indexes_count,
             "ephemeral_warning": (not is_postgres)
         }
     except Exception as e:
@@ -318,5 +372,6 @@ def check_database_health() -> Dict[str, Any]:
             "database_type": "Neon PostgreSQL" if is_postgres else "SQLite",
             "is_persistent_cloud": is_postgres,
             "error": str(e),
+            "missing_tables": REQUIRED_TABLES,
             "ephemeral_warning": True
         }

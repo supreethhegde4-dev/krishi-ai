@@ -75,6 +75,9 @@ def seed_development_accounts(conn: sqlite3.Connection):
 
 def init_db():
     """Initializes tables and seeds default accounts if not present."""
+    if is_postgres_configured():
+        # Schema and initialization for PostgreSQL are managed via migrate_to_neon.py
+        return
     conn = get_db_connection()
     c = conn.cursor()
 
@@ -164,7 +167,7 @@ def init_db():
 
     conn.commit()
     # In development mode, seed test sandbox accounts for testing
-    active_env = os.environ.get("KRISHI_ENV", "development").lower()
+    active_env = os.environ.get("KRISHI_ENV", "production").lower()
     if active_env == "development":
         seed_development_accounts(conn)
 

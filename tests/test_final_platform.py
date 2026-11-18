@@ -138,11 +138,20 @@ class TestFinalKrishiAIPlatform(unittest.TestCase):
         self.assertTrue(s_c)
         self.assertIsNotNone(i_id)
 
-        # Inspector certifies lot
+        # Inspector certifies lot (dynamically resolved authorized inspector)
+        from modules.db_engine import get_db_connection
+        _conn = get_db_connection()
+        _cur = _conn.cursor()
+        _cur.execute("SELECT id, full_name FROM users WHERE role = 'inspector' LIMIT 1;")
+        _insp = _cur.fetchone()
+        _insp_id = _insp["id"] if hasattr(_insp, "__getitem__") else 5
+        _insp_name = _insp["full_name"] if hasattr(_insp, "__getitem__") else "Dr. Anand Murthy"
+        _conn.close()
+
         s_v, msg_v = verify_crop_inspection(
             inspection_id=i_id,
-            inspector_id=3,
-            inspector_name="Dr. Anand Murthy",
+            inspector_id=_insp_id,
+            inspector_name=_insp_name,
             inspector_grade="Grade A (Premium Export)",
             brix_reading=5.4,
             size_caliper_mm=60.0,

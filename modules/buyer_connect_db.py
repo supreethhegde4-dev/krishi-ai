@@ -42,7 +42,7 @@ def init_buyer_connect_tables():
         verified_status INTEGER NOT NULL DEFAULT 0,
         verified_by INTEGER,
         verification_remarks TEXT,
-        rating REAL NOT NULL DEFAULT 5.0,
+        rating REAL NOT NULL DEFAULT 0.0,
         total_deals_completed INTEGER NOT NULL DEFAULT 0,
         payment_terms TEXT NOT NULL DEFAULT 'Within 24 Hours of Delivery / Gate Weighbridge Clearance',
         created_at TEXT NOT NULL,
@@ -709,6 +709,52 @@ def get_all_inspections(status: Optional[str] = None) -> List[Dict[str, Any]]:
     return [dict(r) for r in rows]
 
 
+def assign_inspector_to_inspection(
+    inspection_id: int,
+    inspector_id: int,
+    admin_id: int
+) -> Tuple[bool, str]:
+    """Assigns a certified inspector to an inspection batch. Requires admin authorization."""
+    conn = get_db_connection()
+    c = conn.cursor()
+    try:
+        # Verify admin
+        c.execute("SELECT id, role, is_active FROM users WHERE id = ?", (admin_id,))
+        admin_user = c.fetchone()
+        if not admin_user:
+            return False, f"Unauthorized: Admin ID #{admin_id} not found."
+        admin_role = admin_user.get("role") if hasattr(admin_user, "get") else admin_user[1]
+        is_active = admin_user.get("is_active") if hasattr(admin_user, "get") else admin_user[2]
+        if admin_role != "admin" or not is_active:
+            return False, f"Unauthorized: User #{admin_id} is not an active administrator."
+
+        # Verify inspector
+        c.execute("SELECT id, role, full_name, is_active FROM users WHERE id = ?", (inspector_id,))
+        insp_user = c.fetchone()
+        if not insp_user:
+            return False, f"Inspector ID #{inspector_id} not found."
+        insp_role = insp_user.get("role") if hasattr(insp_user, "get") else insp_user[1]
+        insp_name = insp_user.get("full_name") if hasattr(insp_user, "get") else insp_user[2]
+        insp_active = insp_user.get("is_active") if hasattr(insp_user, "get") else insp_user[3]
+        if insp_role not in ("inspector", "admin") or not insp_active:
+            return False, f"Invalid inspector: User #{inspector_id} must be an active certified inspector or admin."
+
+        c.execute("""
+        UPDATE crop_inspections
+        SET inspector_id = ?, inspector_name = ?, status = 'ASSIGNED'
+        WHERE id = ?
+        """, (inspector_id, insp_name, inspection_id))
+        if c.rowcount == 0:
+            return False, f"Inspection #{inspection_id} not found."
+        conn.commit()
+        return True, f"Inspection #{inspection_id} successfully assigned to Inspector {insp_name}."
+    except Exception as e:
+        conn.rollback()
+        return False, f"Failed to assign inspector: {str(e)}"
+    finally:
+        conn.close()
+
+
 def verify_crop_inspection(
     inspection_id: int,
     inspector_id: int,
@@ -723,8 +769,18 @@ def verify_crop_inspection(
     c = conn.cursor()
     now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
     import hashlib
-    cert_hash = hashlib.sha256(f"INSP_{inspection_id}_{inspector_name}_{now_str}".encode("utf-8")).hexdigest()[:16].upper()
+    # Enforce RBAC: Caller must be an active certified inspector or admin
     try:
+        c.execute("SELECT id, role, is_active FROM users WHERE id = ?", (inspector_id,))
+        user_row = c.fetchone()
+        if not user_row:
+            return False, f"Unauthorized: Inspector ID #{inspector_id} not found in user directory."
+        user_role = user_row.get("role") if hasattr(user_row, "get") else user_row[1]
+        user_active = user_row.get("is_active") if hasattr(user_row, "get") else user_row[2]
+        if user_role not in ("inspector", "admin") or not user_active:
+            return False, f"Unauthorized: User #{inspector_id} does not have inspector or admin privileges."
+
+        cert_hash = hashlib.sha256(f"INSP_{inspection_id}_{inspector_name}_{now_str}".encode("utf-8")).hexdigest()[:16].upper()
         c.execute("""
         UPDATE crop_inspections
         SET inspector_id = ?,
@@ -892,7 +948,7 @@ def register_buyer_profile(
             user_id, company_name, business_type, contact_person, phone, email,
             facility_address, district, state, latitude, longitude, gstin, apmc_license,
             verified_status, rating, total_deals_completed, payment_terms, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 5.0, 0, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 0.0, 0, ?, ?)
         """, (
             user_id, company_name.strip(), business_type, contact_person.strip(),
             phone.strip(), email.strip().lower(), facility_address.strip(),
@@ -915,10 +971,23 @@ def verify_buyer_account(
 ) -> Tuple[bool, str]:
     """
     Grants official verified status (1) to a registered buyer after regulatory due diligence.
+    Enforces RBAC: Only an active administrator (role='admin') can verify a buyer.
     """
     conn = get_db_connection()
     c = conn.cursor()
     try:
+        # Enforce RBAC validation
+        c.execute("SELECT id, role, is_active FROM users WHERE id = ?", (admin_id,))
+        admin_user = c.fetchone()
+        if not admin_user:
+            return False, f"Verification failed: Admin ID #{admin_id} not found."
+        
+        user_role = admin_user.get("role") if hasattr(admin_user, "get") else admin_user[1]
+        is_active = admin_user.get("is_active") if hasattr(admin_user, "get") else admin_user[2]
+        
+        if user_role != "admin" or not is_active:
+            return False, f"Unauthorized: User #{admin_id} is not an active administrator."
+
         c.execute("""
         UPDATE buyers
         SET verified_status = 1,
@@ -926,8 +995,10 @@ def verify_buyer_account(
             verification_remarks = ?
         WHERE id = ?
         """, (admin_id, remarks, buyer_id))
+        if c.rowcount == 0:
+            return False, f"Buyer #{buyer_id} does not exist."
         conn.commit()
-        return True, f"Buyer #{buyer_id} verified successfully."
+        return True, f"Buyer #{buyer_id} verified successfully by Admin #{admin_id}."
     except Exception as e:
         conn.rollback()
         return False, f"Verification failed: {str(e)}"

@@ -149,8 +149,16 @@ class TestKrishiAIProductionReadiness(unittest.TestCase):
         self.assertTrue(succ, f"Buyer profile registration failed: {msg}")
         self.assertIsNotNone(buyer_id)
 
-        # Verify buyer status via admin
-        v_ok, v_msg = verify_buyer_account(buyer_id=buyer_id, admin_id=1, remarks="Official GSTIN verified.")
+        # Verify buyer status via admin (dynamically resolved authorized admin)
+        from modules.db_engine import get_db_connection
+        _conn = get_db_connection()
+        _cur = _conn.cursor()
+        _cur.execute("SELECT id FROM users WHERE role = 'admin' LIMIT 1;")
+        _adm = _cur.fetchone()
+        _admin_id = _adm["id"] if hasattr(_adm, "__getitem__") else 2
+        _conn.close()
+
+        v_ok, v_msg = verify_buyer_account(buyer_id=buyer_id, admin_id=_admin_id, remarks="Official GSTIN verified.")
         self.assertTrue(v_ok)
 
     def test_06_duckdb_sql_injection_defense(self):
