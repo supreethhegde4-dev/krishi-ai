@@ -67,6 +67,12 @@ from modules.explainable_ai import explain_yield_prediction
 from modules.decision_engine import generate_unified_decision_report
 
 # High-Contrast Dedicated UI Views
+from modules.buyer_connect_db import init_buyer_connect_tables
+from modules.buyer_ui_view import render_buyer_connect_view
+
+# Initialize Buyer & Industry Connect Tables
+init_buyer_connect_tables()
+
 from modules.ui_views import (
     render_intelligence_overview_view,
     render_historical_analysis_view,
@@ -417,9 +423,9 @@ def render_authentication_page():
                 </div>
                 """)
 
-                cd1, cd2 = st.columns(2)
+                cd1, cd2, cd3 = st.columns(3)
                 with cd1:
-                    if st.button("🧑‍🌾 Demo Farmer (Ramesh)", use_container_width=True):
+                    if st.button("👨‍🌾 Demo Farmer (Ramesh)", use_container_width=True):
                         s, m, t, u = authenticate_user("farmer@krishiai.com", "Password@123", remember_me=True)
                         if s:
                             st.session_state.auth_token = t
@@ -427,6 +433,15 @@ def render_authentication_page():
                             st.rerun()
                     st.caption("5-Acre Tomato Farm • Ramanagara")
                 with cd2:
+                    if st.button("🏢 Demo Buyer (ITC Agro)", use_container_width=True):
+                        s, m, t, u = authenticate_user("buyer@krishiai.com", "Password@123", remember_me=True)
+                        if s:
+                            st.session_state.auth_token = t
+                            st.session_state.current_user = u
+                            st.session_state.active_nav = "Buyer Connect"
+                            st.rerun()
+                    st.caption("Industrial Procurement Hub")
+                with cd3:
                     if st.button("🛡️ Demo Administrator", use_container_width=True):
                         s, m, t, u = authenticate_user("admin@krishiai.com", "Admin@123", remember_me=True)
                         if s:
@@ -435,7 +450,6 @@ def render_authentication_page():
                             st.rerun()
                     st.caption("APMC & Agronomic Oversight")
 
-            # SIGN UP VIEW
             elif st.session_state.auth_view == "signup":
                 st.html("""
                 <div style="margin-bottom: 14px;">
@@ -573,6 +587,7 @@ def render_main_application():
             ("🌾 Crop Yield Prediction", "Crop Yield Prediction"),
             ("💰 Market Intelligence", "Market Intelligence"),
             ("📈 Trend Shift Intelligence", "Trend Shift Intelligence"),
+            ("🤝 Buyer & Industry Connect", "Buyer Connect"),
             ("🗓️ Seasonal Intelligence", "Seasonal Intelligence"),
             ("⚠️ Agricultural Risk Analysis", "Agricultural Risk Analysis"),
             ("🧪 What-If Simulator", "What-If Simulator"),
@@ -629,6 +644,8 @@ def render_main_application():
         render_market_intelligence_view(user, farm, df_market)
     elif st.session_state.active_nav == "Trend Shift Intelligence":
         render_trend_shift_view(user, farm, df_market)
+    elif st.session_state.active_nav == "Buyer Connect":
+        render_buyer_connect_view(user, farm, df_market)
     elif st.session_state.active_nav == "Seasonal Intelligence":
         render_seasonal_intelligence_view(user, farm)
     elif st.session_state.active_nav == "Agricultural Risk Analysis":

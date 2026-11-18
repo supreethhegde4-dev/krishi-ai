@@ -143,6 +143,28 @@ def init_db():
 
         conn.commit()
 
+    # Ensure Demo Buyer Account exists
+    c.execute("SELECT id FROM users WHERE email = 'buyer@krishiai.com'")
+    buyer_row = c.fetchone()
+    if not buyer_row:
+        now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        buyer_pwd_hash = bcrypt.hashpw("Password@123".encode("utf-8"), bcrypt.gensalt(12)).decode("utf-8")
+        c.execute("""
+        INSERT INTO users (email, password_hash, full_name, phone, role, created_at, is_active)
+        VALUES (?, ?, ?, ?, 'buyer', ?, 1)
+        """, ("buyer@krishiai.com", buyer_pwd_hash, "Vikramaditya Rao", "+91 98451 22334", now_str))
+        b_uid = c.lastrowid
+        c.execute("""
+        INSERT OR REPLACE INTO farm_profiles (user_id, farm_name, acreage, village, district, state, latitude, longitude, soil_type, primary_crops, irrigation_source)
+        VALUES (?, 'ITC Procurement & Sourcing Center', 0.0, 'Bidadi Industrial Area Phase II', 'Ramanagara', 'Karnataka', 12.7981, 77.4005, 'Industrial Agro Hub', 'Tomato, Wheat, Potato', 'Industrial Borewell')
+        """, (b_uid,))
+        # Link user_id to ITC in buyers table if exists
+        try:
+            c.execute("UPDATE buyers SET user_id = ? WHERE company_name LIKE '%ITC Agri%'", (b_uid,))
+        except Exception:
+            pass
+        conn.commit()
+
     conn.close()
 
 
