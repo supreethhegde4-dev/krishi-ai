@@ -89,19 +89,37 @@ def compute_mandi_proceeds_table(
         dist_name = row['district']
         st_name = row['state']
         
-        # Resolve coords
-        key_full = f"{m_name}, {dist_name}, {st_name}"
-        key_market = m_name
+        # Multi-level coordinate resolution
+        clean_m_name = m_name.replace(" APMC", "").replace(" (F&V)", "").replace(" (Grain Market)", "").strip()
+        candidates = [
+            f"{m_name}, {dist_name}, {st_name}",
+            f"{clean_m_name}, {dist_name}, {st_name}",
+            m_name,
+            clean_m_name,
+            f"{dist_name}, {st_name}",
+            dist_name
+        ]
         
         lat, lon = None, None
-        if key_full in coords_cache:
-            lat = coords_cache[key_full]["lat"]
-            lon = coords_cache[key_full]["lon"]
-        elif key_market in coords_cache:
-            lat = coords_cache[key_market]["lat"]
-            lon = coords_cache[key_market]["lon"]
-        else:
-            # Centroid approximation
+        for c_key in candidates:
+            if c_key in coords_cache and isinstance(coords_cache[c_key], dict):
+                lat = coords_cache[c_key].get("lat")
+                lon = coords_cache[c_key].get("lon")
+                if lat is not None and lon is not None:
+                    break
+        
+        # Fuzzy/substring match if exact key not in cache
+        if lat is None or lon is None:
+            m_low = clean_m_name.lower()
+            for k, val in coords_cache.items():
+                if isinstance(val, dict) and (k.lower() in m_low or m_low in k.lower()):
+                    lat = val.get("lat")
+                    lon = val.get("lon")
+                    if lat is not None and lon is not None:
+                        break
+
+        # Centroid approximation fallback
+        if lat is None or lon is None:
             lat, lon = 20.5937, 78.9629
 
         destinations.append({

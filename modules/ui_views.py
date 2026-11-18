@@ -550,9 +550,32 @@ def render_market_intelligence_view(user, farm, df_market):
     with col_mp3:
         m_veh = st.selectbox("Vehicle Profile", list(DEFAULT_VEHICLE_CONFIGS.keys()), index=0)
 
+    col_fl1, col_fl2 = st.columns(2)
+    with col_fl1:
+        dist_filter = st.selectbox(
+            "Distance Radius Filter",
+            [
+                "All Mandis (Nationwide)",
+                "Local Mandis (< 50 km) — Minimal Freight",
+                "Regional Mandis (< 150 km) — Same-day Transport",
+                "Statewide Mandis (< 300 km)"
+            ],
+            index=0
+        )
+    with col_fl2:
+        sort_by = st.selectbox(
+            "Sort Results By",
+            [
+                "Highest Net Proceeds (Recommended)",
+                "Nearest Distance (Shortest Haul)",
+                "Highest Modal Price (Gross)"
+            ],
+            index=0
+        )
+
     vehicle_cfg = DEFAULT_VEHICLE_CONFIGS[m_veh].copy()
 
-    with st.spinner("Calculating actual road matrix across 2,733 mandis..."):
+    with st.spinner("Calculating actual road matrix across wholesale mandis..."):
         p_res = compute_mandi_proceeds_table(
             df_marketplace=df_market,
             crop_name=m_crop,
@@ -562,10 +585,30 @@ def render_market_intelligence_view(user, farm, df_market):
             vehicle_config=vehicle_cfg
         )
 
-    b_m = p_res["best_mandi"]
-    n_m = p_res["nearest_mandi"]
+    all_records = list(p_res.get("records", []))
+    records = all_records
 
-    if b_m and n_m:
+    # Apply distance filter
+    if "< 50 km" in dist_filter:
+        records = [r for r in records if r["road_distance_km"] <= 50.0]
+    elif "< 150 km" in dist_filter:
+        records = [r for r in records if r["road_distance_km"] <= 150.0]
+    elif "< 300 km" in dist_filter:
+        records = [r for r in records if r["road_distance_km"] <= 300.0]
+
+    # Apply sort
+    if "Nearest Distance" in sort_by:
+        records = sorted(records, key=lambda x: x["road_distance_km"])
+    elif "Highest Modal Price" in sort_by:
+        records = sorted(records, key=lambda x: x["modal_price_kg"], reverse=True)
+    else:
+        records = sorted(records, key=lambda x: x["net_proceeds"], reverse=True)
+
+    if records:
+        b_m = max(records, key=lambda x: x["net_proceeds"])
+        n_m = min(records, key=lambda x: x["road_distance_km"])
+        net_gain = b_m["net_proceeds"] - n_m["net_proceeds"]
+
         cb1, cb2, cb3 = st.columns(3)
         with cb1:
             st.html(f"""
@@ -586,7 +629,6 @@ def render_market_intelligence_view(user, farm, df_market):
             </div>
             """)
         with cb3:
-            net_gain = p_res["net_advantage_vs_nearest"]
             st.html(f"""
             <div class="stat-card" style="background:#FFFBEB; border-color:#F59E0B;">
                 <div class="stat-label">💡 Net Arbitrage Advantage</div>
@@ -596,8 +638,8 @@ def render_market_intelligence_view(user, farm, df_market):
             </div>
             """)
 
-        st.markdown("#### Ranked Mandi Ledger")
-        df_m_disp = pd.DataFrame(p_res["records"])[[
+        st.markdown(f"#### Ranked Mandi Ledger ({len(records)} mandis matching filters)")
+        df_m_disp = pd.DataFrame(records)[[
             "mandi", "district", "state", "modal_price_kg", "road_distance_km",
             "gross_revenue", "transport_cost", "total_expenses", "net_proceeds", "net_price_per_kg", "suitability_badge"
         ]].rename(columns={
@@ -608,6 +650,8 @@ def render_market_intelligence_view(user, farm, df_market):
             "net_price_per_kg": "Net Realized (₹/kg)", "suitability_badge": "Cold-Chain Match"
         })
         st.dataframe(df_m_disp, use_container_width=True)
+    else:
+        st.info(f"No mandis found within {dist_filter} for '{m_crop}'. Try selecting a wider distance radius.")
 
 
 # ==============================================================================

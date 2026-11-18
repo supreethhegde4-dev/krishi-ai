@@ -129,6 +129,56 @@ def load_normalized_marketplace_data() -> pd.DataFrame:
     # Flag valid records (Modal price > 0)
     df_clean['is_valid'] = (df_clean['modal_price_kg'] > 0) & (df_clean['min_price_kg'] <= df_clean['max_price_kg'])
     
+    # Enrich with latest Karnataka active local mandis from historical Parquet
+    try:
+        data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+        parquet_2026 = os.path.join(data_dir, "historical_parquet", "parquet", "2026.parquet")
+        if not os.path.exists(parquet_2026):
+            parquet_2026 = os.path.join(data_dir, "historical_parquet", "parquet", "2025.parquet")
+            
+        if os.path.exists(parquet_2026):
+            import duckdb
+            con = duckdb.connect()
+            p_path = parquet_2026.replace("\\", "/")
+            k_query = f"""
+            WITH latest_records AS (
+                SELECT 
+                    State as state,
+                    District as district,
+                    Market as market,
+                    Commodity as commodity,
+                    Variety as variety,
+                    Grade as grade,
+                    Arrival_Date as arrival_date,
+                    Min_Price as min_price_quintal,
+                    Max_Price as max_price_quintal,
+                    Modal_Price as modal_price_quintal,
+                    ROW_NUMBER() OVER(
+                        PARTITION BY State, Market, Commodity 
+                        ORDER BY Arrival_Date DESC
+                    ) as rn
+                FROM '{p_path}'
+                WHERE Modal_Price > 0 AND State = 'Karnataka'
+            )
+            SELECT state, district, market, commodity, variety, grade, arrival_date, 
+                   min_price_quintal, max_price_quintal, modal_price_quintal
+            FROM latest_records
+            WHERE rn = 1
+            """
+            df_k = con.execute(k_query).fetchdf()
+            if not df_k.empty:
+                for col in df_k.select_dtypes(include='object').columns:
+                    df_k[col] = df_k[col].astype(str).str.strip()
+                df_k['min_price_kg'] = df_k['min_price_quintal'] / 100.0
+                df_k['max_price_kg'] = df_k['max_price_quintal'] / 100.0
+                df_k['modal_price_kg'] = df_k['modal_price_quintal'] / 100.0
+                df_k['is_valid'] = (df_k['modal_price_kg'] > 0) & (df_k['min_price_kg'] <= df_k['max_price_kg'])
+                
+                # Prepend Karnataka local records to the marketplace
+                df_clean = pd.concat([df_k, df_clean], ignore_index=True)
+    except Exception:
+        pass
+    
     return df_clean
 
 

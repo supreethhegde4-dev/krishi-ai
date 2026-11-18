@@ -5670,5 +5670,5428 @@
     "market": "Tanakpur",
     "district": "Champawat",
     "state": "Uttrakhand"
+  },
+  "Ramanagara": {
+    "lat": 12.7209,
+    "lon": 77.2799
+  },
+  "Ramanagara, Bangalore, Karnataka": {
+    "lat": 12.7209,
+    "lon": 77.2799
+  },
+  "Channapatana": {
+    "lat": 12.6518,
+    "lon": 77.2089
+  },
+  "Channapatana, Bangalore, Karnataka": {
+    "lat": 12.6518,
+    "lon": 77.2089
+  },
+  "Kanakapura": {
+    "lat": 12.5462,
+    "lon": 77.4194
+  },
+  "Kanakapura, Bangalore, Karnataka": {
+    "lat": 12.5462,
+    "lon": 77.4194
+  },
+  "Binny Mill (F&V), Bangalore": {
+    "lat": 12.9698,
+    "lon": 77.5684
+  },
+  "Binny Mill (F&V), Bangalore, Bangalore, Karnataka": {
+    "lat": 12.9698,
+    "lon": 77.5684
+  },
+  "Mandya": {
+    "lat": 12.5226,
+    "lon": 76.8974
+  },
+  "Mandya, Mandya, Karnataka": {
+    "lat": 12.5226,
+    "lon": 76.8974
+  },
+  "Maddur": {
+    "lat": 12.5843,
+    "lon": 77.0452
+  },
+  "Maddur, Mandya, Karnataka": {
+    "lat": 12.5843,
+    "lon": 77.0452
+  },
+  "Doddaballa Pur": {
+    "lat": 13.2924,
+    "lon": 77.5417
+  },
+  "Doddaballa Pur, Bangalore, Karnataka": {
+    "lat": 13.2924,
+    "lon": 77.5417
+  },
+  "Mysore (Bandipalya)": {
+    "lat": 12.2818,
+    "lon": 76.6667
+  },
+  "Mysore (Bandipalya), Mysore, Karnataka": {
+    "lat": 12.2818,
+    "lon": 76.6667
+  },
+  "Kolar": {
+    "lat": 13.1367,
+    "lon": 78.1348
+  },
+  "Kolar, Kolar, Karnataka": {
+    "lat": 13.1367,
+    "lon": 78.1348
+  },
+  "Chintamani": {
+    "lat": 13.4024,
+    "lon": 78.0583
+  },
+  "Chintamani, Kolar, Karnataka": {
+    "lat": 13.4024,
+    "lon": 78.0583
+  },
+  "Malur": {
+    "lat": 13.0042,
+    "lon": 77.9392
+  },
+  "Malur, Kolar, Karnataka": {
+    "lat": 13.0042,
+    "lon": 77.9392
+  },
+  "Tumkur": {
+    "lat": 13.3379,
+    "lon": 77.1006
+  },
+  "Tumkur, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1006
+  },
+  "Badami APMC": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Badami APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Badami APMC, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Badami APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Badami APMC, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Badami APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Badami": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Badami APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Badami, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Badami APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalakot APMC": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalakot APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalakot APMC, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalakot APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalakot APMC, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalakot APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalakot": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalakot APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalakot, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalakot APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalkot (Bigali) APMC": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalkot (Bigali) APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalkot (Bigali) APMC, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalkot (Bigali) APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalkot (Bigali) APMC, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalkot (Bigali) APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalkot (Bigali)": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalkot (Bigali) APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bagalkot (Bigali), Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Bagalkot (Bigali) APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Hungund APMC": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Hungund APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Hungund APMC, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Hungund APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Hungund APMC, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Hungund APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Hungund": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Hungund APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Hungund, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Hungund APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Jamakhandi APMC": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Jamakhandi APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Jamakhandi APMC, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Jamakhandi APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Jamakhandi APMC, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Jamakhandi APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Jamakhandi": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Jamakhandi APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Jamakhandi, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Jamakhandi APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Mhalingapur APMC": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Mhalingapur APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Mhalingapur APMC, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Mhalingapur APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Mhalingapur APMC, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Mhalingapur APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Mhalingapur": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Mhalingapur APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Mhalingapur, Bagalkot, Karnataka": {
+    "lat": 16.18,
+    "lon": 75.7,
+    "market": "Mhalingapur APMC",
+    "district": "Bagalkot",
+    "state": "Karnataka"
+  },
+  "Bangalore APMC": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Bangalore APMC, Bangalore, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Bangalore APMC, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Bangalore": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Bangalore, Bangalore, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Binny Mill (F&V), Bangalore APMC": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Binny Mill (F&V), Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Binny Mill (F&V), Bangalore APMC, Bangalore, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Binny Mill (F&V), Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Binny Mill (F&V), Bangalore APMC, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Binny Mill (F&V), Bangalore APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Channapatana APMC": {
+    "lat": 12.6518,
+    "lon": 77.2089,
+    "market": "Channapatana APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Channapatana APMC, Bangalore, Karnataka": {
+    "lat": 12.6518,
+    "lon": 77.2089,
+    "market": "Channapatana APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Channapatana APMC, Karnataka": {
+    "lat": 12.6518,
+    "lon": 77.2089,
+    "market": "Channapatana APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Doddaballa Pur APMC": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Doddaballa Pur APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Doddaballa Pur APMC, Bangalore, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Doddaballa Pur APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Doddaballa Pur APMC, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Doddaballa Pur APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Hoskote APMC": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Hoskote APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Hoskote APMC, Bangalore, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Hoskote APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Hoskote APMC, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Hoskote APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Hoskote": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Hoskote APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Hoskote, Bangalore, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Hoskote APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Kanakapura APMC": {
+    "lat": 12.5461,
+    "lon": 77.4184,
+    "market": "Kanakapura APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Kanakapura APMC, Bangalore, Karnataka": {
+    "lat": 12.5461,
+    "lon": 77.4184,
+    "market": "Kanakapura APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Kanakapura APMC, Karnataka": {
+    "lat": 12.5461,
+    "lon": 77.4184,
+    "market": "Kanakapura APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Ramanagara APMC": {
+    "lat": 12.7209,
+    "lon": 77.2799,
+    "market": "Ramanagara APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Ramanagara APMC, Bangalore, Karnataka": {
+    "lat": 12.7209,
+    "lon": 77.2799,
+    "market": "Ramanagara APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Ramanagara APMC, Karnataka": {
+    "lat": 12.7209,
+    "lon": 77.2799,
+    "market": "Ramanagara APMC",
+    "district": "Bangalore",
+    "state": "Karnataka"
+  },
+  "Athani APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Athani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Athani APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Athani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Athani APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Athani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Athani": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Athani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Athani, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Athani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Bailahongal APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Bailahongal APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Bailahongal APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Bailahongal APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Bailahongal APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Bailahongal APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Bailahongal": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Bailahongal APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Bailahongal, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Bailahongal APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Belgaum APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Belgaum APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Belgaum APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Belgaum APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Belgaum APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Belgaum APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Belgaum": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Belgaum APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Belgaum, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Belgaum APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Gokak APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Gokak APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Gokak APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Gokak APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Gokak APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Gokak APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Gokak": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Gokak APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Gokak, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Gokak APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Kudchi APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Kudchi APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Kudchi APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Kudchi APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Kudchi APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Kudchi APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Kudchi": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Kudchi APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Kudchi, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Kudchi APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nandagada APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nandagada APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nandagada APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nandagada APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nandagada APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nandagada APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nandagada": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nandagada APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nandagada, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nandagada APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nippani APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nippani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nippani APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nippani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nippani APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nippani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nippani": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nippani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Nippani, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Nippani APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Ramdurga APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Ramdurga APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Ramdurga APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Ramdurga APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Ramdurga APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Ramdurga APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Ramdurga": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Ramdurga APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Ramdurga, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Ramdurga APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Sankeshwar APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Sankeshwar APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Sankeshwar APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Sankeshwar APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Sankeshwar APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Sankeshwar APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Sankeshwar": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Sankeshwar APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Sankeshwar, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Sankeshwar APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Soundati APMC": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Soundati APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Soundati APMC, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Soundati APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Soundati APMC, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Soundati APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Soundati": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Soundati APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Soundati, Belgaum, Karnataka": {
+    "lat": 15.8497,
+    "lon": 74.4977,
+    "market": "Soundati APMC",
+    "district": "Belgaum",
+    "state": "Karnataka"
+  },
+  "Bellary APMC": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Bellary APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Bellary APMC, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Bellary APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Bellary APMC, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Bellary APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Bellary": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Bellary APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Bellary, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Bellary APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "H.B. Halli APMC": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "H.B. Halli APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "H.B. Halli APMC, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "H.B. Halli APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "H.B. Halli APMC, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "H.B. Halli APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "H.B. Halli": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "H.B. Halli APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "H.B. Halli, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "H.B. Halli APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hoovinahadagali APMC": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hoovinahadagali APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hoovinahadagali APMC, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hoovinahadagali APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hoovinahadagali APMC, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hoovinahadagali APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hoovinahadagali": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hoovinahadagali APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hoovinahadagali, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hoovinahadagali APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hospet APMC": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hospet APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hospet APMC, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hospet APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hospet APMC, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hospet APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hospet": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hospet APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Hospet, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Hospet APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Kottur APMC": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Kottur APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Kottur APMC, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Kottur APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Kottur APMC, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Kottur APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Kottur": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Kottur APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Kottur, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Kottur APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Sirguppa APMC": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Sirguppa APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Sirguppa APMC, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Sirguppa APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Sirguppa APMC, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Sirguppa APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Sirguppa": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Sirguppa APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Sirguppa, Bellary, Karnataka": {
+    "lat": 15.1394,
+    "lon": 76.9214,
+    "market": "Sirguppa APMC",
+    "district": "Bellary",
+    "state": "Karnataka"
+  },
+  "Aurad APMC": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Aurad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Aurad APMC, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Aurad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Aurad APMC, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Aurad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Aurad": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Aurad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Aurad, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Aurad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Basava Kalayana APMC": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Basava Kalayana APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Basava Kalayana APMC, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Basava Kalayana APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Basava Kalayana APMC, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Basava Kalayana APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Basava Kalayana": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Basava Kalayana APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Basava Kalayana, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Basava Kalayana APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bhalki APMC": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bhalki APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bhalki APMC, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bhalki APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bhalki APMC, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bhalki APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bhalki": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bhalki APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bhalki, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bhalki APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bidar APMC": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bidar APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bidar APMC, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bidar APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bidar APMC, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bidar APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bidar": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bidar APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bidar, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Bidar APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Humanabad APMC": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Humanabad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Humanabad APMC, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Humanabad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Humanabad APMC, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Humanabad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Humanabad": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Humanabad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Humanabad, Bidar, Karnataka": {
+    "lat": 17.9104,
+    "lon": 77.5199,
+    "market": "Humanabad APMC",
+    "district": "Bidar",
+    "state": "Karnataka"
+  },
+  "Bijapur APMC": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Bijapur APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Bijapur APMC, Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Bijapur APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Bijapur APMC, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Bijapur APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Bijapur": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Bijapur APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Bijapur, Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Bijapur APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi (Indi) APMC": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi (Indi) APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi (Indi) APMC, Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi (Indi) APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi (Indi) APMC, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi (Indi) APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi (Indi)": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi (Indi) APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi (Indi), Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi (Indi) APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi APMC": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi APMC, Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi APMC, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Sindagi, Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Sindagi APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Talikot APMC": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Talikot APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Talikot APMC, Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Talikot APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Talikot APMC, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Talikot APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Talikot": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Talikot APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Talikot, Bijapur, Karnataka": {
+    "lat": 16.8302,
+    "lon": 75.71,
+    "market": "Talikot APMC",
+    "district": "Bijapur",
+    "state": "Karnataka"
+  },
+  "Chamaraj Nagar APMC": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Chamaraj Nagar APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Chamaraj Nagar APMC, Chamrajnagar, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Chamaraj Nagar APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Chamaraj Nagar APMC, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Chamaraj Nagar APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Chamaraj Nagar": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Chamaraj Nagar APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Chamaraj Nagar, Chamrajnagar, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Chamaraj Nagar APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Gundlupet APMC": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Gundlupet APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Gundlupet APMC, Chamrajnagar, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Gundlupet APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Gundlupet APMC, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Gundlupet APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Gundlupet": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Gundlupet APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Gundlupet, Chamrajnagar, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Gundlupet APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Kollegal APMC": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Kollegal APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Kollegal APMC, Chamrajnagar, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Kollegal APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Kollegal APMC, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Kollegal APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Kollegal": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Kollegal APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Kollegal, Chamrajnagar, Karnataka": {
+    "lat": 11.9261,
+    "lon": 76.9437,
+    "market": "Kollegal APMC",
+    "district": "Chamrajnagar",
+    "state": "Karnataka"
+  },
+  "Chikkamagalore APMC": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Chikkamagalore APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Chikkamagalore APMC, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Chikkamagalore APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Chikkamagalore APMC, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Chikkamagalore APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Chikkamagalore": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Chikkamagalore APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Chikkamagalore, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Chikkamagalore APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Kadur APMC": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Kadur APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Kadur APMC, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Kadur APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Kadur APMC, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Kadur APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Kadur": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Kadur APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Kadur, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Kadur APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Koppa APMC": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Koppa APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Koppa APMC, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Koppa APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Koppa APMC, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Koppa APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Koppa": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Koppa APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Koppa, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Koppa APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Moodigere APMC": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Moodigere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Moodigere APMC, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Moodigere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Moodigere APMC, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Moodigere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Moodigere": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Moodigere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Moodigere, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Moodigere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Tarikere APMC": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Tarikere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Tarikere APMC, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Tarikere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Tarikere APMC, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Tarikere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Tarikere": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Tarikere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Tarikere, Chikmagalur, Karnataka": {
+    "lat": 13.3153,
+    "lon": 75.7754,
+    "market": "Tarikere APMC",
+    "district": "Chikmagalur",
+    "state": "Karnataka"
+  },
+  "Challakere APMC": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Challakere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Challakere APMC, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Challakere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Challakere APMC, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Challakere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Challakere": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Challakere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Challakere, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Challakere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Chitradurga APMC": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Chitradurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Chitradurga APMC, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Chitradurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Chitradurga APMC, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Chitradurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Chitradurga": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Chitradurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Chitradurga, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Chitradurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hiriyur APMC": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hiriyur APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hiriyur APMC, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hiriyur APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hiriyur APMC, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hiriyur APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hiriyur": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hiriyur APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hiriyur, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hiriyur APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Holalkere APMC": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Holalkere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Holalkere APMC, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Holalkere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Holalkere APMC, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Holalkere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Holalkere": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Holalkere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Holalkere, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Holalkere APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hosadurga APMC": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hosadurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hosadurga APMC, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hosadurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hosadurga APMC, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hosadurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hosadurga": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hosadurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Hosadurga, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Hosadurga APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Rampura APMC": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Rampura APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Rampura APMC, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Rampura APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Rampura APMC, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Rampura APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Rampura": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Rampura APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Rampura, Chitradurga, Karnataka": {
+    "lat": 14.2251,
+    "lon": 76.398,
+    "market": "Rampura APMC",
+    "district": "Chitradurga",
+    "state": "Karnataka"
+  },
+  "Channagiri APMC": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Channagiri APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Channagiri APMC, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Channagiri APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Channagiri APMC, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Channagiri APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Channagiri": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Channagiri APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Channagiri, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Channagiri APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Davangere APMC": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Davangere APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Davangere APMC, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Davangere APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Davangere APMC, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Davangere APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Davangere": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Davangere APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Davangere, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Davangere APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harappana Halli APMC": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harappana Halli APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harappana Halli APMC, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harappana Halli APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harappana Halli APMC, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harappana Halli APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harappana Halli": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harappana Halli APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harappana Halli, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harappana Halli APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harihara APMC": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harihara APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harihara APMC, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harihara APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harihara APMC, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harihara APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harihara": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harihara APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Harihara, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Harihara APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Honnali APMC": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Honnali APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Honnali APMC, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Honnali APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Honnali APMC, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Honnali APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Honnali": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Honnali APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Honnali, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Honnali APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Jagalur APMC": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Jagalur APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Jagalur APMC, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Jagalur APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Jagalur APMC, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Jagalur APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Jagalur": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Jagalur APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Jagalur, Davangere, Karnataka": {
+    "lat": 14.4644,
+    "lon": 75.9218,
+    "market": "Jagalur APMC",
+    "district": "Davangere",
+    "state": "Karnataka"
+  },
+  "Annigeri APMC": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Annigeri APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Annigeri APMC, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Annigeri APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Annigeri APMC, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Annigeri APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Annigeri": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Annigeri APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Annigeri, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Annigeri APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Dharwar APMC": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Dharwar APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Dharwar APMC, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Dharwar APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Dharwar APMC, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Dharwar APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Dharwar": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Dharwar APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Dharwar, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Dharwar APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Hubli (Amaragol) APMC": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Hubli (Amaragol) APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Hubli (Amaragol) APMC, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Hubli (Amaragol) APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Hubli (Amaragol) APMC, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Hubli (Amaragol) APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Hubli (Amaragol)": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Hubli (Amaragol) APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Hubli (Amaragol), Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Hubli (Amaragol) APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kalagategi APMC": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kalagategi APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kalagategi APMC, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kalagategi APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kalagategi APMC, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kalagategi APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kalagategi": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kalagategi APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kalagategi, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kalagategi APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kundagol APMC": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kundagol APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kundagol APMC, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kundagol APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kundagol APMC, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kundagol APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kundagol": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kundagol APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Kundagol, Dharwad, Karnataka": {
+    "lat": 15.4589,
+    "lon": 75.0078,
+    "market": "Kundagol APMC",
+    "district": "Dharwad",
+    "state": "Karnataka"
+  },
+  "Gadag APMC": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Gadag APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Gadag APMC, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Gadag APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Gadag APMC, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Gadag APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Gadag": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Gadag APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Gadag, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Gadag APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Laxmeshwar APMC": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Laxmeshwar APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Laxmeshwar APMC, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Laxmeshwar APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Laxmeshwar APMC, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Laxmeshwar APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Laxmeshwar": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Laxmeshwar APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Laxmeshwar, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Laxmeshwar APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Mundaragi APMC": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Mundaragi APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Mundaragi APMC, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Mundaragi APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Mundaragi APMC, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Mundaragi APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Mundaragi": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Mundaragi APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Mundaragi, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Mundaragi APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Nargunda APMC": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Nargunda APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Nargunda APMC, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Nargunda APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Nargunda APMC, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Nargunda APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Nargunda": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Nargunda APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Nargunda, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Nargunda APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Rona APMC": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Rona APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Rona APMC, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Rona APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Rona APMC, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Rona APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Rona": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Rona APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Rona, Gadag, Karnataka": {
+    "lat": 15.4167,
+    "lon": 75.6333,
+    "market": "Rona APMC",
+    "district": "Gadag",
+    "state": "Karnataka"
+  },
+  "Arakalgud APMC": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arakalgud APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arakalgud APMC, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arakalgud APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arakalgud APMC, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arakalgud APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arakalgud": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arakalgud APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arakalgud, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arakalgud APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arasikere APMC": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arasikere APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arasikere APMC, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arasikere APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arasikere APMC, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arasikere APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arasikere": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arasikere APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Arasikere, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Arasikere APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Belur APMC": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Belur APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Belur APMC, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Belur APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Belur APMC, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Belur APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Belur": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Belur APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Belur, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Belur APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Channarayapatna APMC": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Channarayapatna APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Channarayapatna APMC, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Channarayapatna APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Channarayapatna APMC, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Channarayapatna APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Channarayapatna": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Channarayapatna APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Channarayapatna, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Channarayapatna APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Hassan APMC": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Hassan APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Hassan APMC, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Hassan APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Hassan APMC, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Hassan APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Hassan": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Hassan APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Hassan, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Hassan APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Holenarsipura APMC": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Holenarsipura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Holenarsipura APMC, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Holenarsipura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Holenarsipura APMC, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Holenarsipura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Holenarsipura": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Holenarsipura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Holenarsipura, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Holenarsipura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Sakaleshpura APMC": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Sakaleshpura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Sakaleshpura APMC, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Sakaleshpura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Sakaleshpura APMC, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Sakaleshpura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Sakaleshpura": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Sakaleshpura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Sakaleshpura, Hassan, Karnataka": {
+    "lat": 13.0072,
+    "lon": 76.0962,
+    "market": "Sakaleshpura APMC",
+    "district": "Hassan",
+    "state": "Karnataka"
+  },
+  "Byadagi APMC": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Byadagi APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Byadagi APMC, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Byadagi APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Byadagi APMC, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Byadagi APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Byadagi": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Byadagi APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Byadagi, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Byadagi APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hanagal APMC": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hanagal APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hanagal APMC, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hanagal APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hanagal APMC, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hanagal APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hanagal": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hanagal APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hanagal, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hanagal APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Haveri APMC": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Haveri APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Haveri APMC, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Haveri APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Haveri APMC, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Haveri APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Haveri": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Haveri APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Haveri, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Haveri APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hirekerur APMC": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hirekerur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hirekerur APMC, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hirekerur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hirekerur APMC, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hirekerur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hirekerur": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hirekerur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Hirekerur, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Hirekerur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Ranebennur APMC": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Ranebennur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Ranebennur APMC, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Ranebennur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Ranebennur APMC, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Ranebennur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Ranebennur": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Ranebennur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Ranebennur, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Ranebennur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Savanur APMC": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Savanur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Savanur APMC, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Savanur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Savanur APMC, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Savanur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Savanur": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Savanur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Savanur, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Savanur APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Shiggauv APMC": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Shiggauv APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Shiggauv APMC, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Shiggauv APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Shiggauv APMC, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Shiggauv APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Shiggauv": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Shiggauv APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Shiggauv, Haveri, Karnataka": {
+    "lat": 14.7964,
+    "lon": 75.4018,
+    "market": "Shiggauv APMC",
+    "district": "Haveri",
+    "state": "Karnataka"
+  },
+  "Alanda APMC": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Alanda APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Alanda APMC, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Alanda APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Alanda APMC, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Alanda APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Alanda": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Alanda APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Alanda, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Alanda APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chincholi APMC": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chincholi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chincholi APMC, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chincholi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chincholi APMC, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chincholi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chincholi": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chincholi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chincholi, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chincholi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chittapur APMC": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chittapur APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chittapur APMC, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chittapur APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chittapur APMC, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chittapur APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chittapur": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chittapur APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Chittapur, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Chittapur APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Afzalpur) APMC": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Afzalpur) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Afzalpur) APMC, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Afzalpur) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Afzalpur) APMC, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Afzalpur) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Afzalpur)": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Afzalpur) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Afzalpur), Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Afzalpur) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Jevargi) APMC": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Jevargi) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Jevargi) APMC, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Jevargi) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Jevargi) APMC, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Jevargi) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Jevargi)": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Jevargi) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi (Jevargi), Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi (Jevargi) APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi APMC": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi APMC, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi APMC, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Kalburgi, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Kalburgi APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Sedam APMC": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Sedam APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Sedam APMC, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Sedam APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Sedam APMC, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Sedam APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Sedam": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Sedam APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Sedam, Kalburgi, Karnataka": {
+    "lat": 17.3297,
+    "lon": 76.8343,
+    "market": "Sedam APMC",
+    "district": "Kalburgi",
+    "state": "Karnataka"
+  },
+  "Haliyala APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Haliyala APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Haliyala APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Haliyala APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Haliyala APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Haliyala APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Haliyala": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Haliyala APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Haliyala, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Haliyala APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Honnavar APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Honnavar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Honnavar APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Honnavar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Honnavar APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Honnavar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Honnavar": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Honnavar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Honnavar, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Honnavar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Karwar APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Karwar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Karwar APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Karwar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Karwar APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Karwar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Karwar": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Karwar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Karwar, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Karwar APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Kumta APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Kumta APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Kumta APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Kumta APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Kumta APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Kumta APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Kumta": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Kumta APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Kumta, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Kumta APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Mundgod APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Mundgod APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Mundgod APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Mundgod APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Mundgod APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Mundgod APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Mundgod": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Mundgod APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Mundgod, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Mundgod APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Siddapur APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Siddapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Siddapur APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Siddapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Siddapur APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Siddapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Siddapur": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Siddapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Siddapur, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Siddapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Sirsi APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Sirsi APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Sirsi APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Sirsi APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Sirsi APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Sirsi APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Sirsi": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Sirsi APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Sirsi, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Sirsi APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Yellapur APMC": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Yellapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Yellapur APMC, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Yellapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Yellapur APMC, Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Yellapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Yellapur": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Yellapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Yellapur, Karwar (Uttar Kannad), Karnataka": {
+    "lat": 14.8136,
+    "lon": 74.1297,
+    "market": "Yellapur APMC",
+    "district": "Karwar (Uttar Kannad)",
+    "state": "Karnataka"
+  },
+  "Bangarpet APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bangarpet APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bangarpet APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bangarpet APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bangarpet APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bangarpet APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bangarpet": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bangarpet APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bangarpet, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bangarpet APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bhagepalli APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bhagepalli APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bhagepalli APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bhagepalli APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bhagepalli APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bhagepalli APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bhagepalli": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bhagepalli APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Bhagepalli, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Bhagepalli APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chickkaballapura APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chickkaballapura APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chickkaballapura APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chickkaballapura APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chickkaballapura APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chickkaballapura APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chickkaballapura": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chickkaballapura APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chickkaballapura, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chickkaballapura APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chintamani APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chintamani APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chintamani APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chintamani APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Chintamani APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Chintamani APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Gowribidanoor APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Gowribidanoor APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Gowribidanoor APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Gowribidanoor APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Gowribidanoor APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Gowribidanoor APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Gowribidanoor": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Gowribidanoor APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Gowribidanoor, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Gowribidanoor APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Kolar APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Kolar APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Kolar APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Kolar APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Kolar APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Kolar APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Malur APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Malur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Malur APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Malur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Malur APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Malur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Mulabagilu APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Mulabagilu APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Mulabagilu APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Mulabagilu APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Mulabagilu APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Mulabagilu APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Mulabagilu": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Mulabagilu APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Mulabagilu, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Mulabagilu APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Srinivasapur APMC": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Srinivasapur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Srinivasapur APMC, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Srinivasapur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Srinivasapur APMC, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Srinivasapur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Srinivasapur": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Srinivasapur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Srinivasapur, Kolar, Karnataka": {
+    "lat": 13.1358,
+    "lon": 78.1291,
+    "market": "Srinivasapur APMC",
+    "district": "Kolar",
+    "state": "Karnataka"
+  },
+  "Gangavathi (Karatagi) APMC": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi (Karatagi) APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi (Karatagi) APMC, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi (Karatagi) APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi (Karatagi) APMC, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi (Karatagi) APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi (Karatagi)": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi (Karatagi) APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi (Karatagi), Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi (Karatagi) APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi APMC": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi APMC, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi APMC, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Gangavathi, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Gangavathi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Koppal APMC": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Koppal APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Koppal APMC, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Koppal APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Koppal APMC, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Koppal APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Koppal": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Koppal APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Koppal, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Koppal APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Kustagi APMC": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Kustagi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Kustagi APMC, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Kustagi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Kustagi APMC, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Kustagi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Kustagi": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Kustagi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Kustagi, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Kustagi APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Yalburga APMC": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Yalburga APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Yalburga APMC, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Yalburga APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Yalburga APMC, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Yalburga APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Yalburga": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Yalburga APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Yalburga, Koppal, Karnataka": {
+    "lat": 15.3475,
+    "lon": 76.155,
+    "market": "Yalburga APMC",
+    "district": "Koppal",
+    "state": "Karnataka"
+  },
+  "Madikeri APMC": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Madikeri APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Madikeri APMC, Madikeri (Kodagu), Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Madikeri APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Madikeri APMC, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Madikeri APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Madikeri": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Madikeri APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Madikeri, Madikeri (Kodagu), Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Madikeri APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Somvarpet APMC": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Somvarpet APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Somvarpet APMC, Madikeri (Kodagu), Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Somvarpet APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Somvarpet APMC, Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Somvarpet APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Somvarpet": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Somvarpet APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "Somvarpet, Madikeri (Kodagu), Karnataka": {
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "market": "Somvarpet APMC",
+    "district": "Madikeri (Kodagu)",
+    "state": "Karnataka"
+  },
+  "K.R. Pet APMC": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "K.R. Pet APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "K.R. Pet APMC, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "K.R. Pet APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "K.R. Pet APMC, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "K.R. Pet APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "K.R. Pet": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "K.R. Pet APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "K.R. Pet, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "K.R. Pet APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Maddur APMC": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Maddur APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Maddur APMC, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Maddur APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Maddur APMC, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Maddur APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Malavalli APMC": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Malavalli APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Malavalli APMC, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Malavalli APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Malavalli APMC, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Malavalli APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Malavalli": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Malavalli APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Malavalli, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Malavalli APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Mandya APMC": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Mandya APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Mandya APMC, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Mandya APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Mandya APMC, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Mandya APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Nagamangala APMC": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Nagamangala APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Nagamangala APMC, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Nagamangala APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Nagamangala APMC, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Nagamangala APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Nagamangala": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Nagamangala APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Nagamangala, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Nagamangala APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Pandavapura APMC": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Pandavapura APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Pandavapura APMC, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Pandavapura APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Pandavapura APMC, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Pandavapura APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Pandavapura": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Pandavapura APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Pandavapura, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Pandavapura APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Srirangapattana APMC": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Srirangapattana APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Srirangapattana APMC, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Srirangapattana APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Srirangapattana APMC, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Srirangapattana APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Srirangapattana": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Srirangapattana APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Srirangapattana, Mandya, Karnataka": {
+    "lat": 12.5218,
+    "lon": 76.8951,
+    "market": "Srirangapattana APMC",
+    "district": "Mandya",
+    "state": "Karnataka"
+  },
+  "Bantwala APMC": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Bantwala APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Bantwala APMC, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Bantwala APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Bantwala APMC, Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Bantwala APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Bantwala": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Bantwala APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Bantwala, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Bantwala APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Belthangdi APMC": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Belthangdi APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Belthangdi APMC, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Belthangdi APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Belthangdi APMC, Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Belthangdi APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Belthangdi": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Belthangdi APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Belthangdi, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Belthangdi APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Mangalore APMC": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Mangalore APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Mangalore APMC, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Mangalore APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Mangalore APMC, Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Mangalore APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Mangalore": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Mangalore APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Mangalore, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Mangalore APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Puttur APMC": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Puttur APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Puttur APMC, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Puttur APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Puttur APMC, Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Puttur APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Puttur": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Puttur APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Puttur, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Puttur APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Sulya APMC": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Sulya APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Sulya APMC, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Sulya APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Sulya APMC, Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Sulya APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Sulya": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Sulya APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Sulya, Mangalore (Dakshin Kannad), Karnataka": {
+    "lat": 12.9141,
+    "lon": 74.856,
+    "market": "Sulya APMC",
+    "district": "Mangalore (Dakshin Kannad)",
+    "state": "Karnataka"
+  },
+  "Hunsur APMC": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Hunsur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Hunsur APMC, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Hunsur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Hunsur APMC, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Hunsur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Hunsur": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Hunsur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Hunsur, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Hunsur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "K.R.Nagar APMC": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "K.R.Nagar APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "K.R.Nagar APMC, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "K.R.Nagar APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "K.R.Nagar APMC, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "K.R.Nagar APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "K.R.Nagar": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "K.R.Nagar APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "K.R.Nagar, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "K.R.Nagar APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Mysore (Bandipalya) APMC": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Mysore (Bandipalya) APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Mysore (Bandipalya) APMC, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Mysore (Bandipalya) APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Mysore (Bandipalya) APMC, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Mysore (Bandipalya) APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Nanjangud APMC": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Nanjangud APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Nanjangud APMC, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Nanjangud APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Nanjangud APMC, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Nanjangud APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Nanjangud": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Nanjangud APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Nanjangud, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Nanjangud APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Piriya Pattana APMC": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Piriya Pattana APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Piriya Pattana APMC, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Piriya Pattana APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Piriya Pattana APMC, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Piriya Pattana APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Piriya Pattana": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Piriya Pattana APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Piriya Pattana, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Piriya Pattana APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Santhesargur APMC": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Santhesargur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Santhesargur APMC, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Santhesargur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Santhesargur APMC, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Santhesargur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Santhesargur": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Santhesargur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Santhesargur, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "Santhesargur APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "T. Narasipura APMC": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "T. Narasipura APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "T. Narasipura APMC, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "T. Narasipura APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "T. Narasipura APMC, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "T. Narasipura APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "T. Narasipura": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "T. Narasipura APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "T. Narasipura, Mysore, Karnataka": {
+    "lat": 12.2958,
+    "lon": 76.6394,
+    "market": "T. Narasipura APMC",
+    "district": "Mysore",
+    "state": "Karnataka"
+  },
+  "Lingasugur APMC": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Lingasugur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Lingasugur APMC, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Lingasugur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Lingasugur APMC, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Lingasugur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Lingasugur": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Lingasugur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Lingasugur, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Lingasugur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Manvi APMC": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Manvi APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Manvi APMC, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Manvi APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Manvi APMC, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Manvi APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Manvi": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Manvi APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Manvi, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Manvi APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Raichur APMC": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Raichur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Raichur APMC, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Raichur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Raichur APMC, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Raichur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Raichur": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Raichur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Raichur, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Raichur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Sindhanur APMC": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Sindhanur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Sindhanur APMC, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Sindhanur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Sindhanur APMC, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Sindhanur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Sindhanur": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Sindhanur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Sindhanur, Raichur, Karnataka": {
+    "lat": 16.2076,
+    "lon": 77.3463,
+    "market": "Sindhanur APMC",
+    "district": "Raichur",
+    "state": "Karnataka"
+  },
+  "Bhadravathi APMC": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Bhadravathi APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Bhadravathi APMC, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Bhadravathi APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Bhadravathi APMC, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Bhadravathi APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Bhadravathi": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Bhadravathi APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Bhadravathi, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Bhadravathi APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sagar APMC": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sagar APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sagar APMC, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sagar APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sagar APMC, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sagar APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sagar": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sagar APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sagar, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sagar APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shikaripura APMC": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shikaripura APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shikaripura APMC, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shikaripura APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shikaripura APMC, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shikaripura APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shikaripura": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shikaripura APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shikaripura, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shikaripura APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga (Theertahalli) APMC": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga (Theertahalli) APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga (Theertahalli) APMC, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga (Theertahalli) APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga (Theertahalli) APMC, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga (Theertahalli) APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga (Theertahalli)": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga (Theertahalli) APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga (Theertahalli), Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga (Theertahalli) APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga APMC": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga APMC, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga APMC, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Shimoga, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Shimoga APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sorabha APMC": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sorabha APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sorabha APMC, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sorabha APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sorabha APMC, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sorabha APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sorabha": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sorabha APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Sorabha, Shimoga, Karnataka": {
+    "lat": 13.9299,
+    "lon": 75.5681,
+    "market": "Sorabha APMC",
+    "district": "Shimoga",
+    "state": "Karnataka"
+  },
+  "Gubbi APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Gubbi APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Gubbi APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Gubbi APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Gubbi APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Gubbi APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Gubbi": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Gubbi APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Gubbi, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Gubbi APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Huliyar APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Huliyar APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Huliyar APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Huliyar APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Huliyar APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Huliyar APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Huliyar": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Huliyar APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Huliyar, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Huliyar APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Kunigal APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Kunigal APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Kunigal APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Kunigal APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Kunigal APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Kunigal APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Kunigal": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Kunigal APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Kunigal, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Kunigal APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Madhugiri APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Madhugiri APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Madhugiri APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Madhugiri APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Madhugiri APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Madhugiri APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Madhugiri": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Madhugiri APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Madhugiri, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Madhugiri APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Pavagada APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Pavagada APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Pavagada APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Pavagada APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Pavagada APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Pavagada APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Pavagada": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Pavagada APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Pavagada, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Pavagada APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Sira APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Sira APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Sira APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Sira APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Sira APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Sira APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Sira": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Sira APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Sira, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Sira APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tiptur APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tiptur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tiptur APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tiptur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tiptur APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tiptur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tiptur": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tiptur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tiptur, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tiptur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tumkur APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tumkur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tumkur APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tumkur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Tumkur APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Tumkur APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Turvekere APMC": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Turvekere APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Turvekere APMC, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Turvekere APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Turvekere APMC, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Turvekere APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Turvekere": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Turvekere APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Turvekere, Tumkur, Karnataka": {
+    "lat": 13.3379,
+    "lon": 77.1173,
+    "market": "Turvekere APMC",
+    "district": "Tumkur",
+    "state": "Karnataka"
+  },
+  "Karkala APMC": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Karkala APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Karkala APMC, Udupi, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Karkala APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Karkala APMC, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Karkala APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Karkala": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Karkala APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Karkala, Udupi, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Karkala APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Kundapura APMC": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Kundapura APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Kundapura APMC, Udupi, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Kundapura APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Kundapura APMC, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Kundapura APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Kundapura": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Kundapura APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Kundapura, Udupi, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Kundapura APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Udupi APMC": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Udupi APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Udupi APMC, Udupi, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Udupi APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Udupi APMC, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Udupi APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Udupi": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Udupi APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Udupi, Udupi, Karnataka": {
+    "lat": 13.3409,
+    "lon": 74.7421,
+    "market": "Udupi APMC",
+    "district": "Udupi",
+    "state": "Karnataka"
+  },
+  "Shahapur APMC": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shahapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shahapur APMC, Yadgiri, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shahapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shahapur APMC, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shahapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shahapur": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shahapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shahapur, Yadgiri, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shahapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shorapur APMC": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shorapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shorapur APMC, Yadgiri, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shorapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shorapur APMC, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shorapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shorapur": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shorapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Shorapur, Yadgiri, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Shorapur APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Yadgir APMC": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Yadgir APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Yadgir APMC, Yadgiri, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Yadgir APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Yadgir APMC, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Yadgir APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Yadgir": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Yadgir APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
+  },
+  "Yadgir, Yadgiri, Karnataka": {
+    "lat": 16.77,
+    "lon": 77.14,
+    "market": "Yadgir APMC",
+    "district": "Yadgiri",
+    "state": "Karnataka"
   }
 }
