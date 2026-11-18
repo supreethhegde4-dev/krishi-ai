@@ -102,19 +102,68 @@ st.html("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
-    /* Global Viewport Background & Base Reset */
+    /* Global Apple Reset & Typography */
     html, body, .stApp, [data-testid="stAppViewContainer"], .main, .block-container {
-        background-color: #F8FAF8 !important;
-        font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-        color: #0F172A !important;
+        background-color: #F5F5F7 !important;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", sans-serif !important;
+        color: #1D1D1F !important;
+        -webkit-font-smoothing: antialiased;
     }
 
-    /* Force Dark Slate Text on All Text Elements */
+    /* Force Clean Apple Dark Slate on Text Elements */
     .stApp p, .stApp span, .stApp div, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6, .stApp li {
-        color: #0F172A !important;
+        color: #1D1D1F !important;
     }
 
-    /* ALL Streamlit Widget Labels (Emails, Passwords, Numbers, Selectboxes) */
+    /* Streamlit Main Block Padding */
+    .block-container {
+        padding-top: 1.8rem !important;
+        padding-bottom: 2.5rem !important;
+        max-width: 1300px !important;
+    }
+
+    /* Apple Minimal Card Containers */
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        background-color: #FFFFFF !important;
+        border-radius: 18px !important;
+        border: 1px solid #E5E5E7 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.025), 0 1px 2px rgba(0, 0, 0, 0.015) !important;
+        padding: 22px !important;
+        transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    /* Streamlit Metric KPI Cards (Apple Style) */
+    [data-testid="stMetric"] {
+        background-color: #FFFFFF !important;
+        border: 1px solid #E5E5E7 !important;
+        border-radius: 16px !important;
+        padding: 16px 20px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+    }
+
+    [data-testid="stMetricLabel"] p, [data-testid="stMetricLabel"] span {
+        font-size: 0.76rem !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        color: #86868B !important;
+    }
+
+    [data-testid="stMetricValue"] div {
+        font-size: 1.85rem !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.03em !important;
+        color: #1D1D1F !important;
+        line-height: 1.2 !important;
+    }
+
+    [data-testid="stMetricDelta"] {
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        color: #16834A !important;
+    }
+
+    /* Form Labels (Crisp & Readable) */
     label,
     label *,
     label p,
@@ -122,186 +171,215 @@ st.html("""
     [data-testid="stWidgetLabel"],
     [data-testid="stWidgetLabel"] *,
     [data-testid="stWidgetLabel"] p,
-    [data-testid="stWidgetLabel"] span,
-    [data-testid="stMarkdownContainer"] p,
-    .stTextInput label,
-    .stTextInput label p,
-    .stNumberInput label,
-    .stNumberInput label p,
-    .stSelectbox label,
-    .stSelectbox label p,
-    .stSlider label,
-    .stSlider label p,
-    .stCheckbox label,
-    .stCheckbox label p,
-    .stCheckbox label span,
-    .stCheckbox span {
-        color: #0F172A !important;
-        -webkit-text-fill-color: #0F172A !important;
-        font-weight: 700 !important;
-        font-size: 0.93rem !important;
-        letter-spacing: -0.1px !important;
+    [data-testid="stWidgetLabel"] span {
+        color: #1D1D1F !important;
+        -webkit-text-fill-color: #1D1D1F !important;
+        font-weight: 600 !important;
+        font-size: 0.88rem !important;
+        letter-spacing: -0.01em !important;
     }
 
-    /* Form Inputs (Text, Password, Numbers, Select) */
+    /* Form Inputs (Apple Style: Soft Rounded 12px, Subtle Border) */
     input[type="text"], input[type="password"], input[type="number"], select, textarea,
     div[data-baseweb="input"] input,
-    div[data-baseweb="input"] {
+    div[data-baseweb="input"],
+    div[data-baseweb="select"] > div {
         background-color: #FFFFFF !important;
-        color: #0F172A !important;
-        -webkit-text-fill-color: #0F172A !important;
-        border: 1.5px solid #CBD5E1 !important;
-        border-radius: 8px !important;
-        font-size: 14.5px !important;
+        color: #1D1D1F !important;
+        -webkit-text-fill-color: #1D1D1F !important;
+        border: 1px solid #E5E5E7 !important;
+        border-radius: 12px !important;
+        font-size: 14px !important;
         font-weight: 500 !important;
+        transition: all 0.15s ease !important;
     }
 
-    input:focus, div[data-baseweb="input"]:focus-within {
-        border-color: #0D5C3A !important;
-        box-shadow: 0 0 0 3px rgba(13, 92, 58, 0.12) !important;
+    input:focus, div[data-baseweb="input"]:focus-within, div[data-baseweb="select"] > div:focus-within {
+        border-color: #16834A !important;
+        box-shadow: 0 0 0 3px rgba(22, 131, 74, 0.14) !important;
     }
 
-    /* Input Placeholders */
     input::placeholder, textarea::placeholder {
-        color: #94A3B8 !important;
-        -webkit-text-fill-color: #94A3B8 !important;
-        opacity: 1 !important;
+        color: #A1A1A6 !important;
+        -webkit-text-fill-color: #A1A1A6 !important;
     }
 
-    /* Primary Action Buttons (Sign In, Create, Calculate) */
+    /* Primary Apple-Green Action Buttons */
     button[kind="primary"], .stButton > button[kind="primary"] {
-        background-color: #0D5C3A !important;
+        background-color: #16834A !important;
         color: #FFFFFF !important;
         -webkit-text-fill-color: #FFFFFF !important;
-        border: 1px solid #0A4D30 !important;
-        border-radius: 8px !important;
-        font-weight: 700 !important;
-        font-size: 15px !important;
+        border: 1px solid #147542 !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        font-size: 14.5px !important;
         padding: 9px 20px !important;
-        box-shadow: 0 2px 5px rgba(13, 92, 58, 0.22) !important;
-        transition: all 0.2s ease !important;
+        letter-spacing: -0.01em !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(22, 131, 74, 0.22) !important;
+        transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
 
     button[kind="primary"]:hover, .stButton > button[kind="primary"]:hover {
-        background-color: #0A4D30 !important;
-        color: #FFFFFF !important;
-        -webkit-text-fill-color: #FFFFFF !important;
-        box-shadow: 0 4px 12px rgba(13, 92, 58, 0.35) !important;
+        background-color: #137340 !important;
+        box-shadow: 0 3px 10px rgba(22, 131, 74, 0.32) !important;
         transform: translateY(-1px) !important;
     }
 
-    /* Secondary / Demo Buttons (NO MORE BLACK BOXES) */
+    /* Secondary Apple Minimal Buttons */
     button[kind="secondary"], .stButton > button:not([kind="primary"]) {
-        background-color: #F0FDF4 !important;
-        color: #14532D !important;
-        -webkit-text-fill-color: #14532D !important;
-        border: 1.5px solid #86EFAC !important;
-        border-radius: 8px !important;
-        font-weight: 700 !important;
+        background-color: #FFFFFF !important;
+        color: #1D1D1F !important;
+        -webkit-text-fill-color: #1D1D1F !important;
+        border: 1px solid #E5E5E7 !important;
+        border-radius: 12px !important;
+        font-weight: 500 !important;
         font-size: 14px !important;
-        padding: 8px 16px !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
-        transition: all 0.2s ease !important;
+        padding: 8px 18px !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+        transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
 
     button[kind="secondary"]:hover, .stButton > button:not([kind="primary"]):hover {
-        background-color: #DCFCE7 !important;
-        border-color: #22C55E !important;
-        color: #0F3822 !important;
-        -webkit-text-fill-color: #0F3822 !important;
-        box-shadow: 0 3px 8px rgba(34, 197, 94, 0.18) !important;
+        background-color: #F5F5F7 !important;
+        border-color: #D1D1D6 !important;
+        color: #1D1D1F !important;
+        -webkit-text-fill-color: #1D1D1F !important;
         transform: translateY(-1px) !important;
     }
 
-    /* Card Containers */
-    div[data-testid="stVerticalBlockBorderWrapper"] {
-        background-color: #FFFFFF !important;
-        border-radius: 14px !important;
-        border: 1.5px solid #E2E8F0 !important;
-        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
-        padding: 22px !important;
-    }
-
-    /* Sidebar Styling */
+    /* Minimal Apple Sidebar */
     section[data-testid="stSidebar"] {
-        background-color: #072715 !important;
-        border-right: 1px solid #144426 !important;
+        background-color: #FBFBFD !important;
+        border-right: 1px solid #E5E5E7 !important;
+        padding-top: 1rem !important;
     }
 
     section[data-testid="stSidebar"] * {
-        color: #F1F5F2 !important;
+        color: #1D1D1F !important;
     }
 
-    section[data-testid="stSidebar"] label[data-testid="stWidgetLabel"] p {
-        color: #B5D1BD !important;
+    section[data-testid="stSidebar"] .stButton button[kind="primary"] {
+        background-color: #DCEFE2 !important;
+        color: #16834A !important;
+        -webkit-text-fill-color: #16834A !important;
+        border: 1px solid #B6E0C4 !important;
+        border-radius: 10px !important;
+        font-weight: 700 !important;
+        box-shadow: none !important;
+        text-align: left !important;
+        padding: 9px 14px !important;
+    }
+
+    section[data-testid="stSidebar"] .stButton button:not([kind="primary"]) {
+        background-color: transparent !important;
+        color: #1D1D1F !important;
+        -webkit-text-fill-color: #1D1D1F !important;
+        border: 1px solid transparent !important;
+        border-radius: 10px !important;
+        font-weight: 500 !important;
+        box-shadow: none !important;
+        text-align: left !important;
+        padding: 9px 14px !important;
+    }
+
+    section[data-testid="stSidebar"] .stButton button:not([kind="primary"]):hover {
+        background-color: #F0F0F3 !important;
+        color: #1D1D1F !important;
+    }
+
+    /* Segmented Tabs (Apple Style) */
+    div[data-baseweb="tab-list"] {
+        background-color: #EFEFF2 !important;
+        border-radius: 12px !important;
+        padding: 4px !important;
+        border: 1px solid #E5E5E7 !important;
+        gap: 4px !important;
+    }
+
+    button[data-baseweb="tab"] {
+        background-color: transparent !important;
+        border-radius: 8px !important;
+        border: none !important;
+        color: #86868B !important;
+        font-weight: 500 !important;
+        font-size: 13.5px !important;
+        padding: 6px 14px !important;
+        transition: all 0.15s ease !important;
+    }
+
+    button[data-baseweb="tab"][aria-selected="true"] {
+        background-color: #FFFFFF !important;
+        color: #1D1D1F !important;
+        -webkit-text-fill-color: #1D1D1F !important;
         font-weight: 600 !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
     }
 
-    section[data-testid="stSidebar"] .stButton button {
-        background-color: #0E361D !important;
-        color: #FFFFFF !important;
-        -webkit-text-fill-color: #FFFFFF !important;
-        border: 1px solid #1E5C35 !important;
-        border-radius: 6px !important;
-        font-weight: 600 !important;
-    }
-
-    section[data-testid="stSidebar"] .stButton button:hover {
-        background-color: #1A542F !important;
-        border-color: #34D399 !important;
-    }
-
-    /* KPI Stat Cards */
+    /* Stat Cards */
     .stat-card {
         background-color: #FFFFFF;
-        border: 1.5px solid #E2E8F0;
-        border-radius: 10px;
-        padding: 16px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        margin-bottom: 10px;
+        border: 1px solid #E5E5E7;
+        border-radius: 16px;
+        padding: 18px 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        margin-bottom: 12px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .stat-card:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        transform: translateY(-1px);
     }
     .stat-label {
-        font-size: 0.78rem;
-        font-weight: 700;
+        font-size: 0.74rem;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: #64748B;
+        letter-spacing: 0.06em;
+        color: #86868B;
         margin-bottom: 4px;
     }
     .stat-value {
-        font-size: 1.65rem;
-        font-weight: 800;
-        color: #0D5C3A;
+        font-size: 1.85rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: #1D1D1F;
         line-height: 1.2;
     }
     .stat-subtext {
-        font-size: 0.82rem;
-        color: #15803D;
-        font-weight: 600;
+        font-size: 0.8rem;
+        color: #16834A;
+        font-weight: 500;
         margin-top: 4px;
     }
 
     /* Top Navigation Header */
     .top-nav {
         background-color: #FFFFFF;
-        border: 1.5px solid #E2E8F0;
+        border: 1px solid #E5E5E7;
         padding: 14px 24px;
-        border-radius: 10px;
+        border-radius: 16px;
         margin-bottom: 22px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     }
     .top-nav-title {
         font-size: 1.35rem;
-        font-weight: 800;
-        color: #0D5C3A;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: #1D1D1F;
     }
     .top-nav-meta {
-        font-size: 0.85rem;
-        color: #64748B;
+        font-size: 0.82rem;
+        color: #86868B;
         font-weight: 500;
+    }
+
+    /* Clean Table Styling */
+    div[data-testid="stDataFrame"] {
+        border-radius: 14px !important;
+        border: 1px solid #E5E5E7 !important;
+        overflow: hidden !important;
     }
 </style>
 """)
@@ -561,26 +639,33 @@ def render_main_application():
     # LEFT SIDEBAR NAVIGATION
     with st.sidebar:
         st.html("""
-        <div style="padding: 10px 0 16px 0; border-bottom: 1px solid #1A4D2E; margin-bottom: 16px;">
-            <div style="display:flex; align-items:center; gap:8px;">
-                <span style="font-size:1.4rem;">🌿</span>
-                <span style="font-size:1.3rem; font-weight:800; color:#FFFFFF; letter-spacing:-0.5px;">Krishi AI</span>
+        <div style="padding: 8px 4px 16px 4px; border-bottom: 1px solid #E5E5E7; margin-bottom: 16px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div style="width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg, #16834A 0%, #0D5C3A 100%); display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-size:1.2rem; box-shadow:0 2px 6px rgba(22, 131, 74, 0.25);">
+                    🌱
+                </div>
+                <div>
+                    <div style="font-size:1.2rem; font-weight:700; color:#1D1D1F; letter-spacing:-0.03em; line-height:1.1;">Krishi AI</div>
+                    <div style="font-size:0.72rem; color:#86868B; font-weight:500; letter-spacing:0.01em;">Intelligent Decision Platform</div>
+                </div>
             </div>
-            <div style="font-size:0.75rem; color:#A4B6A6; margin-top:2px; font-weight:600;">INTELLIGENT FARMING SYSTEM</div>
         </div>
         """)
 
-        # Farmer / Farm Profile Badge
+        # Minimal Apple Profile Card
         st.html(f"""
-        <div style="background-color:#143F24; border:1px solid #235C37; border-radius:8px; padding:12px; margin-bottom:16px;">
-            <div style="font-size:0.9rem; font-weight:700; color:#FFFFFF;">{user['full_name']}</div>
-            <div style="font-size:0.8rem; color:#C2DEC9;">{farm.get('farm_name', 'My Farm')}</div>
-            <div style="font-size:0.75rem; color:#85B892; margin-top:2px;">📍 {farm.get('district', 'Ramanagara')}, {farm.get('state', 'Karnataka')}</div>
+        <div style="background:#FFFFFF; border:1px solid #E5E5E7; border-radius:14px; padding:12px 14px; margin-bottom:16px; box-shadow:0 1px 3px rgba(0,0,0,0.02); display:flex; align-items:center; gap:10px;">
+            <div style="width:34px; height:34px; border-radius:50%; background:#DCEFE2; color:#16834A; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:0.88rem; flex-shrink:0;">
+                {user['full_name'][0]}
+            </div>
+            <div style="overflow:hidden;">
+                <div style="font-size:0.86rem; font-weight:600; color:#1D1D1F; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;">{user['full_name']}</div>
+                <div style="font-size:0.72rem; color:#86868B; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;">📍 {farm.get('district', 'Ramanagara')}, {farm.get('state', 'Karnataka')}</div>
+            </div>
         </div>
         """)
 
-        st.html("<div style='font-size:0.75rem; font-weight:700; color:#85B892; text-transform:uppercase; margin-bottom:8px;'>SYSTEM MODULES</div>")
-        
+        st.html("<div style='font-size:0.7rem; font-weight:600; color:#86868B; text-transform:uppercase; letter-spacing:0.06em; margin:0 4px 8px 4px;'>Platform Modules</div>")
         NAV_ITEMS = [
             ("📊 Intelligence Overview", "Intelligence Overview"),
             ("📜 Historical Analysis", "Historical Analysis"),
@@ -608,20 +693,22 @@ def render_main_application():
             st.session_state.current_user = None
             st.rerun()
 
-    # TOP NAVIGATION BAR
+        # APPLE MINIMAL TOP NAVIGATION BAR
     today_str = datetime.date.today().strftime("%B %d, %Y")
     st.html(f"""
     <div class="top-nav">
         <div>
             <div class="top-nav-title">{st.session_state.active_nav}</div>
-            <div class="top-nav-meta">Krishi AI Decision Platform • {farm.get('farm_name', 'Farm Enterprise')}</div>
+            <div class="top-nav-meta">Krishi AI • Intelligent Farming Decision System • {farm.get('farm_name', 'Farm Enterprise')}</div>
         </div>
-        <div style="display:flex; align-items:center; gap:16px;">
-            <div style="text-align:right;">
-                <div style="font-size:0.88rem; font-weight:700; color:#0D5C3A;">{today_str}</div>
-                <div style="font-size:0.75rem; color:#15803D; font-weight:600;">Status: Predictive Intelligence Engine Active</div>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <div style="background:#F5F5F7; border:1px solid #E5E5E7; padding:6px 14px; border-radius:20px; display:flex; align-items:center; gap:8px;">
+                <span style="width:7px; height:7px; border-radius:50%; background:#16834A; display:inline-block;"></span>
+                <span style="font-size:0.78rem; font-weight:600; color:#1D1D1F;">System Active</span>
+                <span style="color:#D1D1D6; font-size:0.75rem;">•</span>
+                <span style="font-size:0.78rem; color:#86868B;">{today_str}</span>
             </div>
-            <div style="background-color:#E9F1EC; color:#0D5C3A; font-weight:800; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1.5px solid #0D5C3A;">
+            <div style="background:#FFFFFF; border:1px solid #E5E5E7; color:#16834A; font-weight:700; width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,0.03); font-size:0.88rem;">
                 {user['full_name'][0]}
             </div>
         </div>

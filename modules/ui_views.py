@@ -47,34 +47,73 @@ from modules.auth_db import (
 
 
 # ==============================================================================
-# 1. INTELLIGENCE OVERVIEW VIEW
+# 1. INTELLIGENCE OVERVIEW VIEW (APPLE-INSPIRED MINIMALIST REDESIGN)
 # ==============================================================================
 def render_intelligence_overview_view(user, farm, df_market):
-    with st.container(border=True):
-        st.html(f"""
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <div>
-                <h2 style="color:#0D5C3A; margin:0 0 4px 0; font-size:1.65rem; font-weight:800;">
-                    Welcome back, {user['full_name']}!
-                </h2>
-                <p style="color:#475569; margin:0; font-size:0.95rem;">
-                    Agricultural Command Center active for <strong>{farm.get('farm_name', 'Farm Enterprise')}</strong> 
-                    ({farm.get('acreage', 2.5)} Acres, {farm.get('district', 'Ramanagara')}, {farm.get('state', 'Karnataka')}).
-                </p>
+    # Apple Welcome Card
+    st.html(f"""
+    <div style="background:#FFFFFF; border:1px solid #E5E5E7; border-radius:20px; padding:24px 28px; margin-bottom:20px; box-shadow:0 2px 10px rgba(0,0,0,0.02); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+        <div>
+            <div style="display:inline-flex; align-items:center; gap:6px; background:#DCEFE2; color:#16834A; padding:4px 12px; border-radius:20px; font-size:0.75rem; font-weight:700; margin-bottom:8px; letter-spacing:0.02em;">
+                <span>●</span> Precision Telemetry Active
             </div>
-            <div>
-                <span style="background:#DCFCE7; color:#14532D; padding:6px 14px; border-radius:20px; font-weight:800; font-size:0.85rem; border:1.5px solid #86EFAC;">
-                    ● LIVE TELEMETRY ACTIVE
-                </span>
-            </div>
+            <h1 style="color:#1D1D1F; margin:0 0 4px 0; font-size:1.85rem; font-weight:700; letter-spacing:-0.03em;">
+                Welcome back, {user['full_name']}
+            </h1>
+            <p style="color:#86868B; margin:0; font-size:0.92rem; font-weight:400; line-height:1.5;">
+                Agricultural Decision Support Platform for <strong style="color:#1D1D1F;">{farm.get('farm_name', 'Farm Enterprise')}</strong> 
+                ({farm.get('acreage', 2.5)} Acres • {farm.get('district', 'Ramanagara')}, {farm.get('state', 'Karnataka')}).
+            </p>
+        </div>
+        <div style="text-align:right;">
+            <div style="font-size:0.76rem; color:#86868B; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">FARM ID</div>
+            <div style="font-size:1.15rem; font-weight:700; color:#1D1D1F;">#{user['id']:04d}-AGRO</div>
+        </div>
+    </div>
+    """)
+
+    # 4 Modern Apple Metric KPI Cards
+    k1, k2, k3, k4 = st.columns(4)
+    with k1:
+        st.html("""
+        <div class="stat-card">
+            <div class="stat-label">Crop Yield Prediction</div>
+            <div class="stat-value">105.9 <span style="font-size:1.0rem; color:#86868B; font-weight:500;">Q/ac</span></div>
+            <div class="stat-subtext">26,480 kg Projected Harvest</div>
+        </div>
+        """)
+    with k2:
+        st.html("""
+        <div class="stat-card">
+            <div class="stat-label">Market Price Intelligence</div>
+            <div class="stat-value">₹16.50 <span style="font-size:1.0rem; color:#86868B; font-weight:500;">/ kg</span></div>
+            <div class="stat-subtext">Wholesale Modal Baseline</div>
+        </div>
+        """)
+    with k3:
+        st.html("""
+        <div class="stat-card">
+            <div class="stat-label">Trend Shift Alert</div>
+            <div class="stat-value" style="color:#16834A; font-size:1.55rem;">Bullish Momentum</div>
+            <div class="stat-subtext">+14.2% 7-Day Velocity</div>
+        </div>
+        """)
+    with k4:
+        st.html("""
+        <div class="stat-card">
+            <div class="stat-label">Agricultural Risk Score</div>
+            <div class="stat-value">28 <span style="font-size:1.0rem; color:#86868B; font-weight:500;">/ 100</span></div>
+            <div class="stat-subtext" style="color:#16834A;">Low Composite Risk Index</div>
         </div>
         """)
 
-    # 4 CORE QUESTIONS: THE CORE PLATFORM VISION
+    st.markdown("<div style='height: 6px;'></div>", unsafe_allow_html=True)
+
+    # 4 CORE PLATFORM QUESTIONS (APPLE INSIGHT CARDS)
     st.html("""
-    <div style="margin: 18px 0 10px 0;">
-        <span style="background:#F1F5F9; color:#334155; padding:4px 12px; border-radius:12px; font-size:0.8rem; font-weight:800; letter-spacing:0.5px;">
-            AI DECISION SYSTEM: 4 CORE ANSWERS
+    <div style="margin: 16px 0 10px 0;">
+        <span style="font-size:0.75rem; font-weight:700; color:#86868B; text-transform:uppercase; letter-spacing:0.06em;">
+            Decision Intelligence Framework
         </span>
     </div>
     """)
@@ -83,115 +122,150 @@ def render_intelligence_overview_view(user, farm, df_market):
     with cq1:
         with st.container(border=True):
             st.html("""
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                <span style="font-size:1.2rem;">📜</span>
-                <span style="font-weight:800; font-size:1.05rem; color:#0D5C3A;">1. What happened in the past?</span>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <div style="width:32px; height:32px; border-radius:8px; background:#F5F5F7; display:flex; align-items:center; justify-content:center; font-size:1.05rem;">
+                    📜
+                </div>
+                <div>
+                    <div style="font-size:0.72rem; color:#86868B; font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Historical Context</div>
+                    <div style="font-weight:700; font-size:1.05rem; color:#1D1D1F;">1. What happened in the past?</div>
+                </div>
             </div>
-            <div style="font-size:0.88rem; color:#334155; line-height:1.5;">
-                • <strong>16,373,211 historical records</strong> analyzed across 32 Indian States.<br>
-                • 4-year modal price corridor: <strong>₹12.50 to ₹48.00/kg</strong>.<br>
-                • Historical seasonal prices peak in <strong>July (+₹18.50/kg)</strong> during monsoon shortfall, with peak arrival glut in <strong>January–February</strong>.
+            <div style="font-size:0.88rem; color:#475569; line-height:1.55;">
+                • <strong>16,373,211 historical transactions</strong> analyzed across 32 Indian States.<br>
+                • 4-year modal price corridor: <strong style="color:#1D1D1F;">₹12.50 to ₹48.00/kg</strong>.<br>
+                • Seasonal wholesale prices consistently peak in <strong style="color:#16834A;">July (+₹18.50/kg)</strong> during monsoon shortfall, with supply gluts in <strong style="color:#1D1D1F;">January–February</strong>.
             </div>
             """)
 
         with st.container(border=True):
             st.html("""
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                <span style="font-size:1.2rem;">🔮</span>
-                <span style="font-weight:800; font-size:1.05rem; color:#0D5C3A;">3. What is likely to happen in the future?</span>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <div style="width:32px; height:32px; border-radius:8px; background:#F5F5F7; display:flex; align-items:center; justify-content:center; font-size:1.05rem;">
+                    🔮
+                </div>
+                <div>
+                    <div style="font-size:0.72rem; color:#86868B; font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Predictive Models</div>
+                    <div style="font-weight:700; font-size:1.05rem; color:#1D1D1F;">3. What is likely to happen in the future?</div>
+                </div>
             </div>
-            <div style="font-size:0.88rem; color:#334155; line-height:1.5;">
-                • <strong>Harvest Volume Forecast:</strong> 105.9 Quintals/Acre (26,480 kg total).<br>
-                • <strong>14-Day Price Trajectory:</strong> Predicted upward trend to <strong>₹17.65/kg (+₹1.15/kg)</strong>.<br>
-                • <strong>Composite Risk Score:</strong> <strong>28/100 (🟢 Low Risk)</strong> with optimal soil balance and low thermal stress.
+            <div style="font-size:0.88rem; color:#475569; line-height:1.55;">
+                • <strong>Harvest Production Forecast:</strong> 105.9 Quintals/Acre (26,480 kg total volume).<br>
+                • <strong>14-Day Price Trajectory:</strong> Projected upward trend to <strong style="color:#16834A;">₹17.65/kg (+₹1.15/kg)</strong>.<br>
+                • <strong>Composite Risk Score:</strong> <strong style="color:#16834A;">28/100 (Low Risk)</strong> with optimal soil fertility and low thermal stress.
             </div>
             """)
 
     with cq2:
         with st.container(border=True):
-            st.html(f"""
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                <span style="font-size:1.2rem;">📡</span>
-                <span style="font-weight:800; font-size:1.05rem; color:#0D5C3A;">2. What is happening currently?</span>
+            st.html("""
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <div style="width:32px; height:32px; border-radius:8px; background:#F5F5F7; display:flex; align-items:center; justify-content:center; font-size:1.05rem;">
+                    📡
+                </div>
+                <div>
+                    <div style="font-size:0.72rem; color:#86868B; font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Live Telemetry</div>
+                    <div style="font-weight:700; font-size:1.05rem; color:#1D1D1F;">2. What is happening currently?</div>
+                </div>
             </div>
-            <div style="font-size:0.88rem; color:#334155; line-height:1.5;">
-                • <strong>Active Production:</strong> Tomato (BATCH-2026-TM500, 500 kg batch).<br>
-                • <strong>Soil Health Index:</strong> 84/100 (Optimal NPK & pH balance).<br>
+            <div style="font-size:0.88rem; color:#475569; line-height:1.55;">
+                • <strong>Active Farm Batch:</strong> Tomato (BATCH-2026-TM500, 500 kg lot).<br>
+                • <strong>Soil Fertility Index:</strong> 84/100 (Optimal NPK & pH balance).<br>
                 • <strong>Current Mandi Benchmark:</strong> ₹16.50/kg across Ramanagara & Kolar mandis.
             </div>
             """)
 
         with st.container(border=True):
             st.html("""
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                <span style="font-size:1.2rem;">🎯</span>
-                <span style="font-weight:800; font-size:1.05rem; color:#0D5C3A;">4. What is the best decision for farmers?</span>
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <div style="width:32px; height:32px; border-radius:8px; background:#DCEFE2; display:flex; align-items:center; justify-content:center; font-size:1.05rem;">
+                    🎯
+                </div>
+                <div>
+                    <div style="font-size:0.72rem; color:#16834A; font-weight:700; text-transform:uppercase; letter-spacing:0.04em;">Optimal Decision</div>
+                    <div style="font-weight:700; font-size:1.05rem; color:#1D1D1F;">4. What is the best decision for farmers?</div>
+                </div>
             </div>
-            <div style="font-size:0.88rem; color:#334155; line-height:1.5;">
-                • <strong>Target Market:</strong> Dispatch batch to <strong>Thrippunithura APMC</strong>.<br>
-                • <strong>Net Proceeds Advantage:</strong> Realizes <strong>₹7,278.30</strong> in-hand (an extra <strong>+₹2,478.30 net profit</strong> over nearest local mandi).<br>
-                • <strong>Action:</strong> Use Mini Truck (Ambient) under protective tarpaulin.
+            <div style="font-size:0.88rem; color:#475569; line-height:1.55;">
+                • <strong>Target Marketplace:</strong> Dispatch harvest batch to <strong style="color:#1D1D1F;">Thrippunithura APMC</strong>.<br>
+                • <strong>Net Proceeds Advantage:</strong> Realizes <strong style="color:#16834A;">₹7,278.30</strong> in-hand (<strong style="color:#16834A;">+₹2,478.30 net profit</strong> over nearest local mandi).<br>
+                • <strong>Recommended Logistics:</strong> Standard Goods Truck under covered tarpaulin.
             </div>
             """)
 
-    # Macro KPI Row
-    k1, k2, k3, k4 = st.columns(4)
-    with k1:
-        st.html("""
-        <div class="stat-card">
-            <div class="stat-label">Historical Transactions</div>
-            <div class="stat-value">16,373,211</div>
-            <div class="stat-subtext">32 States • 6,374 Mandis</div>
-        </div>
-        """)
-    with k2:
-        st.html("""
-        <div class="stat-card">
-            <div class="stat-label">Active APMC Network</div>
-            <div class="stat-value">2,733</div>
-            <div class="stat-subtext">Live Wholesale Markets</div>
-        </div>
-        """)
-    with k3:
-        st.html("""
-        <div class="stat-card">
-            <div class="stat-label">Predicted Yield</div>
-            <div class="stat-value">105.9 Q/ac</div>
-            <div class="stat-subtext">26,480 kg Total Volume</div>
-        </div>
-        """)
-    with k4:
-        st.html("""
-        <div class="stat-card">
-            <div class="stat-label">Max Arbitrage Spread</div>
-            <div class="stat-value" style="color:#D97706;">+₹9,602.10</div>
-            <div class="stat-subtext">Net Extra Profit vs Local Mandi</div>
-        </div>
-        """)
+    st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
-    # Action Shortcuts
-    with st.container(border=True):
-        st.html("<div style='font-size:1.15rem; font-weight:700; color:#0D5C3A; margin-bottom:12px;'>⚡ Intelligence Quick Action Shortcuts</div>")
-        qa1, qa2, qa3, qa4, qa5 = st.columns(5)
-        with qa1:
-            if st.button("📜 Historical Analysis", use_container_width=True):
+    # QUICK ACTION CARDS (6 APPLE-INSPIRED INTERACTIVE CARDS)
+    st.html("""
+    <div style="margin: 16px 0 10px 0;">
+        <span style="font-size:0.75rem; font-weight:700; color:#86868B; text-transform:uppercase; letter-spacing:0.06em;">
+            Quick Action Workflows
+        </span>
+    </div>
+    """)
+
+    qa_col1, qa_col2, qa_col3 = st.columns(3)
+    with qa_col1:
+        with st.container(border=True):
+            st.html("""
+            <div style="font-size:1.2rem; margin-bottom:6px;">📜</div>
+            <div style="font-weight:700; font-size:1.02rem; color:#1D1D1F; margin-bottom:2px;">Historical Analysis</div>
+            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">16.37M parquet data points, 12-month seasonality and price anomalies.</div>
+            """)
+            if st.button("Explore History →", key="qa_hist", use_container_width=True):
                 st.session_state.active_nav = "Historical Analysis"
                 st.rerun()
-        with qa2:
-            if st.button("🌾 Yield Forecast & SHAP", use_container_width=True):
+
+        with st.container(border=True):
+            st.html("""
+            <div style="font-size:1.2rem; margin-bottom:6px;">📈</div>
+            <div style="font-weight:700; font-size:1.02rem; color:#1D1D1F; margin-bottom:2px;">Trend Shift Intelligence</div>
+            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">Moving average crossovers, Bollinger envelopes and supply shocks.</div>
+            """)
+            if st.button("Track Trends →", key="qa_trend", use_container_width=True):
+                st.session_state.active_nav = "Trend Shift Intelligence"
+                st.rerun()
+
+    with qa_col2:
+        with st.container(border=True):
+            st.html("""
+            <div style="font-size:1.2rem; margin-bottom:6px;">🌾</div>
+            <div style="font-weight:700; font-size:1.02rem; color:#1D1D1F; margin-bottom:2px;">Crop Yield Prediction</div>
+            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">Random Forest model with SHAP factor attributions and soil prescriptions.</div>
+            """)
+            if st.button("Forecast Yield →", key="qa_yield", use_container_width=True):
                 st.session_state.active_nav = "Crop Yield Prediction"
                 st.rerun()
-        with qa3:
-            if st.button("💰 Market Arbitrage", use_container_width=True):
+
+        with st.container(border=True):
+            st.html("""
+            <div style="font-size:1.2rem; margin-bottom:6px;">📍</div>
+            <div style="font-weight:700; font-size:1.02rem; color:#1D1D1F; margin-bottom:2px;">Nearby Market Finder</div>
+            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">Road distance circuity and driving time from farm GPS.</div>
+            """)
+            if st.button("Find Markets →", key="qa_mandi_finder", use_container_width=True):
                 st.session_state.active_nav = "Market Intelligence"
                 st.rerun()
-        with qa4:
-            if st.button("🧪 What-If Simulator", use_container_width=True):
-                st.session_state.active_nav = "What-If Simulator"
+
+    with qa_col3:
+        with st.container(border=True):
+            st.html("""
+            <div style="font-size:1.2rem; margin-bottom:6px;">💰</div>
+            <div style="font-weight:700; font-size:1.02rem; color:#1D1D1F; margin-bottom:2px;">Market Intelligence</div>
+            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">APMC ranking, freight itemization, and net revenue arbitrage.</div>
+            """)
+            if st.button("Rank Mandis →", key="qa_mkt", use_container_width=True):
+                st.session_state.active_nav = "Market Intelligence"
                 st.rerun()
-        with qa5:
-            if st.button("📑 Decision Report", use_container_width=True):
-                st.session_state.active_nav = "AI Decision Reports"
+
+        with st.container(border=True):
+            st.html("""
+            <div style="font-size:1.2rem; margin-bottom:6px;">🤝</div>
+            <div style="font-weight:700; font-size:1.02rem; color:#1D1D1F; margin-bottom:2px;">Buyer & Industry Connect</div>
+            <div style="font-size:0.82rem; color:#86868B; margin-bottom:14px; min-height:36px;">Direct quotes to ITC, Haldiram and corporate food processors.</div>
+            """)
+            if st.button("Connect Buyers →", key="qa_buyer", use_container_width=True):
+                st.session_state.active_nav = "Buyer Connect"
                 st.rerun()
 
 
@@ -252,10 +326,14 @@ def render_historical_analysis_view(user, farm):
                     line=dict(color="#0D5C3A", width=3), marker=dict(size=8)
                 ))
                 fig_yoy.update_layout(
-                    template="plotly_white", height=320,
-                    yaxis=dict(title="Modal Price (₹/kg)", showgrid=True),
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    font=dict(family="-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, sans-serif", size=11, color="#86868B"),
+                    height=320,
+                    xaxis=dict(showgrid=False, linecolor="#E5E5E7"),
+                    yaxis=dict(title="Modal Price (₹/kg)", showgrid=True, gridcolor="#F0F0F2", linecolor="#E5E5E7"),
                     yaxis2=dict(title="Arrivals Volume", overlaying="y", side="right", showgrid=False),
-                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(color="#1D1D1F")),
                     margin=dict(l=40, r=40, t=20, b=30)
                 )
                 st.plotly_chart(fig_yoy, use_container_width=True)
@@ -271,8 +349,12 @@ def render_historical_analysis_view(user, farm):
                     text_auto=".1f"
                 )
                 fig_s.update_layout(
-                    template="plotly_white", height=320, coloraxis_showscale=False,
-                    xaxis_title="Month", yaxis_title="Avg Price (₹/kg)",
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    font=dict(family="-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, sans-serif", size=11, color="#86868B"),
+                    height=320, coloraxis_showscale=False,
+                    xaxis=dict(title="Month", showgrid=False, linecolor="#E5E5E7"),
+                    yaxis=dict(title="Avg Price (₹/kg)", showgrid=True, gridcolor="#F0F0F2", linecolor="#E5E5E7"),
                     margin=dict(l=30, r=30, t=20, b=30)
                 )
                 st.plotly_chart(fig_s, use_container_width=True)
@@ -376,8 +458,16 @@ def render_crop_yield_view(user, farm):
                 textposition='auto'
             ))
             fig_y.update_layout(
-                title=f"{y_crop} Yield Benchmark (Quintals/Acre)",
-                yaxis_title="Yield (Q/Acre)", template="plotly_white", height=280,
+                title=dict(
+                    text=f"<b>{y_crop} Yield Benchmark (Quintals/Acre)</b>",
+                    font=dict(family="-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, sans-serif", size=13, color="#1D1D1F")
+                ),
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                font=dict(family="-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, sans-serif", size=11, color="#86868B"),
+                xaxis=dict(showgrid=False, linecolor="#E5E5E7"),
+                yaxis=dict(title="Yield (Q/Acre)", showgrid=True, gridcolor="#F0F0F2", linecolor="#E5E5E7"),
+                height=280,
                 margin=dict(l=30, r=30, t=40, b=30)
             )
             st.plotly_chart(fig_y, use_container_width=True)

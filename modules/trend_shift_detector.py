@@ -237,12 +237,17 @@ def detect_market_trend_shifts(commodity: str, state: str = None, district: str 
         ))
 
     fig.update_layout(
-        title=f"<b>Historical Price Trend Shifts & Structural Inflections — {commodity} ({state or 'India'})</b>",
-        xaxis_title="Timeline",
-        yaxis_title="Wholesale Price (₹/kg)",
-        template="plotly_white",
+        title=dict(
+            text=f"<b>Historical Price Trend Shifts & Structural Inflections — {commodity} ({state or 'India'})</b>",
+            font=dict(family="-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, sans-serif", size=15, color="#1D1D1F")
+        ),
+        xaxis=dict(title="Timeline", showgrid=False, linecolor="#E5E5E7", tickfont=dict(color="#86868B", size=11)),
+        yaxis=dict(title="Wholesale Price (₹/kg)", showgrid=True, gridcolor="#F0F0F2", linecolor="#E5E5E7", tickfont=dict(color="#86868B", size=11)),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="-apple-system, BlinkMacSystemFont, SF Pro Text, Inter, sans-serif", size=12, color="#86868B"),
         height=450,
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(color="#1D1D1F")),
         margin=dict(l=40, r=40, t=50, b=40)
     )
 
