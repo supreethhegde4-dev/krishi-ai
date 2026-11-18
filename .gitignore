@@ -43,7 +43,8 @@ Thumbs.db
 # Local environment & credentials (NEVER commit secrets!)
 .env
 .env.local
-.env.*.local
+.env.*
+!.env.example
 *.env
 
 # Node & Neon CLI metadata

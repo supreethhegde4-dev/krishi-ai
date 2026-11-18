@@ -471,6 +471,18 @@ def update_farm_profile(user_id: int, farm_data: Dict[str, Any]) -> Tuple[bool, 
     return True, "Farm profile updated successfully."
 
 
+def get_user_farm_profile(user_id: int) -> Tuple[bool, Dict[str, Any]]:
+    """Retrieves the isolated farm profile for a given user."""
+    conn = get_db_connection()
+    c = conn.cursor()
+    c.execute("SELECT * FROM farm_profiles WHERE user_id = ?", (user_id,))
+    row = c.fetchone()
+    conn.close()
+    if row:
+        return True, dict(row)
+    return False, {}
+
+
 def save_user_prediction(user_id: int, module_name: str, title: str, inputs_json: str, outputs_json: str) -> int:
     """Saves a prediction/report isolated strictly to the authenticated user."""
     conn = get_db_connection()
