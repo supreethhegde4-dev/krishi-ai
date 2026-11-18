@@ -54,6 +54,34 @@ from modules.soil_intelligence import evaluate_soil_health
 from modules.fertilizer_advisor import calculate_fertilizer_prescription
 from modules.yield_analytics import predict_crop_yield
 
+# New Predictive Intelligence & Decision Modules
+from modules.historical_intelligence import (
+    get_historical_database_metrics, get_commodity_yoy_trends,
+    get_monthly_seasonal_profile, detect_historical_price_anomalies,
+    get_regional_market_benchmarks
+)
+from modules.seasonal_intelligence import get_seasonal_crop_intelligence
+from modules.risk_analytics import evaluate_agricultural_risks
+from modules.what_if_simulator import run_what_if_simulation
+from modules.explainable_ai import explain_yield_prediction
+from modules.decision_engine import generate_unified_decision_report
+
+# High-Contrast Dedicated UI Views
+from modules.ui_views import (
+    render_intelligence_overview_view,
+    render_historical_analysis_view,
+    render_crop_yield_view,
+    render_market_intelligence_view,
+    render_seasonal_intelligence_view,
+    render_risk_analysis_view,
+    render_what_if_view,
+    render_explainable_ai_view,
+    render_decision_reports_view,
+    render_crop_soil_advisor_view,
+    render_anti_fraud_view,
+    render_settings_view
+)
+
 # Page Configuration
 st.set_page_config(
     page_title="Krishi AI – Intelligent Farming Decision System",
@@ -280,7 +308,7 @@ if "current_user" not in st.session_state:
 if "auth_view" not in st.session_state:
     st.session_state.auth_view = "signin"  # 'signin', 'signup', 'forgot'
 if "active_nav" not in st.session_state:
-    st.session_state.active_nav = "Dashboard"
+    st.session_state.active_nav = "Intelligence Overview"
 
 # Verify Existing Session
 if st.session_state.auth_token and not st.session_state.current_user:
@@ -539,24 +567,27 @@ def render_main_application():
         st.html("<div style='font-size:0.75rem; font-weight:700; color:#85B892; text-transform:uppercase; margin-bottom:8px;'>SYSTEM MODULES</div>")
         
         NAV_ITEMS = [
-            ("📊 Dashboard", "Dashboard"),
-            ("🌾 Crop Advisor", "Crop Advisor"),
-            ("🧪 Soil Intelligence", "Soil Intelligence"),
-            ("💊 Fertilizer Advisor", "Fertilizer Advisor"),
-            ("📈 Yield Analytics", "Yield Analytics"),
-            ("🚚 Mandi Net Proceeds", "Mandi Net Proceeds"),
-            ("📉 Price Forecast & Timing", "Price Forecast"),
-            ("🛡️ Fraud Offer Detector", "Fraud Detector"),
-            ("📑 Reports & History", "Reports"),
+            ("📊 Intelligence Overview", "Intelligence Overview"),
+            ("📜 Historical Analysis", "Historical Analysis"),
+            ("🌾 Crop Yield Prediction", "Crop Yield Prediction"),
+            ("💰 Market Intelligence", "Market Intelligence"),
+            ("🗓️ Seasonal Intelligence", "Seasonal Intelligence"),
+            ("⚠️ Agricultural Risk Analysis", "Agricultural Risk Analysis"),
+            ("🧪 What-If Simulator", "What-If Simulator"),
+            ("🔍 Explainable AI (XAI)", "Explainable AI"),
+            ("📑 AI Decision Reports", "AI Decision Reports"),
+            ("🌱 Crop & Soil Advisor", "Crop & Soil Advisor"),
+            ("🛡️ Anti-Fraud Detector", "Anti-Fraud Detector"),
             ("👤 Profile & Settings", "Settings")
         ]
 
         for label, key in NAV_ITEMS:
-            if st.button(label, key=f"nav_{key}", use_container_width=True):
+            btn_type = "primary" if st.session_state.active_nav == key else "secondary"
+            if st.button(label, key=f"nav_{key}", use_container_width=True, type=btn_type):
                 st.session_state.active_nav = key
                 st.rerun()
 
-        st.html("<hr style='border:none; border-top:1px solid #1A4D2E; margin:20px 0;'>")
+        st.html("<hr style='border:none; border-top:1px solid #1A4D2E; margin:16px 0;'>")
         
         # Logout Button
         if st.button("🚪 Logout Active Session", use_container_width=True):
@@ -571,706 +602,45 @@ def render_main_application():
     <div class="top-nav">
         <div>
             <div class="top-nav-title">{st.session_state.active_nav}</div>
-            <div class="top-nav-meta">Krishi AI Command Center • {farm.get('farm_name', 'Farm Enterprise')}</div>
+            <div class="top-nav-meta">Krishi AI Decision Platform • {farm.get('farm_name', 'Farm Enterprise')}</div>
         </div>
         <div style="display:flex; align-items:center; gap:16px;">
             <div style="text-align:right;">
-                <div style="font-size:0.88rem; font-weight:700; color:#0F3822;">{today_str}</div>
-                <div style="font-size:0.75rem; color:#2D6A4F; font-weight:600;">Status: Active Production Cycle</div>
+                <div style="font-size:0.88rem; font-weight:700; color:#0D5C3A;">{today_str}</div>
+                <div style="font-size:0.75rem; color:#15803D; font-weight:600;">Status: Predictive Intelligence Engine Active</div>
             </div>
-            <div style="background-color:#E9F1EC; color:#0F3822; font-weight:800; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1.5px solid #0F3822;">
+            <div style="background-color:#E9F1EC; color:#0D5C3A; font-weight:800; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:1.5px solid #0D5C3A;">
                 {user['full_name'][0]}
             </div>
         </div>
     </div>
     """)
 
-
-    # ==========================================================================
-    # 1. EXECUTIVE DASHBOARD MODULE
-    # ==========================================================================
-    if st.session_state.active_nav == "Dashboard":
-        with st.container(border=True):
-            st.html(f"""
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <h2 style="color:#0F3822; margin:0 0 6px 0; font-size:1.7rem; font-weight:800;">Welcome back, {user['full_name']}!</h2>
-                    <p style="color:#475569; margin:0; font-size:0.95rem;">
-                        Real-time agricultural telemetry active for <strong>{farm.get('farm_name')}</strong> ({farm.get('acreage')} acres, {farm.get('soil_type')}).
-                    </p>
-                </div>
-                <div>
-                    <span style="background:#E9F1EC; color:#0F3822; padding:6px 14px; border-radius:20px; font-weight:700; font-size:0.85rem; border:1px solid #C8DDD0;">● Operational</span>
-                </div>
-            </div>
-            """)
-
-        # Key High-Level KPI Cards
-        kpi1, kpi2, kpi3, kpi4 = st.columns(4)
-        with kpi1:
-            st.html(f"""
-            <div class="stat-card">
-                <div class="stat-label">Farm Holding</div>
-                <div class="stat-value">{farm.get('acreage', 2.5):.1f} Acres</div>
-                <div class="stat-subtext">Soil: {farm.get('soil_type', 'Red Loam')}</div>
-            </div>
-            """)
-        with kpi2:
-            st.html(f"""
-            <div class="stat-card">
-                <div class="stat-label">Primary Crop</div>
-                <div class="stat-value">{farm.get('primary_crops', 'Tomato').split(',')[0]}</div>
-                <div class="stat-subtext">Mandi Parity: ₹16.50/kg</div>
-            </div>
-            """)
-        with kpi3:
-            st.html(f"""
-            <div class="stat-card">
-                <div class="stat-label">Soil Health Index</div>
-                <div class="stat-value" style="color:#0D5C3A;">84 / 100</div>
-                <div class="stat-subtext">Fertility Status: Good</div>
-            </div>
-            """)
-        with kpi4:
-            st.html(f"""
-            <div class="stat-card">
-                <div class="stat-label">APMC Wholesale Network</div>
-                <div class="stat-value">2,733</div>
-                <div class="stat-subtext">Active Live Mandis</div>
-            </div>
-            """)
-
-        # Quick Actions & Recent Activity
-        c_act1, c_act2 = st.columns([1.5, 1])
-        with c_act1:
-            with st.container(border=True):
-                st.html("""
-                <div style="font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;">⚡ Intelligent Farm Quick Actions</div>
-                <div style="font-size:0.9rem; color:#475569; margin-bottom:14px;">Select an intelligence module to run automated agronomic analysis:</div>
-                """)
-
-                qa1, qa2, qa3 = st.columns(3)
-                with qa1:
-                    if st.button("🌱 Run Crop Matcher", use_container_width=True):
-                        st.session_state.active_nav = "Crop Advisor"
-                        st.rerun()
-                with qa2:
-                    if st.button("🧪 Analyze Soil Health", use_container_width=True):
-                        st.session_state.active_nav = "Soil Intelligence"
-                        st.rerun()
-                with qa3:
-                    if st.button("💰 Compare Mandis", use_container_width=True):
-                        st.session_state.active_nav = "Mandi Net Proceeds"
-                        st.rerun()
-
-                st.html("""
-                <div style="background:#F1F5F2; border-left:4px solid #0F3822; border-radius:0 8px 8px 0; padding:12px; margin-top:16px;">
-                    <div style="font-weight:700; color:#0F3822; font-size:0.88rem;">📢 Seasonal Agricultural Advisory</div>
-                    <div style="font-size:0.83rem; color:#334155; margin-top:4px;">
-                        Wholesale Tomato prices across Bangalore Rural and Kolar show an upward seasonal trend (+₹2.20/kg expected in next 7-14 days). Review the <strong>Price Forecast & Sell Timing Advisor</strong> before confirming local farmgate deals.
-                    </div>
-                </div>
-                """)
-
-        with c_act2:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>📋 Recent Activity & Audits</div>")
-                user_preds = get_user_predictions(user["id"])
-                if user_preds:
-                    for p in user_preds[:4]:
-                        st.html(f"""
-                        <div style="padding:8px 0; border-bottom:1px solid #F1F5F9; font-size:0.85rem;">
-                            <strong style="color:#0F3822;">{p['title']}</strong><br>
-                            <span style="color:#64748B; font-size:0.75rem;">{p['created_at'][:16].replace('T', ' ')} • {p['module_name']}</span>
-                        </div>
-                        """)
-                else:
-                    st.html("<div style='font-size:0.85rem; color:#64748B;'>No prior prediction records found. Run Crop Advisor or Mandi Analytics to log private farm reports.</div>")
-
-
-    # ==========================================================================
-    # 2. CROP ADVISOR MODULE
-    # ==========================================================================
-    elif st.session_state.active_nav == "Crop Advisor":
-        st.markdown("#### 🌾 Precision Crop Recommendation Engine")
-        st.caption("Machine learning model evaluating soil chemical parameters and local agro-climatic telemetry to predict the highest yielding crop.")
-
-        col_in, col_out = st.columns([1, 1], gap="large")
-
-        with col_in:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>1. Soil & Climatic Parameters</div>")
-
-                c_n1, c_n2, c_n3 = st.columns(3)
-                with c_n1:
-                    n_val = st.number_input("Nitrogen (N) kg/ha", min_value=0.0, max_value=200.0, value=85.0, step=5.0)
-                with c_n2:
-                    p_val = st.number_input("Phosphorus (P) kg/ha", min_value=5.0, max_value=160.0, value=55.0, step=5.0)
-                with c_n3:
-                    k_val = st.number_input("Potassium (K) kg/ha", min_value=5.0, max_value=220.0, value=58.0, step=5.0)
-
-                c_c1, c_c2 = st.columns(2)
-                with c_c1:
-                    t_val = st.number_input("Temperature (°C)", min_value=10.0, max_value=50.0, value=25.2, step=0.5)
-                    ph_val = st.number_input("Soil pH", min_value=3.5, max_value=9.5, value=6.5, step=0.1)
-                with c_c2:
-                    h_val = st.number_input("Humidity (%)", min_value=15.0, max_value=100.0, value=71.0, step=1.0)
-                    r_val = st.number_input("Rainfall (mm)", min_value=10.0, max_value=400.0, value=82.0, step=5.0)
-
-                run_crop = st.button("Predict Optimal Crop", type="primary", use_container_width=True)
-
-        crop_res = recommend_crop(n_val, p_val, k_val, t_val, h_val, ph_val, r_val)
-
-        with col_out:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>2. Recommended Crop & Confidence</div>")
-
-                rec_crop = crop_res["primary_crop"]
-                conf = crop_res["confidence"]
-
-                st.html(f"""
-                <div style="background-color:#E9F1EC; border:2px solid #2D6A4F; border-radius:10px; padding:20px; text-align:center; margin-bottom:16px;">
-                    <span style="background:#0F3822; color:white; padding:4px 12px; border-radius:12px; font-weight:700; font-size:0.8rem;">TOP AGRONOMIC MATCH</span>
-                    <div style="font-size:2.4rem; font-weight:800; color:#0F3822; margin:8px 0;">{rec_crop}</div>
-                    <div style="font-size:1.1rem; font-weight:700; color:#2D6A4F;">{conf:.1f}% Model Confidence</div>
-                </div>
-                """)
-
-                st.markdown(f"**Agronomic Rationale:** {crop_res['explanation']}")
-
-                if crop_res["alternatives"]:
-                    st.markdown("**Secondary Crop Options:**")
-                    for alt_name, alt_pct in crop_res["alternatives"]:
-                        st.markdown(f"- **{alt_name}**: {alt_pct:.1f}% compatibility")
-
-                if st.button("💾 Save to Private Farm Reports", key="save_crop_rec"):
-                    save_user_prediction(
-                        user_id=user["id"],
-                        module_name="Crop Advisor",
-                        title=f"Crop Match: {rec_crop} ({conf:.0f}%)",
-                        inputs_json=json.dumps(crop_res["inputs"]),
-                        outputs_json=json.dumps({"crop": rec_crop, "confidence": conf, "explanation": crop_res["explanation"]})
-                    )
-                    st.success("Report saved to your private account!")
-
-
-    # ==========================================================================
-    # 3. SOIL INTELLIGENCE MODULE
-    # ==========================================================================
-    elif st.session_state.active_nav == "Soil Intelligence":
-        st.markdown("#### 🧪 Precision Soil Intelligence & Health Index")
-        st.caption("Comprehensive soil chemical evaluation against ICAR standard agricultural benchmarks.")
-
-        col_s1, col_s2 = st.columns([1, 1], gap="large")
-        with col_s1:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Soil Test Report Inputs</div>")
-                sn = st.slider("Available Nitrogen (N) kg/ha", 10.0, 160.0, 75.0)
-                sp = st.slider("Available Phosphorus (P) kg/ha", 5.0, 120.0, 48.0)
-                sk = st.slider("Available Potassium (K) kg/ha", 10.0, 180.0, 62.0)
-                sph = st.slider("Soil Reaction (pH)", 4.5, 9.0, 6.6, step=0.1)
-                soc = st.slider("Organic Carbon (%)", 0.1, 1.5, 0.65, step=0.05)
-
-        soil_res = evaluate_soil_health(sn, sp, sk, sph, soc)
-
-        with col_s2:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Soil Health Index & Condition</div>")
-
-                sh_idx = soil_res["health_index"]
-                sh_color = soil_res["health_color"]
-
-                st.html(f"""
-                <div style="background-color:#FFFFFF; border:2px solid {sh_color}; border-radius:10px; padding:18px; text-align:center; margin-bottom:16px;">
-                    <div style="font-size:0.8rem; font-weight:700; color:#64748B; letter-spacing:0.5px;">COMPOSITE SOIL HEALTH SCORE</div>
-                    <div style="font-size:2.8rem; font-weight:800; color:{sh_color};">{sh_idx} / 100</div>
-                    <div style="font-size:1.05rem; font-weight:700; color:{sh_color};">{soil_res['overall_condition']}</div>
-                </div>
-                """)
-
-                # Radar Chart for Soil Nutrients
-                fig_soil = go.Figure()
-                categories = ['Nitrogen', 'Phosphorus', 'Potassium', 'pH Balance', 'Organic Matter']
-                r_vals = [
-                    min(100, sn / 1.2),
-                    min(100, sp / 0.8),
-                    min(100, sk / 0.9),
-                    max(20, 100 - abs(sph - 6.5) * 25),
-                    min(100, soc * 120)
-                ]
-                fig_soil.add_trace(go.Scatterpolar(
-                    r=r_vals,
-                    theta=categories,
-                    fill='toself',
-                    name='Soil Fertility Index',
-                    line=dict(color='#0F3822')
-                ))
-                fig_soil.update_layout(
-                    polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
-                    showlegend=False,
-                    height=280,
-                    margin=dict(l=30, r=30, t=20, b=20)
-                )
-                st.plotly_chart(fig_soil, use_container_width=True)
-
-        with st.container(border=True):
-            st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Parameter Diagnostic Breakdown & Amendment Advice</div>")
-            for param_name, p_data in soil_res["nutrients"].items():
-                st.html(f"""
-                <div style="padding:10px 0; border-bottom:1px solid #E2E8F0; display:flex; justify-content:space-between; align-items:center;">
-                    <div>
-                        <strong style="color:#0F3822;">{param_name}:</strong> {p_data['value']} {p_data['unit']} — 
-                        <span style="color:{p_data['color']}; font-weight:700;">{p_data['status']}</span>
-                        <div style="font-size:0.83rem; color:#475569; margin-top:2px;">{p_data['advice']}</div>
-                    </div>
-                </div>
-                """)
-
-
-    # ==========================================================================
-    # 4. FERTILIZER ADVISOR MODULE
-    # ==========================================================================
-    elif st.session_state.active_nav == "Fertilizer Advisor":
-        st.markdown("#### 💊 Prescription Fertilizer Advisor")
-        st.caption("Calculates crop nutrient deficit vs soil test reserves, computes commercial 50kg bag dosage, and creates split schedules.")
-
-        c_f1, c_f2 = st.columns([1, 1], gap="large")
-        with c_f1:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Target Crop & Soil Values</div>")
-                f_crop_sel = st.selectbox("Target Crop", ["Tomato", "Rice", "Maize", "Banana", "Cotton", "Potato", "Chickpea"])
-                f_acres = st.number_input("Field Acreage (Acres)", min_value=0.5, max_value=50.0, value=farm.get("acreage", 2.0), step=0.5)
-                f_sn = st.number_input("Soil Available N (kg/ha)", value=60.0)
-                f_sp = st.number_input("Soil Available P (kg/ha)", value=35.0)
-                f_sk = st.number_input("Soil Available K (kg/ha)", value=45.0)
-
-        fert_res = calculate_fertilizer_prescription(f_crop_sel, f_sn, f_sp, f_sk, f_acres)
-
-        with c_f2:
-            with st.container(border=True):
-                st.html(f"<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Commercial Fertilizer Requirement ({f_acres:.1f} Acres)</div>")
-                for item in fert_res["fertilizers"]:
-                    st.html(f"""
-                    <div style="background:#F8FAF8; border:1px solid #E2E8F0; border-radius:8px; padding:12px; margin-bottom:10px;">
-                        <div style="display:flex; justify-content:space-between; align-items:center;">
-                            <span style="font-weight:700; color:#0F3822; font-size:1.0rem;">{item['name']}</span>
-                            <span style="background:#E9F1EC; color:#0F3822; font-weight:700; padding:3px 10px; border-radius:12px; font-size:0.85rem;">{item['bags_50kg']} Bags ({item['total_kg']} kg)</span>
-                        </div>
-                        <div style="font-size:0.8rem; color:#475569; margin-top:4px;">{item['purpose']}</div>
-                    </div>
-                    """)
-
-        with st.container(border=True):
-            st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Agronomic Split Application Schedule</div>")
-            df_sch = pd.DataFrame(fert_res["schedule"])[[
-                "stage", "timing", "urea_kg", "dap_kg", "mop_kg", "method"
-            ]].rename(columns={
-                "stage": "Growth Stage",
-                "timing": "Recommended Timing",
-                "urea_kg": "Urea (kg)",
-                "dap_kg": "DAP (kg)",
-                "mop_kg": "MOP (kg)",
-                "method": "Application Method & Guidance"
-            })
-            st.dataframe(df_sch, use_container_width=True)
-
-
-    # ==========================================================================
-    # 5. YIELD ANALYTICS MODULE
-    # ==========================================================================
-    elif st.session_state.active_nav == "Yield Analytics":
-        st.markdown("#### 📈 Crop Yield Analytics & Benchmarking")
-        st.caption("Random Forest yield prediction benchmarking farm performance against district and state agricultural production standards.")
-
-        c_y1, c_y2 = st.columns([1, 1], gap="large")
-        with c_y1:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Farm Input Telemetry</div>")
-                y_crop = st.selectbox("Crop", ["Tomato", "Rice", "Maize", "Banana", "Cotton", "Potato"], index=0)
-                y_acres = st.number_input("Farm Acreage", min_value=0.5, max_value=50.0, value=farm.get("acreage", 2.5))
-                y_rain = st.number_input("Seasonal Rainfall (mm)", value=85.0)
-                y_ph = st.number_input("Soil pH", value=6.5)
-                y_n = st.number_input("Applied Nitrogen (kg/ha)", value=80.0)
-                y_p = st.number_input("Applied Phosphorus (kg/ha)", value=50.0)
-                y_k = st.number_input("Applied Potassium (kg/ha)", value=60.0)
-
-        yield_res = predict_crop_yield(y_crop, y_acres, y_n, y_p, y_k, y_rain, y_ph)
-
-        with c_y2:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Forecasted Harvest Production</div>")
-
-                py_acre = yield_res["predicted_yield_per_acre"]
-                tot_q = yield_res["total_yield_quintals"]
-                tot_kg = yield_res["total_yield_kg"]
-
-                st.html(f"""
-                <div style="background-color:#E9F1EC; border:2px solid #2D6A4F; border-radius:10px; padding:18px; text-align:center; margin-bottom:16px;">
-                    <div style="font-size:0.8rem; font-weight:700; color:#64748B;">PROJECTED HARVEST VOLUME</div>
-                    <div style="font-size:2.6rem; font-weight:800; color:#0F3822;">{tot_q:,.1f} Quintals</div>
-                    <div style="font-size:1.1rem; font-weight:700; color:#2D6A4F;">{tot_kg:,.0f} kg Total Production</div>
-                    <div style="font-size:0.85rem; color:#475569; margin-top:4px;">({py_acre:.1f} Quintals/Acre) • Rating: {yield_res['performance_rating']}</div>
-                </div>
-                """)
-
-                fig_y = go.Figure()
-                fig_y.add_trace(go.Bar(
-                    x=['District Average', 'State Benchmark', 'Your Predicted Farm Yield', 'Top Decile Farms'],
-                    y=[yield_res['district_avg_yield'], yield_res['state_avg_yield'], py_acre, yield_res['high_performing_yield']],
-                    marker_color=['#94A3B8', '#64748B', '#2D6A4F', '#0F3822'],
-                    text=[f"{v:.1f} Q" for v in [yield_res['district_avg_yield'], yield_res['state_avg_yield'], py_acre, yield_res['high_performing_yield']]],
-                    textposition='auto'
-                ))
-                fig_y.update_layout(
-                    title=f"{y_crop} Yield Benchmark (Quintals/Acre)",
-                    yaxis_title="Yield (Quintals/Acre)",
-                    template="plotly_white",
-                    height=280,
-                    margin=dict(l=30, r=30, t=40, b=30)
-                )
-                st.plotly_chart(fig_y, use_container_width=True)
-
-
-    # ==========================================================================
-    # 6. MANDI NET PROCEEDS & LOGISTICS MODULE
-    # ==========================================================================
-    elif st.session_state.active_nav == "Mandi Net Proceeds":
-        st.markdown("#### 🚚 Mandi Net Proceeds Ranker & Logistics Optimizer")
-        st.caption("Calculates road distance via ORS Matrix API, deducts vehicle freight & APMC fees (1.5% cess + 2.0% commission), and ranks mandis by net proceeds.")
-
-        col_mp1, col_mp2, col_mp3 = st.columns(3)
-        with col_mp1:
-            m_crop = st.selectbox("Crop", sorted(df_market['commodity'].unique()), index=sorted(df_market['commodity'].unique()).index("Tomato") if "Tomato" in df_market['commodity'].unique() else 0)
-        with col_mp2:
-            m_qty = st.number_input("Quantity to Transport (kg)", min_value=100.0, max_value=20000.0, value=500.0, step=50.0)
-        with col_mp3:
-            m_veh = st.selectbox("Vehicle Profile", list(DEFAULT_VEHICLE_CONFIGS.keys()), index=0)
-
-        vehicle_cfg = DEFAULT_VEHICLE_CONFIGS[m_veh].copy()
-
-        # Compute Comparative Proceeds Table
-        p_res = compute_mandi_proceeds_table(
-            df_marketplace=df_market,
-            crop_name=m_crop,
-            quantity_kg=m_qty,
-            farmer_lat=farm.get("latitude", 12.7209),
-            farmer_lon=farm.get("longitude", 77.2799),
-            vehicle_config=vehicle_cfg
-        )
-
-        b_m = p_res["best_mandi"]
-        n_m = p_res["nearest_mandi"]
-
-        if b_m and n_m:
-            cb1, cb2, cb3 = st.columns(3)
-            with cb1:
-                st.html(f"""
-                <div class="stat-card" style="border:2px solid #0D5C3A; background:#F0FDF4;">
-                    <div class="stat-label">🏆 Highest Net Proceeds Mandi</div>
-                    <div style="font-size:1.3rem; font-weight:800; color:#0D5C3A;">{b_m['mandi']}</div>
-                    <div class="stat-value" style="font-size:1.6rem; color:#0D5C3A;">₹{b_m['net_proceeds']:,.2f}</div>
-                    <div class="stat-subtext">Net: ₹{b_m['net_price_per_kg']:.2f}/kg • Dist: {b_m['road_distance_km']} km</div>
-                </div>
-                """)
-            with cb2:
-                st.html(f"""
-                <div class="stat-card">
-                    <div class="stat-label">📍 Nearest Mandi</div>
-                    <div style="font-size:1.3rem; font-weight:800; color:#0D5C3A;">{n_m['mandi']}</div>
-                    <div class="stat-value" style="font-size:1.6rem; color:#0F172A;">₹{n_m['net_proceeds']:,.2f}</div>
-                    <div class="stat-subtext">Net: ₹{n_m['net_price_per_kg']:.2f}/kg • Dist: {n_m['road_distance_km']} km</div>
-                </div>
-                """)
-            with cb3:
-                net_gain = p_res["net_advantage_vs_nearest"]
-                st.html(f"""
-                <div class="stat-card" style="background:#FFFBEB; border-color:#F59E0B;">
-                    <div class="stat-label">💡 Net Arbitrage Advantage</div>
-                    <div style="font-size:1.1rem; color:#475569;">Best vs Nearest Mandi</div>
-                    <div class="stat-value" style="font-size:1.6rem; color:#D97706;">{'+' if net_gain>=0 else ''}₹{net_gain:,.2f}</div>
-                    <div class="stat-subtext">Net extra profit after all transport expenses</div>
-                </div>
-                """)
-
-            st.markdown("#### Ranked Mandi Ledger")
-            df_m_disp = pd.DataFrame(p_res["records"])[[
-                "mandi", "district", "state", "modal_price_kg", "road_distance_km",
-                "gross_revenue", "transport_cost", "total_expenses", "net_proceeds", "net_price_per_kg", "suitability_badge"
-            ]].rename(columns={
-                "mandi": "Market",
-                "district": "District",
-                "state": "State",
-                "modal_price_kg": "Gross Modal (₹/kg)",
-                "road_distance_km": "Distance (km)",
-                "gross_revenue": "Gross (₹)",
-                "transport_cost": "Freight (₹)",
-                "total_expenses": "Fees (₹)",
-                "net_proceeds": "Net Proceeds (₹)",
-                "net_price_per_kg": "Net Realized (₹/kg)",
-                "suitability_badge": "Cold-Chain Match"
-            })
-            st.dataframe(df_m_disp, use_container_width=True, height=350)
-
-
-    # ==========================================================================
-    # 7. PRICE FORECAST & SELL TIMING ADVISOR (NEW TAB 5 FEATURE)
-    # ==========================================================================
-    elif st.session_state.active_nav == "Price Forecast":
-        st.markdown("#### 📉 Historical Price Analytics & Predictive Sell Timing Advisor")
-        st.caption("Powered by 4-year DuckDB time-series arrivals (2023–2026), RandomForest lag regressor, and deterministic storage-versus-spoilage economics.")
-
-        f_meta = get_distinct_filter_values(commodity="Tomato", state=farm.get("state", "Karnataka"))
-        
-        c_pf1, c_pf2, c_pf3, c_pf4 = st.columns(4)
-        with c_pf1:
-            pf_crop = st.selectbox("Crop", f_meta["commodities"], index=f_meta["commodities"].index("Tomato") if "Tomato" in f_meta["commodities"] else 0)
-        with c_pf2:
-            st_opts = ["All States"] + f_meta["states"]
-            pf_state = st.selectbox("State", st_opts, index=st_opts.index(farm.get("state", "Karnataka")) if farm.get("state", "Karnataka") in st_opts else 0)
-        with c_pf3:
-            sub_meta = get_distinct_filter_values(commodity=pf_crop, state=pf_state)
-            dst_opts = ["All Districts"] + sub_meta["districts"]
-            pf_dist = st.selectbox("District", dst_opts, index=0)
-        with c_pf4:
-            mkt_meta = get_distinct_filter_values(commodity=pf_crop, state=pf_state, district=pf_dist)
-            m_opts = ["All Markets"] + mkt_meta["markets"]
-            pf_market = st.selectbox("Market", m_opts, index=0)
-
-        c_pf5, c_pf6 = st.columns([2, 1])
-        with c_pf5:
-            pf_comp = st.multiselect("Overlay Comparison Markets", mkt_meta["markets"], default=[mkt_meta["markets"][0]] if mkt_meta["markets"] else [])
-        with c_pf6:
-            pf_horizon = st.selectbox("Forecast Horizon", [3, 7, 14], index=1, format_func=lambda x: f"{x} Days Ahead")
-
-        with st.spinner("Executing high-speed DuckDB scan over 4-year Parquet files..."):
-            df_hist_series = query_historical_prices(
-                commodity=pf_crop,
-                state=pf_state,
-                district=pf_dist,
-                markets=pf_comp if pf_comp else ([pf_market] if pf_market != "All Markets" else None)
-            )
-
-        if not df_hist_series.empty:
-            primary_mkt = pf_market if pf_market != "All Markets" else (pf_comp[0] if pf_comp else "All")
-            df_target_m = df_hist_series[df_hist_series['Market'] == primary_mkt] if pf_market != "All Markets" else df_hist_series
-            
-            fc_output = train_and_forecast_price(df_target_m if not df_target_m.empty else df_hist_series, horizons=[3, 7, 14])
-
-            k1, k2, k3, k4, k5 = st.columns(5)
-            lat_p = fc_output.get("latest_observed_price", df_hist_series['modal_price_kg'].iloc[-1])
-            p3 = fc_output.get("predictions", {}).get("3_day", {}).get("predicted_price_kg", lat_p)
-            p7 = fc_output.get("predictions", {}).get("7_day", {}).get("predicted_price_kg", lat_p)
-            p14 = fc_output.get("predictions", {}).get("14_day", {}).get("predicted_price_kg", lat_p)
-            mae_v = fc_output.get("metrics", {}).get("mae", 1.5)
-
-            with k1:
-                st.html(f"<div class='stat-card'><div class='stat-label'>Latest Price</div><div class='stat-value'>₹{lat_p:.2f}</div><div class='stat-subtext'>{fc_output.get('latest_observed_date', 'Recent')}</div></div>")
-            with k2:
-                st.html(f"<div class='stat-card'><div class='stat-label'>3-Day Forecast</div><div class='stat-value'>₹{p3:.2f}</div><div class='stat-subtext'>{p3-lat_p:+.2f}/kg</div></div>")
-            with k3:
-                st.html(f"<div class='stat-card' style='background:#F0FDF4; border-color:#0D5C3A;'><div class='stat-label' style='color:#0D5C3A;'>7-Day Forecast</div><div class='stat-value' style='color:#0D5C3A;'>₹{p7:.2f}</div><div class='stat-subtext'>{p7-lat_p:+.2f}/kg</div></div>")
-            with k4:
-                st.html(f"<div class='stat-card'><div class='stat-label'>14-Day Forecast</div><div class='stat-value'>₹{p14:.2f}</div><div class='stat-subtext'>{p14-lat_p:+.2f}/kg</div></div>")
-            with k5:
-                st.html(f"<div class='stat-card'><div class='stat-label'>Validation Error</div><div class='stat-value'>±₹{mae_v:.2f}</div><div class='stat-subtext'>MAE on Out-of-Time Test</div></div>")
-
-            fig_fc = go.Figure()
-            for m_n, g_d in df_hist_series.groupby("Market"):
-                g_d = g_d.sort_values("date")
-                fig_fc.add_trace(go.Scatter(
-                    x=g_d["Arrival_Date"],
-                    y=g_d["modal_price_kg"],
-                    mode="lines",
-                    name=f"{m_n} (Actual Modal)",
-                    line=dict(width=2.5)
-                ))
-
-            if fc_output.get("forecast_series") is not None:
-                f_df = fc_output["forecast_series"]
-                last_d = fc_output["latest_observed_date"]
-                cx = [last_d] + list(f_df["Arrival_Date"])
-                cy = [lat_p] + list(f_df["predicted_modal_price_kg"])
-                cu = [lat_p] + list(f_df["confidence_upper_kg"])
-                cl = [lat_p] + list(f_df["confidence_lower_kg"])
-
-                fig_fc.add_trace(go.Scatter(
-                    x=cx, y=cy, mode="lines+markers",
-                    name="AI Predicted Future Price",
-                    line=dict(color="#C62828", width=3, dash="dash"),
-                    marker=dict(size=6)
-                ))
-                fig_fc.add_trace(go.Scatter(
-                    x=cx + cx[::-1], y=cu + cl[::-1], fill='toself',
-                    fillcolor='rgba(198, 40, 40, 0.12)', line=dict(color='rgba(255,255,255,0)'),
-                    name="Uncertainty Range (±1.64σ)"
-                ))
-
-            fig_fc.update_layout(
-                title=f"{pf_crop} Price History & Machine Learning Forecast – {primary_mkt}",
-                xaxis_title="Arrival Date",
-                yaxis_title="Wholesale Price (₹/kg)",
-                template="plotly_white",
-                height=480,
-                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
-            )
-            st.plotly_chart(fig_fc, use_container_width=True)
-
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>⚖️ Deterministic Sell Now vs Wait Decision Engine</div>")
-                
-                c_dec1, c_dec2 = st.columns([1, 1])
-                with c_dec1:
-                    t_pred_price = fc_output.get("predictions", {}).get(f"{pf_horizon}_day", {}).get("predicted_price_kg", lat_p)
-                    st_cost = st.number_input("Daily Storage Cost (₹/kg/day)", value=0.15, step=0.05)
-                    spoil_pct = st.slider("Expected Spoilage & Weight Loss (%)", 0.0, 20.0, 3.5 if pf_horizon==7 else (1.5 if pf_horizon==3 else 7.0), step=0.5)
-
-                adv_res = evaluate_sell_timing(
-                    crop_name=pf_crop,
-                    quantity_kg=farm.get("acreage", 2.0) * 200.0,
-                    current_price_kg=lat_p,
-                    predicted_future_price_kg=t_pred_price,
-                    horizon_days=pf_horizon,
-                    daily_storage_cost_per_kg=st_cost,
-                    spoilage_pct=spoil_pct,
-                    forecast_mae=mae_v
-                )
-
-                with c_dec2:
-                    st.html(f"""
-                    <div style="background:#FFFFFF; border:2px solid {adv_res['badge_color']}; border-radius:10px; padding:16px;">
-                        <span style="background:#0F3822; color:white; padding:3px 10px; border-radius:12px; font-weight:700; font-size:0.8rem;">STRATEGIC RECOMMENDATION</span>
-                        <div style="font-size:2.0rem; font-weight:800; color:{adv_res['badge_color']}; margin:4px 0;">{adv_res['recommendation']}</div>
-                        <div style="font-size:0.92rem; color:#111827; margin-bottom:10px;">{adv_res['rationale']}</div>
-                        <div style="font-size:0.83rem; background:#F8FAF8; border:1px solid #E2E8F0; padding:8px; border-radius:6px;"><strong>Action:</strong> {adv_res['strategy']}</div>
-                    </div>
-                    """)
-
-
-    # ==========================================================================
-    # 8. FRAUD & UNFAIR OFFER DETECTOR MODULE
-    # ==========================================================================
-    elif st.session_state.active_nav == "Fraud Detector":
-        st.markdown("#### 🛡️ Predatory Offer & Unfair Middleman Transaction Detector")
-        st.caption("Audits buyer farmgate bids against fair mandi parity, calculates farmer loss, and creates negotiation counter-offers.")
-
-        c_fr1, c_fr2 = st.columns([1, 1], gap="large")
-        with c_fr1:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Buyer Offer Parameters</div>")
-                offered_p = st.number_input("Buyer's Quoted Price (₹/kg)", min_value=1.0, max_value=150.0, value=11.50, step=0.5)
-                offered_q = st.number_input("Quantity in Deal (kg)", min_value=100.0, max_value=25000.0, value=500.0, step=50.0)
-                pay_term = st.selectbox("Payment Terms", ["Immediate Cash / UPI at Weighbridge", "Payment after 7 days", "Payment after 15 days", "Unspecified Credit"])
-
-        bench_m = 16.50
-        fr_res = evaluate_buyer_offer(offered_p, offered_q, bench_m, bench_m * 0.88, payment_terms=pay_term)
-
-        with c_fr2:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>AI Parity & Anomaly Audit</div>")
-
-                st.html(f"""
-                <div style="border:2px solid {fr_res['badge_color']}; border-radius:10px; padding:16px; margin-bottom:14px;">
-                    <span style="background:{fr_res['badge_color']}; color:white; padding:4px 12px; border-radius:12px; font-weight:700; font-size:0.85rem;">{fr_res['status']}</span>
-                    <div style="font-size:1.0rem; color:#111827; margin:10px 0;">{fr_res['summary']}</div>
-                    <div style="display:flex; justify-content:space-between; border-top:1px solid #E2E8F0; padding-top:8px;">
-                        <div><strong>Offer Value:</strong> ₹{fr_res['total_offered_proceeds']:,.2f}</div>
-                        <div><strong>Fair Parity:</strong> ₹{fr_res['total_fair_proceeds']:,.2f}</div>
-                    </div>
-                </div>
-                """)
-
-                st.info(f"💡 **Recommended Counter-Offer:** **₹{fr_res['recommended_counter_kg']:.2f}/kg** (Recovers **₹{fr_res['extra_money_from_counter']:,.2f}** in fair proceeds!)")
-                st.markdown(f"*{fr_res['negotiation_script']}*")
-
-
-    # ==========================================================================
-    # 9. REPORTS & HISTORY (ISOLATED USER RECORDS)
-    # ==========================================================================
-    elif st.session_state.active_nav == "Reports":
-        st.markdown("#### 📑 Private Farm Reports & Saved Intelligence")
-        st.caption(f"Historical prediction ledger isolated for **{user['full_name']}** ({user['email']}).")
-
-        preds = get_user_predictions(user["id"])
-        if preds:
-            df_rep = pd.DataFrame(preds)
-            st.dataframe(df_rep[["id", "module_name", "title", "created_at"]].rename(columns={
-                "id": "Report ID",
-                "module_name": "Module",
-                "title": "Title / Recommendation",
-                "created_at": "Timestamp"
-            }), use_container_width=True)
-
-            csv_data = df_rep.to_csv(index=False).encode('utf-8')
-            st.download_button(
-                label="📥 Download Historical Reports (CSV)",
-                data=csv_data,
-                file_name=f"krishi_ai_reports_{user['id']}.csv",
-                mime="text/csv"
-            )
-        else:
-            st.info("No saved predictions yet. Use Crop Advisor or Soil Intelligence to log your first report.")
-
-
-    # ==========================================================================
-    # 10. PROFILE & SETTINGS MODULE
-    # ==========================================================================
+    # ROUTING TO DEDICATED HIGH-CONTRAST UI VIEWS
+    if st.session_state.active_nav == "Intelligence Overview":
+        render_intelligence_overview_view(user, farm, df_market)
+    elif st.session_state.active_nav == "Historical Analysis":
+        render_historical_analysis_view(user, farm)
+    elif st.session_state.active_nav == "Crop Yield Prediction":
+        render_crop_yield_view(user, farm)
+    elif st.session_state.active_nav == "Market Intelligence":
+        render_market_intelligence_view(user, farm, df_market)
+    elif st.session_state.active_nav == "Seasonal Intelligence":
+        render_seasonal_intelligence_view(user, farm)
+    elif st.session_state.active_nav == "Agricultural Risk Analysis":
+        render_risk_analysis_view(user, farm)
+    elif st.session_state.active_nav == "What-If Simulator":
+        render_what_if_view(user, farm)
+    elif st.session_state.active_nav == "Explainable AI":
+        render_explainable_ai_view(user, farm)
+    elif st.session_state.active_nav == "AI Decision Reports":
+        render_decision_reports_view(user, farm, df_market)
+    elif st.session_state.active_nav == "Crop & Soil Advisor":
+        render_crop_soil_advisor_view(user, farm)
+    elif st.session_state.active_nav == "Anti-Fraud Detector":
+        render_anti_fraud_view(user, farm)
     elif st.session_state.active_nav == "Settings":
-        st.markdown("#### 👤 Farmer Profile & Enterprise Settings")
-
-        col_p1, col_p2 = st.columns([1, 1], gap="large")
-
-        with col_p1:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Farm Profile Information</div>")
-                
-                p_farm_name = st.text_input("Farm Name", value=farm.get("farm_name", "Green Valley Agro Farm"))
-                p_acreage = st.number_input("Holding Acreage (Acres)", value=float(farm.get("acreage", 2.5)), step=0.5)
-                p_village = st.text_input("Village / Town", value=farm.get("village", "Ramanagara"))
-                p_district = st.text_input("District", value=farm.get("district", "Ramanagara"))
-                p_state = st.text_input("State", value=farm.get("state", "Karnataka"))
-                p_soil = st.selectbox("Predominant Soil Type", ["Red Sandy Loam", "Clay Loam", "Black Cotton Soil", "Alluvial", "Laterite"], index=0)
-                p_crops = st.text_input("Primary Crops", value=farm.get("primary_crops", "Tomato, Maize, Banana"))
-
-                if st.button("Save Farm Profile", type="primary"):
-                    up_ok, up_msg = update_farm_profile(user["id"], {
-                        "farm_name": p_farm_name,
-                        "acreage": p_acreage,
-                        "village": p_village,
-                        "district": p_district,
-                        "state": p_state,
-                        "soil_type": p_soil,
-                        "primary_crops": p_crops,
-                        "latitude": farm.get("latitude", 12.7209),
-                        "longitude": farm.get("longitude", 77.2799),
-                        "irrigation_source": farm.get("irrigation_source", "Borewell Drip")
-                    })
-                    if up_ok:
-                        st.success("Farm profile updated!")
-                        st.session_state.current_user["farm"]["farm_name"] = p_farm_name
-                        st.session_state.current_user["farm"]["acreage"] = p_acreage
-                        st.session_state.current_user["farm"]["district"] = p_district
-                        st.session_state.current_user["farm"]["state"] = p_state
-                        st.rerun()
-
-        with col_p2:
-            with st.container(border=True):
-                st.html("<div style='font-size:1.15rem; font-weight:700; color:#0F3822; margin-bottom:12px;'>Security & Password Change</div>")
-                
-                old_pwd = st.text_input("Current Password", type="password")
-                new_pwd = st.text_input("New Password", type="password")
-                new_pwd_conf = st.text_input("Confirm New Password", type="password")
-
-                if st.button("Update Password"):
-                    if new_pwd != new_pwd_conf:
-                        st.error("New passwords do not match.")
-                    else:
-                        ch_ok, ch_msg = change_user_password(user["id"], old_pwd, new_pwd)
-                        if ch_ok:
-                            st.success(ch_msg)
-                        else:
-                            st.error(ch_msg)
-
-                st.html(f"<div style='margin-top:20px; font-size:0.85rem; color:#64748B;'>Account ID: #{user['id']} • Role: {user['role'].upper()}</div>")
+        render_settings_view(user, farm)
 
 
 # ==============================================================================
