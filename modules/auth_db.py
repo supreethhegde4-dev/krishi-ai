@@ -14,11 +14,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DB_PATH = os.path.join(PROJECT_ROOT, "data", "krishi_ai.db")
 
 
-def get_db_connection() -> sqlite3.Connection:
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
+from modules.db_engine import get_db_connection, is_postgres_configured
 
 
 def seed_development_accounts(conn: sqlite3.Connection):
@@ -193,7 +189,15 @@ def check_rate_limit(email: str, max_failures: int = 5, window_minutes: int = 10
     conn.close()
     
     if len(failures) >= max_failures:
-        oldest_failure = datetime.datetime.fromisoformat(failures[-1][0])
+        val = failures[-1][0]
+        if isinstance(val, str):
+            oldest_failure = datetime.datetime.fromisoformat(val)
+        elif isinstance(val, datetime.datetime):
+            oldest_failure = val
+        else:
+            oldest_failure = datetime.datetime.now(datetime.timezone.utc)
+        if oldest_failure.tzinfo is None:
+            oldest_failure = oldest_failure.replace(tzinfo=datetime.timezone.utc)
         elapsed = (datetime.datetime.now(datetime.timezone.utc) - oldest_failure).total_seconds()
         remaining = max(1, int(window_minutes * 60 - elapsed))
         return True, remaining

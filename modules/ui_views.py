@@ -521,7 +521,7 @@ def render_crop_yield_view(user, farm):
 
     # MERGED: Crop & Soil Health Diagnostics & Fertilizer Prescriptions
     with st.expander("🌱 Soil Health Diagnostics & Fertilizer Prescription", expanded=False):
-        soil_res = evaluate_soil_health(soil_n=y_n, soil_p=y_p, soil_k=y_k, ph=y_ph, organic_carbon=0.65)
+        soil_res = evaluate_soil_health(nitrogen=y_n, phosphorus=y_p, potassium=y_k, ph=y_ph, organic_carbon_pct=0.65)
         fert_res = calculate_fertilizer_prescription(y_crop, y_acres, y_n, y_p, y_k)
 
         s_c1, s_c2 = st.columns(2)

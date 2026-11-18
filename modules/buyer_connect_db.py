@@ -12,15 +12,13 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DB_PATH = os.path.join(PROJECT_ROOT, "data", "krishi_ai.db")
 
 
-def get_db_connection() -> sqlite3.Connection:
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
+from modules.db_engine import get_db_connection, is_postgres_configured
 
 
 def init_buyer_connect_tables():
     """Initializes tables for buyers, industry requirements, and quotations."""
+    if is_postgres_configured():
+        return
     conn = get_db_connection()
     c = conn.cursor()
 

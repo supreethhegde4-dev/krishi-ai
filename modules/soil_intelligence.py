@@ -6,15 +6,25 @@ from typing import Dict, Any, List
 
 
 def evaluate_soil_health(
-    nitrogen: float,
-    phosphorus: float,
-    potassium: float,
-    ph: float,
-    organic_carbon_pct: float = 0.55
+    nitrogen: float = 60.0,
+    phosphorus: float = 35.0,
+    potassium: float = 40.0,
+    ph: float = 6.5,
+    organic_carbon_pct: float = 0.55,
+    **kwargs
 ) -> Dict[str, Any]:
     """
     Evaluates soil parameters against ICAR standard agricultural benchmarks.
+    Accepts aliases: soil_n, soil_p, soil_k, organic_carbon.
     """
+    if "soil_n" in kwargs:
+        nitrogen = kwargs["soil_n"]
+    if "soil_p" in kwargs:
+        phosphorus = kwargs["soil_p"]
+    if "soil_k" in kwargs:
+        potassium = kwargs["soil_k"]
+    if "organic_carbon" in kwargs:
+        organic_carbon_pct = kwargs["organic_carbon"]
     # 1. Nitrogen Classification (kg/ha equivalent)
     if nitrogen < 40:
         n_status = "Deficient (Low)"

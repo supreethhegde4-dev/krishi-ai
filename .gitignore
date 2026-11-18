@@ -40,9 +40,21 @@ Thumbs.db
 # Streamlit secrets (if any)
 .streamlit/secrets.toml
 
+# Local environment & credentials (NEVER commit secrets!)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Node & Neon CLI metadata
+node_modules/
+.neon
+.neon/
+
 # Local database backups and journals
 data/backups/
 *.db-journal
 *.db-wal
 *.db-shm
+
 
