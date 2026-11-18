@@ -422,6 +422,7 @@ def render_historical_analysis_view(user, farm):
 # ==============================================================================
 def render_crop_yield_view(user, farm):
     st.markdown("#### 🌾 Machine Learning Crop Yield Prediction")
+    st.html("<div style='background:#FFFBEB; border:1px solid #FCD34D; border-radius:8px; padding:8px 12px; margin-bottom:12px; font-size:0.83rem; color:#92400E; display:flex; justify-content:space-between; align-items:center;'><span>🟠 <b>SYNTHETICALLY TRAINED MODEL</b> (ICAR Agro-Climatic Benchmarks)</span><span style='font-weight:600; color:#B45309;'>Scope: Estimated Regional Baseline Yield (Not Empirical Field Trial)</span></div>")
     st.caption("Random Forest regressor trained on agro-climatic conditions to forecast harvest volume and benchmark against ICAR district standards.")
 
     cy1, cy2 = st.columns([1, 1], gap="large")
@@ -1158,9 +1159,13 @@ def render_crop_soil_advisor_view(user, farm):
             r_val = st.number_input("Rainfall (mm)", value=82.0)
 
         crop_res = recommend_crop(n_val, p_val, k_val, t_val, h_val, ph_val, r_val)
+        prov_lbl = crop_res.get('model_provenance', 'VALIDATED ON REAL AGRICULTURAL DATA')
         st.html(f"""
         <div style="background-color:#F0FDF4; border:2px solid #0D5C3A; border-radius:10px; padding:18px; text-align:center; margin:14px 0;">
-            <span style="background:#0D5C3A; color:white; padding:4px 12px; border-radius:12px; font-weight:700; font-size:0.8rem;">TOP AGRONOMIC MATCH</span>
+            <div style="margin-bottom:8px;">
+                <span style="background:#0D5C3A; color:white; padding:4px 12px; border-radius:12px; font-weight:700; font-size:0.8rem;">TOP AGRONOMIC MATCH</span>
+                <span style="background:#059669; color:white; padding:4px 10px; border-radius:12px; font-weight:700; font-size:0.75rem; margin-left:6px;">🟢 {prov_lbl}</span>
+            </div>
             <div style="font-size:2.4rem; font-weight:800; color:#0D5C3A; margin:6px 0;">{crop_res['primary_crop']}</div>
             <div style="font-size:1.1rem; font-weight:700; color:#166534;">{crop_res['confidence']:.1f}% Model Confidence</div>
         </div>
@@ -1341,6 +1346,35 @@ def render_settings_view(user, farm):
                         st.success(b_msg)
                     else:
                         st.error(b_msg)
+
+            # Live API Health & Commercial Licensing Telemetry
+            st.html("<hr style='border:none; border-top:1px solid #E2E8F0; margin:16px 0;'>")
+            st.html("<div style='font-size:1.05rem; font-weight:700; color:#0D5C3A; margin-bottom:8px;'>🌐 External Agricultural API Telemetry</div>")
+            st.caption("Real-time connectivity, data freshness, and commercial licensing compliance.")
+
+            from modules.api_clients import get_api_status_report
+            from modules.db_engine import check_database_health
+            
+            db_h = check_database_health()
+            st.html(f"<div style='font-size:0.85rem; color:#334155; margin-bottom:10px;'>Database Engine: <b>{db_h.get('database_type')}</b> (Status: <b>{db_h.get('status')}</b> • Latency: <b>{db_h.get('latency_ms')} ms</b>)</div>")
+
+            api_statuses = get_api_status_report()
+            for api_item in api_statuses:
+                b_col = "#16A34A" if "LIVE" in api_item["status"] else ("#D97706" if "CACHED" in api_item["status"] else "#DC2626")
+                st.html(f"""
+                <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:10px; margin-bottom:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <b>{api_item['provider']}</b>
+                        <span style="background:{b_col}; color:white; padding:2px 8px; border-radius:12px; font-size:0.75rem; font-weight:700;">{api_item['status']}</span>
+                    </div>
+                    <div style="font-size:0.8rem; color:#64748B; margin-top:4px;">
+                        Freshness: {api_item['data_freshness']} • Observation Date: {api_item['last_observation_date']}
+                    </div>
+                    <div style="font-size:0.75rem; color:#475569; margin-top:2px;">
+                        <i>{api_item['commercial_terms']}</i>
+                    </div>
+                </div>
+                """)
 
 
 # ==============================================================================

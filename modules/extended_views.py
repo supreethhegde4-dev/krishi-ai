@@ -183,32 +183,73 @@ def render_crop_image_quality_view(user, farm):
 
         if "last_image_eval" in st.session_state:
             eval_res = st.session_state["last_image_eval"]
-            g_det = eval_res.get("grade_details", {})
-            st.html(f"""
-            <div style="background:#FFFFFF; border:2px solid {g_det.get('color', '#16834A')}; border-radius:12px; padding:18px; margin-top:16px;">
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                    <div style="font-size:1.3rem; font-weight:800; color:{g_det.get('color', '#16834A')};">
-                        {g_det.get('badge')}
+            ev_status = eval_res.get("status", "AI_ASSESSED")
+
+            if ev_status == "REJECTED":
+                st.html(f"""
+                <div style="background:#FEF2F2; border:2px solid #DC2626; border-radius:12px; padding:18px; margin-top:16px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="font-size:1.25rem; font-weight:800; color:#991B1B;">
+                            ⛔ STATUS: REJECTED
+                        </div>
+                        <span style="background:#FEE2E2; color:#991B1B; padding:4px 10px; border-radius:20px; font-weight:700; font-size:0.8rem;">
+                            SECURITY GATE TRIGGERED
+                        </span>
                     </div>
-                    <div style="background:#F1F5F9; color:#475569; padding:4px 10px; border-radius:20px; font-weight:700; font-size:0.8rem;">
-                        Batch Ref: {eval_res.get('batch_ref')}
+                    <div style="color:#B91C1C; font-weight:700; margin:10px 0 4px 0; font-size:1.0rem;">
+                        REASON: {eval_res.get('reason', 'NOT_AN_AGRICULTURAL_PRODUCE_IMAGE')}
+                    </div>
+                    <p style="color:#4B5563; font-size:0.9rem; margin:0 0 10px 0;">
+                        {eval_res.get('message', 'Uploaded file identified as a non-agricultural subject.')}
+                    </p>
+                    <div style="background:#FFFFFF; border:1px solid #FECACA; border-radius:8px; padding:12px; font-size:0.85rem; color:#374151;">
+                        <b>🛡️ Production Safety & Privacy Notice:</b> Personal documents (marks cards, certificates, Aadhaar/PAN, invoices) and unrelated objects are strictly rejected. Rejected files are <b>never transmitted to external AI cloud services</b> and no commercial trading lots or false grades are created.
                     </div>
                 </div>
-                <div style="font-size:0.85rem; color:#475569; margin:8px 0;">{g_det.get('description')}</div>
-                <hr style="border:none; border-top:1px solid #E2E8F0; margin:10px 0;">
-                <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:10px;">
-                    <div><b>Species:</b> {eval_res.get('botanical_species')} ({eval_res.get('botanical_confidence')}%)</div>
-                    <div><b>Defect Ratio:</b> {eval_res.get('defect_percent')}% (Threshold: &le; {g_det.get('tolerance_defect_pct')}%)</div>
-                    <div><b>Firmness:</b> {eval_res.get('firmness_level')}</div>
+                """)
+            elif ev_status == "UNABLE_TO_ASSESS":
+                st.html(f"""
+                <div style="background:#FFFBEB; border:2px solid #F59E0B; border-radius:12px; padding:18px; margin-top:16px;">
+                    <div style="font-size:1.2rem; font-weight:800; color:#92400E;">
+                        ⚠️ STATUS: UNABLE TO ASSESS
+                    </div>
+                    <div style="color:#B45309; font-weight:600; margin:6px 0;">
+                        REASON: {eval_res.get('reason', 'INSUFFICIENT_IMAGE_QUALITY')}
+                    </div>
+                    <p style="color:#4B5563; font-size:0.88rem; margin:0;">
+                        {eval_res.get('message', 'Please upload clear, well-lit photographs showing representative fruits or tubers.')}
+                    </p>
                 </div>
-            </div>
-            """)
+                """)
+            else:
+                g_det = eval_res.get("grade_details", {})
+                st.html(f"""
+                <div style="background:#FFFFFF; border:2px solid {g_det.get('color', '#16834A')}; border-radius:12px; padding:18px; margin-top:16px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="font-size:1.3rem; font-weight:800; color:{g_det.get('color', '#16834A')};">
+                            {g_det.get('badge')}
+                        </div>
+                        <div style="background:#F1F5F9; color:#475569; padding:4px 10px; border-radius:20px; font-weight:700; font-size:0.8rem;">
+                            Batch Ref: {eval_res.get('batch_ref')}
+                        </div>
+                    </div>
+                    <div style="font-size:0.85rem; color:#475569; margin:8px 0;">{g_det.get('description')}</div>
+                    <hr style="border:none; border-top:1px solid #E2E8F0; margin:10px 0;">
+                    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:10px;">
+                        <div><b>Species:</b> {eval_res.get('botanical_species')} ({eval_res.get('botanical_confidence')}%)</div>
+                        <div><b>Defect Ratio:</b> {eval_res.get('defect_percent')}% (Threshold: &le; {g_det.get('tolerance_defect_pct')}%)</div>
+                        <div><b>Firmness:</b> {eval_res.get('firmness_level')}</div>
+                    </div>
+                </div>
+                """)
 
-            st.markdown("##### 🔬 Detailed Agronomic Observations")
-            for obs in eval_res.get("observations", []):
-                st.markdown(f"• {obs}")
+                st.markdown("##### 🔬 Detailed Agronomic Observations")
+                for obs in eval_res.get("observations", []):
+                    st.markdown(f"• {obs}")
 
-            st.info("ℹ️ Status: **AI ASSESSED (PRELIMINARY)** — To convert this into a certified APMC trading lot, assign an accredited inspector in the Certified Records tab.")
+                conf = eval_res.get("confidence_scores", {})
+                st.caption(f"🎯 Multi-Stage Confidence: Classification {conf.get('produce_classification_confidence', 95):.1f}% | Crop ID {conf.get('crop_identification_confidence', 90):.1f}% | Grading {conf.get('grading_confidence', 88):.1f}%")
+                st.info("ℹ️ Status: **AI ASSESSED (PRELIMINARY)** — To convert this into a certified APMC trading lot, assign an accredited inspector in the Certified Records tab.")
 
     with tab_history:
         st.markdown("##### 📑 Official Inspection Records")

@@ -3,6 +3,7 @@ Machine Learning Price Forecasting Model for KisanAI.
 Uses RandomForestRegressor with chronological time-series lag features,
 strict temporal train/test split, recursive multi-step forecasting, and baseline comparison.
 """
+import datetime
 import numpy as np
 import pandas as pd
 from typing import Dict, Any, List, Tuple, Optional
@@ -210,6 +211,9 @@ def train_and_forecast_price(
 
     return {
         "status": "SUCCESS",
+        "model_version": "krishi-forecast-v1.2.0-rf-timeseries",
+        "prediction_timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "disclaimer": "Agricultural price forecasts represent statistical time-series projections based on historical APMC arrivals and do not constitute a financial guarantee of future realization.",
         "observations_count": len(df_raw),
         "latest_observed_date": last_date.strftime('%Y-%m-%d'),
         "latest_observed_price": round(float(df_daily['modal_price_kg'].iloc[-1]), 2),

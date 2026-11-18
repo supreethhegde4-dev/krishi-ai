@@ -90,6 +90,8 @@ def predict_crop_yield(
     state_avg = benchmarks["state_avg"]
     yield_gap_pct = round(((pred_yield_per_acre - state_avg) / state_avg) * 100.0, 1)
 
+    prov = (model_bundle.get("provenance", {}) if model_bundle else {})
+
     return {
         "crop": crop_cap,
         "acreage": acreage,
@@ -100,5 +102,8 @@ def predict_crop_yield(
         "state_avg_yield": benchmarks["state_avg"],
         "high_performing_yield": benchmarks["high_performing"],
         "yield_gap_pct": yield_gap_pct,
-        "performance_rating": "Superior / Above State Average" if yield_gap_pct >= 5 else ("On-Par with Regional Average" if yield_gap_pct >= -10 else "Sub-Optimal (Yield Gap Exists)")
+        "performance_rating": "Superior / Above State Average" if yield_gap_pct >= 5 else ("On-Par with Regional Average" if yield_gap_pct >= -10 else "Sub-Optimal (Yield Gap Exists)"),
+        "model_provenance": prov.get("status_label", "SYNTHETICALLY TRAINED MODEL (ICAR Agro-Climatic Benchmarks)"),
+        "model_source": prov.get("source", "ICAR Agro-Climatic Regional Benchmarks"),
+        "scope_disclaimer": "Forecast reflects regional agro-climatic baseline yield, not empirical individual farm field trials."
     }
