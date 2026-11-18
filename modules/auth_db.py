@@ -1,3 +1,6 @@
+PUBLIC_ROLES = {"farmer", "buyer"}
+PRIVILEGED_ROLES = {"inspector", "admin"}
+
 """
 Authentication, User Isolation, and Database Management for Krishi AI.
 Uses SQLite (data/krishi_ai.db) with bcrypt password hashing,
@@ -218,7 +221,14 @@ def log_login_attempt(email: str, success: bool, ip: str = "127.0.0.1"):
 
 
 def register_user(full_name: str, email: str, password: str, phone: Optional[str] = None, role: str = "farmer") -> Tuple[bool, str]:
-    """Registers a new user after validation."""
+    """
+    Registers a new public user (farmer or buyer).
+    Enforces strict Role Escalation defense: Rejects privileged roles ('admin', 'inspector').
+    """
+    clean_role = (role or "farmer").lower().strip()
+    if clean_role in PRIVILEGED_ROLES or clean_role not in PUBLIC_ROLES:
+        return False, f"Unauthorized: Role '{role}' cannot be self-registered. Only public roles ({', '.join(sorted(PUBLIC_ROLES))}) are allowed."
+
     clean_email = email.lower().strip()
     clean_name = full_name.strip()
     
@@ -581,3 +591,119 @@ def export_user_data(user_id: int) -> Dict[str, Any]:
         "farm_profile": farm_dict,
         "audit_ledgers": preds
     }
+
+
+def provision_admin_user(
+    full_name: str,
+    email: str,
+    password: str,
+    phone: Optional[str] = None,
+    authorized_by_admin_id: Optional[int] = None,
+    bootstrap_token: Optional[str] = None
+) -> Tuple[bool, str]:
+    """
+    Securely provisions an administrator account.
+    Requires authorization from an existing active admin, OR a valid ADMIN_BOOTSTRAP_TOKEN
+    when bootstrapping initial system setup.
+    """
+    clean_email = email.lower().strip()
+    clean_name = full_name.strip()
+    
+    if not clean_name or "@" not in clean_email or len(password) < 8:
+        return False, "Invalid account details or weak password."
+        
+    conn = get_db_connection()
+    c = conn.cursor()
+    
+    try:
+        # Check existing admins
+        c.execute("SELECT id, role, is_active FROM users WHERE role = 'admin' AND is_active = 1")
+        existing_admins = c.fetchall()
+        
+        is_authorized = False
+        if existing_admins:
+            if authorized_by_admin_id is not None:
+                c.execute("SELECT id, role, is_active FROM users WHERE id = ?", (authorized_by_admin_id,))
+                authorizer = c.fetchone()
+                if authorizer and authorizer["role"] == "admin" and authorizer["is_active"] == 1:
+                    is_authorized = True
+                else:
+                    conn.close()
+                    return False, "Unauthorized: Only an active administrator can provision another admin."
+            else:
+                conn.close()
+                return False, "Authorization error: An active admin ID is required to provision new administrators."
+        else:
+            # Initial bootstrap mode
+            expected_token = os.environ.get("ADMIN_BOOTSTRAP_TOKEN", "krishi-ai-bootstrap-secure-2026")
+            if bootstrap_token and bootstrap_token.strip() == expected_token:
+                is_authorized = True
+            else:
+                conn.close()
+                return False, "Unauthorized bootstrap attempt: Valid ADMIN_BOOTSTRAP_TOKEN required when no admin exists."
+
+        # Check duplicate email
+        c.execute("SELECT id FROM users WHERE email = ?", (clean_email,))
+        if c.fetchone():
+            conn.close()
+            return False, "An account with this email already exists."
+
+        pwd_hash = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt(12)).decode("utf-8")
+        now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        
+        c.execute("""
+        INSERT INTO users (email, password_hash, full_name, phone, role, created_at, is_active)
+        VALUES (?, ?, ?, ?, 'admin', ?, 1)
+        """, (clean_email, pwd_hash, clean_name, phone.strip() if phone else None, now_str))
+        conn.commit()
+        conn.close()
+        return True, "Administrator successfully provisioned."
+    except Exception as e:
+        conn.close()
+        return False, f"Failed to provision administrator: {e}"
+
+
+def provision_inspector_user(
+    full_name: str,
+    email: str,
+    password: str,
+    authorized_by_admin_id: int,
+    phone: Optional[str] = None,
+    certification_agency: Optional[str] = None
+) -> Tuple[bool, str]:
+    """
+    Securely provisions an inspector account.
+    Strictly requires authorization from an active administrator.
+    """
+    if not authorized_by_admin_id:
+        return False, "Unauthorized: An active administrator ID is required to provision an inspector."
+        
+    conn = get_db_connection()
+    c = conn.cursor()
+    try:
+        c.execute("SELECT id, role, is_active FROM users WHERE id = ?", (authorized_by_admin_id,))
+        authorizer = c.fetchone()
+        if not authorizer or authorizer["role"] != "admin" or authorizer["is_active"] != 1:
+            conn.close()
+            return False, "Unauthorized: Only an active administrator can provision an inspector."
+
+        clean_email = email.lower().strip()
+        clean_name = full_name.strip()
+        c.execute("SELECT id FROM users WHERE email = ?", (clean_email,))
+        if c.fetchone():
+            conn.close()
+            return False, "An account with this email already exists."
+
+        pwd_hash = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt(12)).decode("utf-8")
+        now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        
+        c.execute("""
+        INSERT INTO users (email, password_hash, full_name, phone, role, created_at, is_active)
+        VALUES (?, ?, ?, ?, 'inspector', ?, 1)
+        """, (clean_email, pwd_hash, clean_name, phone.strip() if phone else None, now_str))
+        conn.commit()
+        conn.close()
+        return True, "Inspector successfully provisioned."
+    except Exception as e:
+        conn.close()
+        return False, f"Failed to provision inspector: {e}"

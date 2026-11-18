@@ -36,6 +36,18 @@ def get_database_url(unpooled: bool = False) -> Optional[str]:
     if not val and unpooled and os.environ.get("DATABASE_URL"):
         return os.environ.get("DATABASE_URL").strip()
 
+    # Check Streamlit Cloud st.secrets
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets"):
+            if key in st.secrets and str(st.secrets[key]).strip():
+                return str(st.secrets[key]).strip()
+            if unpooled and "DATABASE_URL" in st.secrets and str(st.secrets["DATABASE_URL"]).strip():
+                return str(st.secrets["DATABASE_URL"]).strip()
+    except Exception:
+        pass
+
+
     # Check local configuration files
     for fname in [".env.local", ".env"]:
         env_path = os.path.join(PROJECT_ROOT, fname)

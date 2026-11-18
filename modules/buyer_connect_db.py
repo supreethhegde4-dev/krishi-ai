@@ -780,6 +780,15 @@ def verify_crop_inspection(
         if user_role not in ("inspector", "admin") or not user_active:
             return False, f"Unauthorized: User #{inspector_id} does not have inspector or admin privileges."
 
+        # Conflict of Interest Check: Farmer cannot certify their own produce
+        c.execute("SELECT id, farmer_id FROM crop_inspections WHERE id = ?", (inspection_id,))
+        insp_record = c.fetchone()
+        if not insp_record:
+            return False, f"Inspection #{inspection_id} not found."
+        rec_farmer_id = insp_record.get("farmer_id") if hasattr(insp_record, "get") else insp_record[1]
+        if rec_farmer_id == inspector_id:
+            return False, "Conflict of interest: A farmer cannot inspect or certify their own produce batch."
+
         cert_hash = hashlib.sha256(f"INSP_{inspection_id}_{inspector_name}_{now_str}".encode("utf-8")).hexdigest()[:16].upper()
         c.execute("""
         UPDATE crop_inspections

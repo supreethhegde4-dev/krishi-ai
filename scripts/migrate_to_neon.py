@@ -522,7 +522,8 @@ def main():
                     """, insp_rows)
                 print(f"  [Migrated] crop_inspections: {len(insp_rows)} records", flush=True)
 
-                # Trade Transactions
+                # Trade Transactions (Savepoint protected)
+                pg_cur.execute("SAVEPOINT sp_trade_tx;")
                 try:
                     sq_cur.execute("SELECT * FROM trade_transactions ORDER BY id;")
                     tx_rows = []
@@ -543,11 +544,14 @@ def main():
                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                             ON CONFLICT (id) DO NOTHING;
                         """, tx_rows)
+                    pg_cur.execute("RELEASE SAVEPOINT sp_trade_tx;")
                     print(f"  [Migrated] trade_transactions: {len(tx_rows)} records", flush=True)
                 except Exception as e:
-                    print(f"  [Notice] trade_transactions migration note: {e}", flush=True)
+                    pg_cur.execute("ROLLBACK TO SAVEPOINT sp_trade_tx;")
+                    raise RuntimeError(f"Trade transactions migration failed: {e}") from e
 
-                # Transaction Disputes
+                # Transaction Disputes (Savepoint protected)
+                pg_cur.execute("SAVEPOINT sp_trans_disp;")
                 try:
                     sq_cur.execute("SELECT * FROM transaction_disputes ORDER BY id;")
                     disp_rows = []
@@ -565,9 +569,11 @@ def main():
                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                             ON CONFLICT (id) DO NOTHING;
                         """, disp_rows)
+                    pg_cur.execute("RELEASE SAVEPOINT sp_trans_disp;")
                     print(f"  [Migrated] transaction_disputes: {len(disp_rows)} records", flush=True)
                 except Exception as e:
-                    print(f"  [Notice] transaction_disputes migration note: {e}", flush=True)
+                    pg_cur.execute("ROLLBACK TO SAVEPOINT sp_trans_disp;")
+                    raise RuntimeError(f"Transaction disputes migration failed: {e}") from e
 
                 # User Predictions
                 sq_cur.execute("SELECT * FROM user_predictions ORDER BY id;")
